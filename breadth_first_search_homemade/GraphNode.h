@@ -7,15 +7,19 @@
 
 #include <istream>
 #include <string>
+#include <vector>
 
 using std::istream;
 using std::string;
+using std::vector;
 
 class GraphNode
 {
 public:
     
     GraphNode();
+    GraphNode(const GraphNode& nodeToCopy);
+    
     explicit GraphNode(const string& newName);
     GraphNode(const string& newName, double newValue);
     GraphNode(const string& newName, double newXCoord, double newYCoord);
@@ -34,6 +38,7 @@ public:
 
 private:
     
+//    vector<GraphNode*> neighbors;
     string name;
     double value;
     double xCoord;

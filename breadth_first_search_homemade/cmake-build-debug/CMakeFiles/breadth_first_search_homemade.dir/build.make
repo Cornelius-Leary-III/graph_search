@@ -96,25 +96,39 @@ CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp -o CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.s
 
-CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o: CMakeFiles/breadth_first_search_homemade.dir/flags.make
-CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o: ../Edge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Edge.cpp
+CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o: CMakeFiles/breadth_first_search_homemade.dir/flags.make
+CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o: ../GraphEdge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphEdge.cpp
 
-CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Edge.cpp > CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.i
+CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphEdge.cpp > CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.i
 
-CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Edge.cpp -o CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.s
+CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphEdge.cpp -o CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.s
+
+CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o: CMakeFiles/breadth_first_search_homemade.dir/flags.make
+CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o: ../Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Graph.cpp
+
+CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Graph.cpp > CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.i
+
+CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Graph.cpp -o CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.s
 
 # Object files for target breadth_first_search_homemade
 breadth_first_search_homemade_OBJECTS = \
 "CMakeFiles/breadth_first_search_homemade.dir/main.cpp.o" \
 "CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.o" \
 "CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.o" \
-"CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o"
+"CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o" \
+"CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o"
 
 # External object files for target breadth_first_search_homemade
 breadth_first_search_homemade_EXTERNAL_OBJECTS =
@@ -122,10 +136,11 @@ breadth_first_search_homemade_EXTERNAL_OBJECTS =
 breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/main.cpp.o
 breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.o
 breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.o
-breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o
+breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o
+breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o
 breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/build.make
 breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable breadth_first_search_homemade"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable breadth_first_search_homemade"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/breadth_first_search_homemade.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

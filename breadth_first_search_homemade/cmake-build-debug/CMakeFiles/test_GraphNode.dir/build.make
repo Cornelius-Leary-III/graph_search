@@ -57,22 +57,9 @@ include CMakeFiles/test_GraphNode.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_GraphNode.dir/flags.make
 
-CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o: CMakeFiles/test_GraphNode.dir/flags.make
-CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o: ../GraphNode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp
-
-CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp > CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i
-
-CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp -o CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s
-
 CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o: CMakeFiles/test_GraphNode.dir/flags.make
 CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o: ../GraphNode_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode_test.cpp
 
 CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.i: cmake_force
@@ -83,16 +70,29 @@ CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode_test.cpp -o CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.s
 
+CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o: CMakeFiles/test_GraphNode.dir/flags.make
+CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o: ../GraphNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o -c /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp
+
+CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp > CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i
+
+CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp -o CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s
+
 # Object files for target test_GraphNode
 test_GraphNode_OBJECTS = \
-"CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o" \
-"CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o"
+"CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o" \
+"CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o"
 
 # External object files for target test_GraphNode
 test_GraphNode_EXTERNAL_OBJECTS =
 
-test_GraphNode: CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o
 test_GraphNode: CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o
+test_GraphNode: CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o
 test_GraphNode: CMakeFiles/test_GraphNode.dir/build.make
 test_GraphNode: lib/libgtestd.a
 test_GraphNode: lib/libgtest_maind.a

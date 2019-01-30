@@ -39,14 +39,27 @@ add_executable(breadth_first_search_homemade
                main.cpp
                BreadthFirstSearchPlanner.cpp BreadthFirstSearchPlanner.h
                GraphNode.cpp GraphNode.h
-               Edge.cpp Edge.h)
+               GraphEdge.cpp GraphEdge.h
+               Graph.cpp Graph.h)
 
-add_executable(test_GraphNode GraphNode.cpp GraphNode.h GraphNode_test.cpp)
+add_executable(test_GraphNode GraphNode_test.cpp
+               GraphNode.cpp GraphNode.h)
 target_link_libraries(test_GraphNode gtest gtest_main)
 add_test(test_graph_node_class test_GraphNode)
 
 add_executable(test_GraphEdge GraphEdge_test.cpp
-               Edge.cpp Edge.h
-               GraphNode.h GraphNode.cpp)
+               GraphEdge.cpp GraphEdge.h
+               GraphNode.cpp GraphNode.h)
 target_link_libraries(test_GraphEdge gtest gtest_main)
 add_test(test_graph_edge_class test_GraphEdge)
+
+add_executable(test_Graph Graph_test.cpp
+               Graph.cpp Graph.h
+               GraphEdge.cpp GraphEdge.h
+               GraphNode.cpp GraphNode.h)
+target_link_libraries(test_Graph gtest gtest_main)
+add_test(test_graph_class test_Graph)
+
+
+
+

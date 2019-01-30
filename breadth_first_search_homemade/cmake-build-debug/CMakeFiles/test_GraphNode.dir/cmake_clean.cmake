@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o"
   "CMakeFiles/test_GraphNode.dir/GraphNode_test.cpp.o"
+  "CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o"
   "test_GraphNode.pdb"
   "test_GraphNode"
 )

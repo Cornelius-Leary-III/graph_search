@@ -36,6 +36,14 @@ GraphNode::GraphNode(const string& newName, double newValue,
 {
 }
 
+GraphNode::GraphNode(const GraphNode& nodeToCopy)
+        : name(nodeToCopy.name),
+          value(nodeToCopy.value),
+          xCoord(nodeToCopy.xCoord),
+          yCoord(nodeToCopy.yCoord)
+{
+}
+
 string GraphNode::getNodeName()
 {
     return name;
