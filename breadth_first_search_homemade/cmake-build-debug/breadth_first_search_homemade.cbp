@@ -143,6 +143,66 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="install">
+				<Option working_dir="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_GraphEdge">
+				<Option output="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/test_GraphEdge" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_GraphEdge"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_GraphEdge/fast">
+				<Option output="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/test_GraphEdge" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/googletest-src/googletest/include"/>
+					<Add directory="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/googletest-src/googletest"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_GraphEdge/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug"/>
 				<Option type="4"/>
@@ -158,16 +218,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -387,6 +437,17 @@
 		</Unit>
 		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/BreadthFirstSearchPlanner.h">
 			<Option target="breadth_first_search_homemade"/>
+		</Unit>
+		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Edge.cpp">
+			<Option target="breadth_first_search_homemade"/>
+			<Option target="test_GraphEdge"/>
+		</Unit>
+		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/Edge.h">
+			<Option target="breadth_first_search_homemade"/>
+			<Option target="test_GraphEdge"/>
+		</Unit>
+		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphEdge_test.cpp">
+			<Option target="test_GraphEdge"/>
 		</Unit>
 		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp">
 			<Option target="test_GraphNode"/>

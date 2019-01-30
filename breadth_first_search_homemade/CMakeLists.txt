@@ -35,8 +35,16 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif ()
 
-add_executable(breadth_first_search_homemade main.cpp BreadthFirstSearchPlanner.cpp BreadthFirstSearchPlanner.h GraphNode.cpp GraphNode.h)
+add_executable(breadth_first_search_homemade
+               main.cpp
+               BreadthFirstSearchPlanner.cpp BreadthFirstSearchPlanner.h
+               GraphNode.cpp GraphNode.h
+               Edge.cpp Edge.h)
 
 add_executable(test_GraphNode GraphNode.cpp GraphNode.h GraphNode_test.cpp)
 target_link_libraries(test_GraphNode gtest gtest_main)
 add_test(test_graph_node_class test_GraphNode)
+
+add_executable(test_GraphEdge Edge.cpp Edge.h GraphEdge_test.cpp)
+target_link_libraries(test_GraphEdge gtest gtest_main)
+add_test(test_graph_edge_class test_GraphEdge)

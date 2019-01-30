@@ -32,41 +32,54 @@ double GraphNode::getNodeValue() const
     return value;
 }
 
-GridNode::GridNode()
-        : GraphNode()
+bool operator==(GraphNode& lhs, GraphNode& rhs)
 {
-    xCoord = 0.0;
-    yCoord = 0.0;
+    return (lhs.getNodeName() == rhs.getNodeName()) &&
+           (lhs.getNodeValue() == rhs.getNodeValue());
 }
 
-GridNode::GridNode(const string& newName)
-        : GraphNode(newName)
+bool operator!=(GraphNode& lhs, GraphNode& rhs)
 {
-    xCoord = 0.0;
-    yCoord = 0.0;
+    return !(lhs == rhs);
 }
 
-GridNode::GridNode(const string& newName, double newXCoord, double newYCoord)
-        : GraphNode(newName)
-{
-    xCoord = newXCoord;
-    yCoord = newYCoord;
-}
 
-GridNode::GridNode(const string& newName, double newValue,
-                   double newXCoord, double newYCoord)
-        : GraphNode(newName, newValue)
-{
-    xCoord = newXCoord;
-    yCoord = newYCoord;
-}
-
-double GridNode::getXCoord() const
-{
-    return xCoord;
-}
-
-double GridNode::getYCoord() const
-{
-    return yCoord;
-}
+//
+//GridNode::GridNode()
+//        : GraphNode()
+//{
+//    xCoord = 0.0;
+//    yCoord = 0.0;
+//}
+//
+//GridNode::GridNode(const string& newName)
+//        : GraphNode(newName)
+//{
+//    xCoord = 0.0;
+//    yCoord = 0.0;
+//}
+//
+//GridNode::GridNode(const string& newName, double newXCoord, double newYCoord)
+//        : GraphNode(newName)
+//{
+//    xCoord = newXCoord;
+//    yCoord = newYCoord;
+//}
+//
+//GridNode::GridNode(const string& newName, double newValue,
+//                   double newXCoord, double newYCoord)
+//        : GraphNode(newName, newValue)
+//{
+//    xCoord = newXCoord;
+//    yCoord = newYCoord;
+//}
+//
+//double GridNode::getXCoord() const
+//{
+//    return xCoord;
+//}
+//
+//double GridNode::getYCoord() const
+//{
+//    return yCoord;
+//}

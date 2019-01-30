@@ -29,27 +29,32 @@ private:
     
 };
 
-class GridNode : public GraphNode
-{
-public:
-    
-    GridNode();
-    explicit GridNode(const string& newName);
-    GridNode(const string& newName, double newXCoord, double newYCoord);
-    GridNode(const string& newName, double newValue,
-             double newXCoord, double newYCoord);
-    
-    ~GridNode() override = default;
-    
-    double getXCoord() const;
-    double getYCoord() const;
+bool operator==(GraphNode& lhs, GraphNode& rhs);
+bool operator!=(GraphNode& lhs, GraphNode& rhs);
 
-private:
-    
-    double xCoord;
-    double yCoord;
-    
-};
+
+
+//class GridNode : public GraphNode
+//{
+//public:
+//
+//    GridNode();
+//    explicit GridNode(const string& newName);
+//    GridNode(const string& newName, double newXCoord, double newYCoord);
+//    GridNode(const string& newName, double newValue,
+//             double newXCoord, double newYCoord);
+//
+//    ~GridNode() override = default;
+//
+//    double getXCoord() const;
+//    double getYCoord() const;
+//
+//private:
+//
+//    double xCoord;
+//    double yCoord;
+//
+//};
 
 
 #endif //BREADTH_FIRST_SEARCH_HOMEMADE_GRAPHNODE_H

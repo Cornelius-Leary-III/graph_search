@@ -91,6 +91,18 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -111,18 +123,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -181,6 +181,19 @@ breadth_first_search_homemade: cmake_check_build_system
 breadth_first_search_homemade/fast:
 	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/build
 .PHONY : breadth_first_search_homemade/fast
+
+#=============================================================================
+# Target rules for targets named test_GraphEdge
+
+# Build rule for target.
+test_GraphEdge: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_GraphEdge
+.PHONY : test_GraphEdge
+
+# fast build rule for target.
+test_GraphEdge/fast:
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/build
+.PHONY : test_GraphEdge/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -260,6 +273,63 @@ BreadthFirstSearchPlanner.s: BreadthFirstSearchPlanner.cpp.s
 BreadthFirstSearchPlanner.cpp.s:
 	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.s
 .PHONY : BreadthFirstSearchPlanner.cpp.s
+
+Edge.o: Edge.cpp.o
+
+.PHONY : Edge.o
+
+# target to build an object file
+Edge.cpp.o:
+	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.o
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/Edge.cpp.o
+.PHONY : Edge.cpp.o
+
+Edge.i: Edge.cpp.i
+
+.PHONY : Edge.i
+
+# target to preprocess a source file
+Edge.cpp.i:
+	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.i
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/Edge.cpp.i
+.PHONY : Edge.cpp.i
+
+Edge.s: Edge.cpp.s
+
+.PHONY : Edge.s
+
+# target to generate assembly for a file
+Edge.cpp.s:
+	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Edge.cpp.s
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/Edge.cpp.s
+.PHONY : Edge.cpp.s
+
+GraphEdge_test.o: GraphEdge_test.cpp.o
+
+.PHONY : GraphEdge_test.o
+
+# target to build an object file
+GraphEdge_test.cpp.o:
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge_test.cpp.o
+.PHONY : GraphEdge_test.cpp.o
+
+GraphEdge_test.i: GraphEdge_test.cpp.i
+
+.PHONY : GraphEdge_test.i
+
+# target to preprocess a source file
+GraphEdge_test.cpp.i:
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge_test.cpp.i
+.PHONY : GraphEdge_test.cpp.i
+
+GraphEdge_test.s: GraphEdge_test.cpp.s
+
+.PHONY : GraphEdge_test.s
+
+# target to generate assembly for a file
+GraphEdge_test.cpp.s:
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge_test.cpp.s
+.PHONY : GraphEdge_test.cpp.s
 
 GraphNode.o: GraphNode.cpp.o
 
@@ -356,9 +426,10 @@ help:
 	@echo "... test_GraphNode"
 	@echo "... breadth_first_search_homemade"
 	@echo "... rebuild_cache"
+	@echo "... install"
+	@echo "... test_GraphEdge"
 	@echo "... edit_cache"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
@@ -366,6 +437,12 @@ help:
 	@echo "... BreadthFirstSearchPlanner.o"
 	@echo "... BreadthFirstSearchPlanner.i"
 	@echo "... BreadthFirstSearchPlanner.s"
+	@echo "... Edge.o"
+	@echo "... Edge.i"
+	@echo "... Edge.s"
+	@echo "... GraphEdge_test.o"
+	@echo "... GraphEdge_test.i"
+	@echo "... GraphEdge_test.s"
 	@echo "... GraphNode.o"
 	@echo "... GraphNode.i"
 	@echo "... GraphNode.s"
