@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.h
+istream
+-
 string
 -
 

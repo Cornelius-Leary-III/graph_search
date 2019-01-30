@@ -5,8 +5,10 @@
 #ifndef BREADTH_FIRST_SEARCH_HOMEMADE_GRAPHNODE_H
 #define BREADTH_FIRST_SEARCH_HOMEMADE_GRAPHNODE_H
 
+#include <istream>
 #include <string>
 
+using std::istream;
 using std::string;
 
 class GraphNode
@@ -16,16 +18,26 @@ public:
     GraphNode();
     explicit GraphNode(const string& newName);
     GraphNode(const string& newName, double newValue);
+    GraphNode(const string& newName, double newXCoord, double newYCoord);
+    GraphNode(const string& newName, double newValue,
+              double newXCoord, double newYCoord);
     
-    virtual ~GraphNode() = default;
+    ~GraphNode() = default;
     
-    virtual double getNodeValue() const;
+    double getNodeValue();
     string getNodeName();
+    double getNodeXCoord();
+    double getNodeYCoord();
+    
+    GraphNode& operator=(const GraphNode& rhs);
+    friend istream& operator>>(istream& input, GraphNode& nodeToUpdate);
 
 private:
     
     string name;
     double value;
+    double xCoord;
+    double yCoord;
     
 };
 
