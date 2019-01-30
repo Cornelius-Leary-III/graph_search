@@ -29,7 +29,7 @@ public:
     double getNodeXCoord();
     double getNodeYCoord();
     
-    GraphNode& operator=(const GraphNode& rhs);
+//    GraphNode& operator=(GraphNode& rhs);
     friend istream& operator>>(istream& input, GraphNode& nodeToUpdate);
 
 private:

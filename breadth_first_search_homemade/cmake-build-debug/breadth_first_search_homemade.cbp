@@ -452,10 +452,12 @@
 		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.cpp">
 			<Option target="test_GraphNode"/>
 			<Option target="breadth_first_search_homemade"/>
+			<Option target="test_GraphEdge"/>
 		</Unit>
 		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode.h">
 			<Option target="test_GraphNode"/>
 			<Option target="breadth_first_search_homemade"/>
+			<Option target="test_GraphEdge"/>
 		</Unit>
 		<Unit filename="/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/GraphNode_test.cpp">
 			<Option target="test_GraphNode"/>

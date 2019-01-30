@@ -72,7 +72,7 @@ CMakeFiles/test_GraphNode.dir/all: googletest-build/googlemock/gtest/CMakeFiles/
 CMakeFiles/test_GraphNode.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/depend
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=17,18,19 "Built target test_GraphNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=18,19,20 "Built target test_GraphNode"
 .PHONY : CMakeFiles/test_GraphNode.dir/all
 
 # Include target in all.
@@ -147,7 +147,7 @@ CMakeFiles/test_GraphEdge.dir/all: googletest-build/googlemock/gtest/CMakeFiles/
 CMakeFiles/test_GraphEdge.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/depend
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=14,15,16 "Built target test_GraphEdge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=14,15,16,17 "Built target test_GraphEdge"
 .PHONY : CMakeFiles/test_GraphEdge.dir/all
 
 # Include target in all.
@@ -157,7 +157,7 @@ all: CMakeFiles/test_GraphEdge.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_GraphEdge.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_GraphEdge.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/test_GraphEdge.dir/rule

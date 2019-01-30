@@ -56,18 +56,18 @@ double GraphNode::getNodeYCoord()
     return yCoord;
 }
 
-GraphNode& GraphNode::operator=(const GraphNode& rhs)
-{
-    if (this != &rhs)
-    {
-        this->name = rhs.name;
-        this->value = rhs.value;
-        this->xCoord = rhs.xCoord;
-        this->yCoord = rhs.yCoord;
-    }
-    
-    return *this;
-}
+//GraphNode& GraphNode::operator=(GraphNode& rhs)
+//{
+//    if (this != &rhs)
+//    {
+//        this->name = rhs.name;
+//        this->value = rhs.value;
+//        this->xCoord = rhs.xCoord;
+//        this->yCoord = rhs.yCoord;
+//    }
+//
+//    return *this;
+//}
 
 istream& operator>>(istream& input, GraphNode& nodeToUpdate)
 {

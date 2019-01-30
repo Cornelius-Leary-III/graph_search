@@ -339,6 +339,7 @@ GraphNode.o: GraphNode.cpp.o
 GraphNode.cpp.o:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o
 	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.o
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.o
 .PHONY : GraphNode.cpp.o
 
 GraphNode.i: GraphNode.cpp.i
@@ -349,6 +350,7 @@ GraphNode.i: GraphNode.cpp.i
 GraphNode.cpp.i:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i
 	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.i
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.i
 .PHONY : GraphNode.cpp.i
 
 GraphNode.s: GraphNode.cpp.s
@@ -359,6 +361,7 @@ GraphNode.s: GraphNode.cpp.s
 GraphNode.cpp.s:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s
 	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.s
+	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.s
 .PHONY : GraphNode.cpp.s
 
 GraphNode_test.o: GraphNode_test.cpp.o

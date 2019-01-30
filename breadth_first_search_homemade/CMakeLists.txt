@@ -45,6 +45,8 @@ add_executable(test_GraphNode GraphNode.cpp GraphNode.h GraphNode_test.cpp)
 target_link_libraries(test_GraphNode gtest gtest_main)
 add_test(test_graph_node_class test_GraphNode)
 
-add_executable(test_GraphEdge Edge.cpp Edge.h GraphEdge_test.cpp)
+add_executable(test_GraphEdge GraphEdge_test.cpp
+               Edge.cpp Edge.h
+               GraphNode.h GraphNode.cpp)
 target_link_libraries(test_GraphEdge gtest gtest_main)
 add_test(test_graph_edge_class test_GraphEdge)
