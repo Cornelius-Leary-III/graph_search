@@ -7,28 +7,28 @@
 
 #include "GraphNode.h"
 
-class GraphEdge
-{
-public:
-    
-    GraphEdge();
-    ~GraphEdge() = default;
-    
-    GraphNode& getCurrentNode();
-    GraphNode& getDestinationNode();
-    
-    double getWeight() const;
-    string getLabel();
-
-private:
-    
-    GraphNode currentNode;
-    GraphNode destinationNode;
-    
-    double weight;
-    string label;
-    
-};
+//class GraphEdge
+//{
+//public:
+//
+//    GraphEdge();
+//    ~GraphEdge() = default;
+//
+//    GraphNode& getCurrentNode();
+//    GraphNode& getDestinationNode();
+//
+//    double getWeight() const;
+//    string getLabel();
+//
+//private:
+//
+//    GraphNode currentNode;
+//    GraphNode destinationNode;
+//
+//    double weight;
+//    string label;
+//
+//};
 
 
 #endif //BREADTH_FIRST_SEARCH_HOMEMADE_EDGE_H
