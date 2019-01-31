@@ -37,10 +37,10 @@ public:
     unsigned long getNodeCount();
     bool isGraphDirected();
     
-//    void addNode(GraphNode& newGraphNode);
+    void addNode(GraphNode& newGraphNode);
 //    // remove node.
 //
-//    void addEdge(GraphEdge& newGraphEdge);
+    void addEdge(GraphEdge& newGraphEdge);
 //    // remove edge.
     
     
@@ -53,8 +53,8 @@ private:
     vector<GraphNode> nodeList;
     map<string, vector<GraphEdge>> adjacencyList;
     
-//    void addEdgeDirected(GraphEdge& newGraphEdge);
-//    void addEdgeUndirected(GraphEdge& newGraphEdge);
+    void addEdgeDirected(GraphEdge& newGraphEdge);
+    void addEdgeUndirected(GraphEdge& newGraphEdge);
     
     
     bool graphIsDirected;

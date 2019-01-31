@@ -10,15 +10,17 @@ GraphEdge::GraphEdge()
 }
 
 GraphEdge::GraphEdge(const GraphEdge& edgeToCopy)
-        : currentNode(edgeToCopy.currentNode),
+        : sourceName(edgeToCopy.sourceName),
+          sourceNode(edgeToCopy.sourceNode),
           destinationNode(edgeToCopy.destinationNode),
-          weight(edgeToCopy.weight), label(edgeToCopy.label)
+          weight(edgeToCopy.weight),
+          label(edgeToCopy.label)
 {
 }
 
 void GraphEdge::setSourceNode(GraphNode& newSource)
 {
-    currentNode = newSource;
+    sourceNode = newSource;
     sourceName = newSource.getNodeName();
 }
 
@@ -39,7 +41,7 @@ void GraphEdge::setLabel(const string& newLabel)
 
 GraphNode& GraphEdge::getSourceNode()
 {
-    return currentNode;
+    return sourceNode;
 }
 
 GraphNode& GraphEdge::getDestinationNode()
@@ -61,3 +63,32 @@ string GraphEdge::getSourceName()
 {
     return sourceName;
 }
+
+bool operator==(GraphEdge& lhs, GraphEdge& rhs)
+{
+    return (lhs.getSourceName() == rhs.getSourceName()) &&
+           (lhs.getSourceNode() == rhs.getSourceNode()) &&
+           (lhs.getDestinationNode() == rhs.getDestinationNode()) &&
+           (lhs.getWeight() == rhs.getWeight()) &&
+           (lhs.getLabel() == rhs.getLabel());
+}
+
+bool operator!=(GraphEdge& lhs, GraphEdge& rhs)
+{
+    return !(lhs == rhs);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

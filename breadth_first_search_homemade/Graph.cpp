@@ -13,39 +13,39 @@ Graph::Graph()
 //{
 //}
 
-//void Graph::addNode(GraphNode& newGraphNode)
-//{
-//    nodeList.push_back(newGraphNode);
-//}
-//
-//void Graph::addEdge(GraphEdge& newGraphEdge)
-//{
-//    if (graphIsDirected)
-//    {
-//        addEdgeDirected(newGraphEdge);
-//    }
+void Graph::addNode(GraphNode& newGraphNode)
+{
+    nodeList.push_back(newGraphNode);
+}
+
+void Graph::addEdge(GraphEdge& newGraphEdge)
+{
+    if (graphIsDirected)
+    {
+        addEdgeDirected(newGraphEdge);
+    }
 //    else
 //    {
 //        addEdgeUndirected(newGraphEdge);
 //    }
-//}
-//
-//void Graph::addEdgeDirected(GraphEdge& newGraphEdge)
-//{
-//    string sourceNodeName = newGraphEdge.getSourceName();
-//
-//    auto neighborsFindIter = adjacencyList.find(sourceNodeName);
-//    if (neighborsFindIter != adjacencyList.end())
-//    {
-//        (neighborsFindIter->second).push_back(newGraphEdge);
-//    }
-//    else
-//    {
-//        vector<GraphEdge> newNeighbors{newGraphEdge};
-//        adjacencyList.emplace(sourceNodeName, newNeighbors);
-//    }
-//}
-//
+}
+
+void Graph::addEdgeDirected(GraphEdge& newGraphEdge)
+{
+    string sourceNodeName = newGraphEdge.getSourceName();
+
+    auto neighborsFindIter = adjacencyList.find(sourceNodeName);
+    if (neighborsFindIter != adjacencyList.end())
+    {
+        (neighborsFindIter->second).push_back(newGraphEdge);
+    }
+    else
+    {
+        vector<GraphEdge> newNeighbors{newGraphEdge};
+        adjacencyList.emplace(sourceNodeName, newNeighbors);
+    }
+}
+
 //void Graph::addEdgeUndirected(GraphEdge& newGraphEdge)
 //{
 //    addEdgeDirected(newGraphEdge);

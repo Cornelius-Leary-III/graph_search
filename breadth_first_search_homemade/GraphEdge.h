@@ -29,11 +29,14 @@ public:
 private:
 
     string sourceName;
-    GraphNode currentNode;
+    GraphNode sourceNode;
     GraphNode destinationNode;
     double weight;
     string label;
 };
+
+bool operator==(GraphEdge& lhs, GraphEdge& rhs);
+bool operator!=(GraphEdge& lhs, GraphEdge& rhs);
 
 
 #endif //BREADTH_FIRST_SEARCH_HOMEMADE_EDGE_H
