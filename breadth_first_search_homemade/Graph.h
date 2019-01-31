@@ -26,6 +26,8 @@ class Graph
 public:
     
     Graph();
+    
+    explicit Graph(bool graphIsDirectedState);
     ~Graph() = default;
     
 //    void setNodeList(const vector<GraphNode>& newNodeList);

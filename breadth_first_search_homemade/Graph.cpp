@@ -9,6 +9,11 @@ Graph::Graph()
 {
 }
 
+Graph::Graph(bool graphIsDirectedState)
+        : graphIsDirected(graphIsDirectedState)
+{
+}
+
 //Graph::~Graph()
 //{
 //}
@@ -24,16 +29,16 @@ void Graph::addEdge(GraphEdge& newGraphEdge)
     {
         addEdgeDirected(newGraphEdge);
     }
-//    else
-//    {
-//        addEdgeUndirected(newGraphEdge);
-//    }
+    else
+    {
+        addEdgeUndirected(newGraphEdge);
+    }
 }
 
 void Graph::addEdgeDirected(GraphEdge& newGraphEdge)
 {
     string sourceNodeName = newGraphEdge.getSourceName();
-
+    
     auto neighborsFindIter = adjacencyList.find(sourceNodeName);
     if (neighborsFindIter != adjacencyList.end())
     {
@@ -46,19 +51,19 @@ void Graph::addEdgeDirected(GraphEdge& newGraphEdge)
     }
 }
 
-//void Graph::addEdgeUndirected(GraphEdge& newGraphEdge)
-//{
-//    addEdgeDirected(newGraphEdge);
-//
-//    GraphEdge reverseDirectionEdge(newGraphEdge);
-//
-//    auto tempNode = newGraphEdge.getSourceNode();
-//    newGraphEdge.setSourceNode(newGraphEdge.getDestinationNode());
-//    newGraphEdge.setDestinationNode(tempNode);
-//    string reverseSourceNodeName = newGraphEdge.getSourceName();
-//
-//    addEdgeDirected(reverseDirectionEdge);
-//}
+void Graph::addEdgeUndirected(GraphEdge& newGraphEdge)
+{
+    addEdgeDirected(newGraphEdge);
+    
+    GraphEdge reverseDirectionEdge(newGraphEdge);
+    
+    auto tempNode = newGraphEdge.getSourceNode();
+    reverseDirectionEdge.setSourceNode(newGraphEdge.getDestinationNode());
+    reverseDirectionEdge.setDestinationNode(tempNode);
+    string reverseSourceNodeName = reverseDirectionEdge.getSourceName();
+    
+    addEdgeDirected(reverseDirectionEdge);
+}
 
 vector<GraphNode>& Graph::getNodeList()
 {
