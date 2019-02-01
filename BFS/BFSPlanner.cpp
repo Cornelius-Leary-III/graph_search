@@ -6,11 +6,11 @@
 #include "BFSPlanner.h"
 
 BFSPlanner::BFSPlanner()
-        : totalNumberOfNodes(0), goalReached(false)
+        : inputTotalNumNodes(0), goalReached(false)
 {
 }
 
-void BFSPlanner::importFileToAdjList(const string& fileName)
+void BFSPlanner::importGraphToAdjList(const string& fileName)
 {
     ifstream input(fileName);
     
@@ -19,38 +19,63 @@ void BFSPlanner::importFileToAdjList(const string& fileName)
         return;
     }
     
+    processFirstThreeLinesOfGraphFile(input);
+    updateNodesAndEdges(input);
+    
+    input.close();
+}
+
+void BFSPlanner::processGraphSetupHeaderOnly(const string& fileName)
+{
+    ifstream input(fileName);
+    
+    if (!input.is_open())
+    {
+        return;
+    }
+    
+    processFirstThreeLinesOfGraphFile(input);
+    
+    input.close();
+}
+
+void BFSPlanner::processFirstThreeLinesOfGraphFile(istream& inputStream)
+{
     string temp;
     
-    input >> temp;
-    totalNumberOfNodes = std::stoi(temp);
+    inputStream >> temp;
+    inputTotalNumNodes = std::stoi(temp);
     temp.clear();
     
-    input >> startNode;
-    input >> goalNode;
-    std::getline(input, temp, '\n');
-    
+    inputStream >> startNode;
+    inputStream >> goalNode;
+    std::getline(inputStream, temp, '\n');
+}
+
+void BFSPlanner::updateNodesAndEdges(istream& inputStream)
+{
     string tempLine;
     
-    auto adjListEnd = adjacencyList.end();
-    
-    while (std::getline(input, tempLine))
+    while (std::getline(inputStream, tempLine))
     {
         if (tempLine.empty())
         {
             continue;
         }
         
-        addEdge(tempLine);
+        processEdge(tempLine);
     }
 }
 
-void BFSPlanner::addEdge(const string& edgeToProcess)
+void BFSPlanner::processEdge(const string& edgeToProcess)
 {
     stringstream ss;
     ss << edgeToProcess;
     
     string sourceNodeName;
     ss >> sourceNodeName;
+    
+    addNodeToVisitedStateMap(sourceNodeName);
     
     string destinationNodeName;
     ss >> destinationNodeName;
@@ -59,12 +84,17 @@ void BFSPlanner::addEdge(const string& edgeToProcess)
     ss >> weightString;
     double edgeWeight = std::stod(weightString);
     
-    insertEdgeIntoAdjList(sourceNodeName, destinationNodeName, edgeWeight);
+    addEdgeToAdjList(sourceNodeName, destinationNodeName, edgeWeight);
 }
 
-void BFSPlanner::insertEdgeIntoAdjList(const string& source,
-                                       const string& destination,
-                                       double edgeWeight)
+void BFSPlanner::addNodeToVisitedStateMap(const string& nodeName)
+{
+    visitedStateMap.emplace(nodeName, false);
+}
+
+void BFSPlanner::addEdgeToAdjList(const string& source,
+                                  const string& destination,
+                                  double edgeWeight)
 {
     auto findNodeIter = adjacencyList.find(source);
     auto findNodesEnd = adjacencyList.end();
@@ -80,6 +110,90 @@ void BFSPlanner::insertEdgeIntoAdjList(const string& source,
     }
 }
 
+bool BFSPlanner::searchForGoal()
+{
+    if (!isNodeInGraph(startNode))
+    {
+        return false;
+    }
+    
+    if (!isNodeInGraph(goalNode))
+    {
+        return false;
+    }
+    
+    openNodeSet.push(startNode);
+    
+    while (!openNodeSet.empty() || !goalReached)
+    {
+        processFrontNode();
+        
+        openNodeSet.pop();
+    }
+    
+    return true;
+}
+
+void BFSPlanner::processFrontNode()
+{
+    currentNode = openNodeSet.front();
+    
+    if (currentNode == goalNode)
+    {
+        goalReached = true;
+        return;
+    }
+    
+    if (!hasNodeBeenVisited(currentNode))
+    {
+        updateNodeVisitedState(currentNode);
+        enqueueNeighbors();
+    }
+}
+
+void BFSPlanner::updateNodeVisitedState(const string& nodeToMark)
+{
+    auto findNodeIter = visitedStateMap.find(nodeToMark);
+    if (findNodeIter != visitedStateMap.end())
+    {
+        findNodeIter->second = true;
+    }
+}
+
+void BFSPlanner::enqueueNeighbors()
+{
+    auto currentNodeIter = adjacencyList.find(currentNode);
+    if (currentNodeIter != adjacencyList.end())
+    {
+        auto edgeList = currentNodeIter->second;
+        auto edgeIter = edgeList.begin();
+        auto edgesEnd = edgeList.end();
+        
+        while (edgeIter != edgesEnd)
+        {
+            if (!hasNodeBeenVisited(edgeIter->first))
+            {
+                openNodeSet.push(edgeIter->first);
+            }
+            
+            ++edgeIter;
+        }
+    }
+}
+
+bool BFSPlanner::hasNodeBeenVisited(const string& nodeToCheck)
+{
+    auto findNodeIter = visitedStateMap.find(nodeToCheck);
+    if (findNodeIter != visitedStateMap.end())
+    {
+        return findNodeIter->second;
+    }
+    
+    //TODO:
+    //  (02/01/19) add exception(s) here to handle case where node isn't in visitedStateMap.
+    return true;
+}
+
 void BFSPlanner::setStartNode(const string& newStartNodeName)
 {
     startNode = newStartNodeName;
@@ -93,6 +207,16 @@ void BFSPlanner::setGoalNode(const string& newGoalNodeName)
 bool BFSPlanner::hasGoalBeenReached()
 {
     return goalReached;
+}
+
+int BFSPlanner::getInputTotalNumberOfNodes()
+{
+    return inputTotalNumNodes;
+}
+
+int BFSPlanner::getSizeOfAdjList()
+{
+    return static_cast<int>(adjacencyList.size());
 }
 
 bool BFSPlanner::isNodeInGraph(const string& nodeToCheck)

@@ -18,6 +18,7 @@ using std::map;
 using std::pair;
 using std::make_pair;
 using std::queue;
+using std::istream;
 using std::ifstream;
 using std::stringstream;
 
@@ -28,31 +29,38 @@ public:
     BFSPlanner();
     ~BFSPlanner() = default;
     
-    void importFileToAdjList(const string& fileName);
-    
+    void importGraphToAdjList(const string& fileName);
+    void processGraphSetupHeaderOnly(const string& fileName);
     void setStartNode(const string& newStartNodeName);
     void setGoalNode(const string& newGoalNodeName);
     
     //    void addNodeToAdjList(const string& newNodeName);
-    
-    //    void searchForGoal();
+    bool searchForGoal();
     bool hasGoalBeenReached();
+    int getInputTotalNumberOfNodes();
+    int getSizeOfAdjList();
 
 private:
     
+    void processFirstThreeLinesOfGraphFile(istream& inputStream);
+    void updateNodesAndEdges(istream& inputStream);
     bool isNodeInGraph(const string& nodeToCheck);
-    void addEdge(const string& edgeToProcess);
-    void insertEdgeIntoAdjList(const string& source,
-                               const string& destination,
-                               double edgeWeight);
-    //    void processNode();
+    void processEdge(const string& edgeToProcess);
+    void addEdgeToAdjList(const string& source,
+                          const string& destination,
+                          double edgeWeight);
+    void addNodeToVisitedStateMap(const string& nodeName);
+    void processFrontNode();
+    void enqueueNeighbors();
+    bool hasNodeBeenVisited(const string& nodeToCheck);
+    void updateNodeVisitedState(const string& nodeToMark);
 
 private:
     
     queue<string> openNodeSet;
     map<string, vector<pair<string, double>>> adjacencyList;
-    
-    int totalNumberOfNodes;
+    map<string, bool> visitedStateMap;
+    int inputTotalNumNodes;
     string startNode;
     string currentNode;
     string goalNode;

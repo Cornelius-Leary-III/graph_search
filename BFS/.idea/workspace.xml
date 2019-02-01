@@ -2,12 +2,12 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="BFS" targetName="BFS" />
+      <config projectName="BFS" targetName="gmock" />
+      <config projectName="BFS" targetName="gtest" />
+      <config projectName="BFS" targetName="gmock_main" />
       <config projectName="BFS" targetName="gtest_main" />
       <config projectName="BFS" targetName="BFSPlanner_test" />
-      <config projectName="BFS" targetName="gmock_main" />
-      <config projectName="BFS" targetName="gtest" />
-      <config projectName="BFS" targetName="gmock" />
+      <config projectName="BFS" targetName="BFS" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -17,39 +17,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="801f6fdd-6d83-4517-8dea-525dc08fe834" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/BFS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/AdjacencyList.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/AdjacencyList.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BFSPlanner.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BFSPlanner.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_AdjacencyList.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_BFSPlanner.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/BreadthFirstSearchPlanner_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BFSPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BFSPlanner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BFSPlanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/BFSPlanner.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_BFSPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test_BFSPlanner.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/BreadthFirstSearchPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/BreadthFirstSearchPlanner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/BreadthFirstSearchPlanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/BreadthFirstSearchPlanner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/Graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/GraphNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/GraphNode.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/Graph_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/Graph_test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/breadth_first_search_homemade.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/breadth_first_search_homemade.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,81 +37,93 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/test_BFSPlanner.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="432">
-                    <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-                    <folding>
-                      <element signature="e#42#66#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="648">
-                    <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-                    <folding>
-                      <element signature="e#42#61#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
+          <splitter split-orientation="horizontal" split-proportion="0.5">
+            <split-first>
+              <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+                <file pinned="false" current-in-tab="false">
+                  <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="819">
+                        <caret line="226" column="1" lean-forward="true" selection-start-line="226" selection-start-column="1" selection-end-line="226" selection-end-column="1" />
+                        <folding>
+                          <element signature="e#42#61#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="825">
+                        <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+                        <folding>
+                          <element signature="e#93#110#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-first>
+            <split-second>
+              <leaf>
+                <file pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="673">
+                        <caret line="169" column="39" lean-forward="true" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+                        <folding>
+                          <element signature="e#42#61#0" expanded="true" />
+                        </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+              </leaf>
+            </split-second>
+          </splitter>
         </state>
       </content>
     </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="97">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
-                  <folding>
-                    <element signature="e#93#110#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="347">
-                  <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#93#110#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#93#110#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_BFSPlanner.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="e#42#66#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -149,9 +136,9 @@
         <option value="$PROJECT_DIR$/test_AdjacencyList.cpp" />
         <option value="$PROJECT_DIR$/AdjacencyList.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/test_BFSPlanner.cpp" />
         <option value="$PROJECT_DIR$/BFSPlanner.h" />
         <option value="$PROJECT_DIR$/BFSPlanner.cpp" />
-        <option value="$PROJECT_DIR$/test_BFSPlanner.cpp" />
       </list>
     </option>
   </component>
@@ -167,7 +154,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,11 +165,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myUseExistingConsole" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -259,70 +249,83 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548997907367</updated>
-      <workItem from="1548997908782" duration="6641000" />
+      <workItem from="1548997908782" duration="9210000" />
+      <workItem from="1549039451276" duration="5775000" />
     </task>
+    <task id="LOCAL-00001" summary="Decided to combine several layers of abstraction to simplify the Graph and BFS planner concepts.">
+      <created>1549004781164</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1549004781164</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 39m 17s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 40m 00s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 40m 18s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 41m 11s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 42m 19s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 42m 40s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 43m 00s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 44m 04s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 01h 58m 21s.xml">
       <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
     <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 02h 01m 20s.xml">
       <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 02h 02m 39s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 11h 19m 55s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 11h 20m 37s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 11h 21m 16s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 12h 05m 03s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 12h 12m 07s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 12h 13m 30s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.02.01 at 12h 13m 40s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6641000" />
+    <option name="totallyTimeSpent" value="14985000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18684356" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18905473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="CMake" weight="0.3291536" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.64054334" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.44200626" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19435737" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3782654" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.24451411" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Decided to combine several layers of abstraction to simplify the Graph and BFS planner concepts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Decided to combine several layers of abstraction to simplify the Graph and BFS planner concepts." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt.in">
@@ -358,17 +361,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8412" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_BFSPlanner.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#42#66#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state relative-caret-position="819">
+          <caret line="226" column="1" lean-forward="true" selection-start-line="226" selection-start-column="1" selection-end-line="226" selection-end-column="1" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
           </folding>
@@ -377,20 +395,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="825">
+          <caret line="64" column="23" lean-forward="true" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
           <folding>
             <element signature="e#93#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_BFSPlanner.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#42#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
