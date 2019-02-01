@@ -103,39 +103,40 @@ clean: CMakeFiles/test_GraphNode.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/breadth_first_search_homemade.dir
+# Target rules for target CMakeFiles/test_BFS.dir
 
 # All Build rule for target.
-CMakeFiles/breadth_first_search_homemade.dir/all:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/depend
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target breadth_first_search_homemade"
-.PHONY : CMakeFiles/breadth_first_search_homemade.dir/all
+CMakeFiles/test_BFS.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/test_BFS.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/depend
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12,13,14 "Built target test_BFS"
+.PHONY : CMakeFiles/test_BFS.dir/all
 
 # Include target in all.
-all: CMakeFiles/breadth_first_search_homemade.dir/all
+all: CMakeFiles/test_BFS.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/breadth_first_search_homemade.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/breadth_first_search_homemade.dir/all
+CMakeFiles/test_BFS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_BFS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/breadth_first_search_homemade.dir/rule
+.PHONY : CMakeFiles/test_BFS.dir/rule
 
 # Convenience name for target.
-breadth_first_search_homemade: CMakeFiles/breadth_first_search_homemade.dir/rule
+test_BFS: CMakeFiles/test_BFS.dir/rule
 
-.PHONY : breadth_first_search_homemade
-
-# clean rule for target.
-CMakeFiles/breadth_first_search_homemade.dir/clean:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/clean
-.PHONY : CMakeFiles/breadth_first_search_homemade.dir/clean
+.PHONY : test_BFS
 
 # clean rule for target.
-clean: CMakeFiles/breadth_first_search_homemade.dir/clean
+CMakeFiles/test_BFS.dir/clean:
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/clean
+.PHONY : CMakeFiles/test_BFS.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test_BFS.dir/clean
 
 .PHONY : clean
 
@@ -263,7 +264,7 @@ googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/goog
 googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock_main"
 .PHONY : googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -295,7 +296,7 @@ clean: googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean
 googletest-build/googlemock/CMakeFiles/gmock.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f googletest-build/googlemock/CMakeFiles/gmock.dir/build.make googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target gmock"
 .PHONY : googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,7 +348,7 @@ googletest-build/googlemock/gtest/preinstall:
 googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all: googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest_main"
 .PHONY : googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +380,7 @@ clean: googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gtest"
 .PHONY : googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.

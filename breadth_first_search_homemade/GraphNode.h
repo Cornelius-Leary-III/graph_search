@@ -28,8 +28,8 @@ public:
     
     ~GraphNode() = default;
     
-    double getNodeValue();
     string getNodeName();
+    double getNodeValue();
     double getNodeXCoord();
     double getNodeYCoord();
     
@@ -38,7 +38,6 @@ public:
 
 private:
     
-//    vector<GraphNode*> neighbors;
     string name;
     double value;
     double xCoord;

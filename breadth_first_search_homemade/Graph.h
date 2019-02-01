@@ -26,41 +26,34 @@ class Graph
 public:
     
     Graph();
-    
     explicit Graph(bool graphIsDirectedState);
-    ~Graph() = default;
     
-//    void setNodeList(const vector<GraphNode>& newNodeList);
-//    void setAdjacencyList(const map<string, vector<GraphEdge>>& newAdjList);
+    ~Graph() = default;
     
     vector<GraphNode>& getNodeList();
     map<string, vector<GraphEdge>>& getAdjacencyList();
-    
-    unsigned long getNodeCount();
     bool isGraphDirected();
+    unsigned long getNodeCount();
     
     void addNode(GraphNode& newGraphNode);
-//    // remove node.
-//
     void addEdge(GraphEdge& newGraphEdge);
-//    // remove edge.
-    
-    
     
     // check if node is in nodeList
     // get node neighbors
+    // remove node.
+    // remove edge.
+    //    void setNodeList(const vector<GraphNode>& newNodeList);
+    //    void setAdjacencyList(const map<string, vector<GraphEdge>>& newAdjList);
 
 private:
     
-    vector<GraphNode> nodeList;
-    map<string, vector<GraphEdge>> adjacencyList;
-    
     void addEdgeDirected(GraphEdge& newGraphEdge);
     void addEdgeUndirected(GraphEdge& newGraphEdge);
-    
-    
+
+private:
+    vector<GraphNode> nodeList;
+    map<string, vector<GraphEdge>> adjacencyList;
     bool graphIsDirected;
-    
 };
 
 

@@ -170,17 +170,17 @@ test_GraphNode/fast:
 .PHONY : test_GraphNode/fast
 
 #=============================================================================
-# Target rules for targets named breadth_first_search_homemade
+# Target rules for targets named test_BFS
 
 # Build rule for target.
-breadth_first_search_homemade: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 breadth_first_search_homemade
-.PHONY : breadth_first_search_homemade
+test_BFS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_BFS
+.PHONY : test_BFS
 
 # fast build rule for target.
-breadth_first_search_homemade/fast:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/build
-.PHONY : breadth_first_search_homemade/fast
+test_BFS/fast:
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/build
+.PHONY : test_BFS/fast
 
 #=============================================================================
 # Target rules for targets named test_GraphEdge
@@ -266,7 +266,7 @@ BreadthFirstSearchPlanner.o: BreadthFirstSearchPlanner.cpp.o
 
 # target to build an object file
 BreadthFirstSearchPlanner.cpp.o:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.o
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner.cpp.o
 .PHONY : BreadthFirstSearchPlanner.cpp.o
 
 BreadthFirstSearchPlanner.i: BreadthFirstSearchPlanner.cpp.i
@@ -275,7 +275,7 @@ BreadthFirstSearchPlanner.i: BreadthFirstSearchPlanner.cpp.i
 
 # target to preprocess a source file
 BreadthFirstSearchPlanner.cpp.i:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.i
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner.cpp.i
 .PHONY : BreadthFirstSearchPlanner.cpp.i
 
 BreadthFirstSearchPlanner.s: BreadthFirstSearchPlanner.cpp.s
@@ -284,8 +284,35 @@ BreadthFirstSearchPlanner.s: BreadthFirstSearchPlanner.cpp.s
 
 # target to generate assembly for a file
 BreadthFirstSearchPlanner.cpp.s:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/BreadthFirstSearchPlanner.cpp.s
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner.cpp.s
 .PHONY : BreadthFirstSearchPlanner.cpp.s
+
+BreadthFirstSearchPlanner_test.o: BreadthFirstSearchPlanner_test.cpp.o
+
+.PHONY : BreadthFirstSearchPlanner_test.o
+
+# target to build an object file
+BreadthFirstSearchPlanner_test.cpp.o:
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner_test.cpp.o
+.PHONY : BreadthFirstSearchPlanner_test.cpp.o
+
+BreadthFirstSearchPlanner_test.i: BreadthFirstSearchPlanner_test.cpp.i
+
+.PHONY : BreadthFirstSearchPlanner_test.i
+
+# target to preprocess a source file
+BreadthFirstSearchPlanner_test.cpp.i:
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner_test.cpp.i
+.PHONY : BreadthFirstSearchPlanner_test.cpp.i
+
+BreadthFirstSearchPlanner_test.s: BreadthFirstSearchPlanner_test.cpp.s
+
+.PHONY : BreadthFirstSearchPlanner_test.s
+
+# target to generate assembly for a file
+BreadthFirstSearchPlanner_test.cpp.s:
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/BreadthFirstSearchPlanner_test.cpp.s
+.PHONY : BreadthFirstSearchPlanner_test.cpp.s
 
 Graph.o: Graph.cpp.o
 
@@ -293,7 +320,7 @@ Graph.o: Graph.cpp.o
 
 # target to build an object file
 Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.o
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/Graph.cpp.o
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/Graph.cpp.o
 .PHONY : Graph.cpp.o
 
@@ -303,7 +330,7 @@ Graph.i: Graph.cpp.i
 
 # target to preprocess a source file
 Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.i
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/Graph.cpp.i
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/Graph.cpp.i
 .PHONY : Graph.cpp.i
 
@@ -313,7 +340,7 @@ Graph.s: Graph.cpp.s
 
 # target to generate assembly for a file
 Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/Graph.cpp.s
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/Graph.cpp.s
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
 
@@ -323,7 +350,7 @@ GraphEdge.o: GraphEdge.cpp.o
 
 # target to build an object file
 GraphEdge.cpp.o:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.o
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphEdge.cpp.o
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge.cpp.o
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphEdge.cpp.o
 .PHONY : GraphEdge.cpp.o
@@ -334,7 +361,7 @@ GraphEdge.i: GraphEdge.cpp.i
 
 # target to preprocess a source file
 GraphEdge.cpp.i:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.i
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphEdge.cpp.i
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge.cpp.i
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphEdge.cpp.i
 .PHONY : GraphEdge.cpp.i
@@ -345,7 +372,7 @@ GraphEdge.s: GraphEdge.cpp.s
 
 # target to generate assembly for a file
 GraphEdge.cpp.s:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphEdge.cpp.s
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphEdge.cpp.s
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphEdge.cpp.s
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphEdge.cpp.s
 .PHONY : GraphEdge.cpp.s
@@ -384,7 +411,7 @@ GraphNode.o: GraphNode.cpp.o
 # target to build an object file
 GraphNode.cpp.o:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.o
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.o
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphNode.cpp.o
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.o
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphNode.cpp.o
 .PHONY : GraphNode.cpp.o
@@ -396,7 +423,7 @@ GraphNode.i: GraphNode.cpp.i
 # target to preprocess a source file
 GraphNode.cpp.i:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.i
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.i
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphNode.cpp.i
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.i
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphNode.cpp.i
 .PHONY : GraphNode.cpp.i
@@ -408,7 +435,7 @@ GraphNode.s: GraphNode.cpp.s
 # target to generate assembly for a file
 GraphNode.cpp.s:
 	$(MAKE) -f CMakeFiles/test_GraphNode.dir/build.make CMakeFiles/test_GraphNode.dir/GraphNode.cpp.s
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/GraphNode.cpp.s
+	$(MAKE) -f CMakeFiles/test_BFS.dir/build.make CMakeFiles/test_BFS.dir/GraphNode.cpp.s
 	$(MAKE) -f CMakeFiles/test_GraphEdge.dir/build.make CMakeFiles/test_GraphEdge.dir/GraphNode.cpp.s
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/GraphNode.cpp.s
 .PHONY : GraphNode.cpp.s
@@ -467,33 +494,6 @@ Graph_test.cpp.s:
 	$(MAKE) -f CMakeFiles/test_Graph.dir/build.make CMakeFiles/test_Graph.dir/Graph_test.cpp.s
 .PHONY : Graph_test.cpp.s
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/breadth_first_search_homemade.dir/build.make CMakeFiles/breadth_first_search_homemade.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -504,7 +504,7 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... test_GraphNode"
-	@echo "... breadth_first_search_homemade"
+	@echo "... test_BFS"
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... test_GraphEdge"
@@ -517,6 +517,9 @@ help:
 	@echo "... BreadthFirstSearchPlanner.o"
 	@echo "... BreadthFirstSearchPlanner.i"
 	@echo "... BreadthFirstSearchPlanner.s"
+	@echo "... BreadthFirstSearchPlanner_test.o"
+	@echo "... BreadthFirstSearchPlanner_test.i"
+	@echo "... BreadthFirstSearchPlanner_test.s"
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
@@ -535,9 +538,6 @@ help:
 	@echo "... Graph_test.o"
 	@echo "... Graph_test.i"
 	@echo "... Graph_test.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

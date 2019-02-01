@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
-project(breadth_first_search_homemade)
+project(BFS)
+
+set(CMAKE_CXX_STANDARD 14)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -35,32 +37,20 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif ()
 
-add_executable(test_BFS
-               BreadthFirstSearchPlanner.cpp BreadthFirstSearchPlanner.h
-               GraphNode.cpp GraphNode.h
-               GraphEdge.cpp GraphEdge.h
-               Graph.cpp Graph.h BreadthFirstSearchPlanner_test.cpp)
-target_link_libraries(test_BFS gtest gtest_main)
-add_test(test_breadth_first_search_class test_BFS)
 
-add_executable(test_GraphNode GraphNode_test.cpp
-               GraphNode.cpp GraphNode.h)
-target_link_libraries(test_GraphNode gtest gtest_main)
-add_test(test_graph_node_class test_GraphNode)
+add_executable(BFS main.cpp
+               BFSPlanner.cpp BFSPlanner.h
+               #               AdjacencyList.cpp AdjacencyList.h
+               )
 
-add_executable(test_GraphEdge GraphEdge_test.cpp
-               GraphEdge.cpp GraphEdge.h
-               GraphNode.cpp GraphNode.h)
-target_link_libraries(test_GraphEdge gtest gtest_main)
-add_test(test_graph_edge_class test_GraphEdge)
+add_executable(BFSPlanner_test test_BFSPlanner.cpp
+               BFSPlanner.cpp BFSPlanner.h
+               #               AdjacencyList.cpp AdjacencyList.h
+               )
+target_link_libraries(BFSPlanner_test gtest gtest_main)
+add_test(test_BFS_planner_class BFSPlanner_test)
 
-add_executable(test_Graph Graph_test.cpp
-               Graph.cpp Graph.h
-               GraphEdge.cpp GraphEdge.h
-               GraphNode.cpp GraphNode.h)
-target_link_libraries(test_Graph gtest gtest_main)
-add_test(test_graph_class test_Graph)
-
-
-
-
+#add_executable(AdjacencyList_test test_AdjacencyList.cpp
+#               AdjacencyList.cpp AdjacencyList.h)
+#target_link_libraries(AdjacencyList_test gtest gtest_main)
+#add_test(test_adjacency_list_class AdjacencyList_test)

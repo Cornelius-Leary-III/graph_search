@@ -11,6 +11,8 @@
 #include <iostream>
 #include <sstream>
 
+#include "Graph.h"
+
 using std::map;
 using std::pair;
 using std::make_pair;
@@ -27,27 +29,38 @@ public:
     
     BreadthFirstSearchPlanner();
     
-    ~BreadthFirstSearchPlanner();
-
-    void setStartNode();
+    ~BreadthFirstSearchPlanner() = default;
     
-    void setGoalNodesSet();
-
+    void searchForGoal();
+    
+    string getStartNodeName();
+    GraphNode& getStartNode();
+    void setStartNode(GraphNode& newStartNode);
+    void setGraph(Graph& newGraph);
     bool hasGoalBeenReached();
     
-    vector<int>& recoverFinalPath();
-    
-    
-    
+    //    void setGoalNodesSet();
+    //    vector<int>& recoverFinalPath();
+
 private:
+    
+    void importNodes(Graph& newGraph);
+    bool checkIfNodeIsInGoalSet(GraphNode& nodeToCheck);
 
-    int startNode;
-    vector<int> goalNodesSet;
+private:
+    
+    Graph graph;
+    map<string, vector<GraphEdge>> adjList;
+    
+    string currentNodeName;
+    
+    queue<GraphNode> openSetQueue;
+    map<string, bool> visitedNodesSet;
+    map<string, double> costToGoalMap;
+    vector<GraphNode> finalPath;
+    GraphNode startNode;
+    vector<GraphNode> goalNodesSet;
     bool goalReached;
-    vector<int> finalPath;
-    
-    
-
 };
 
 
