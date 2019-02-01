@@ -11,6 +11,7 @@
 #include <queue>
 #include <fstream>
 #include <sstream>
+#include <cmath>
 
 using std::string;
 using std::vector;
@@ -39,6 +40,8 @@ public:
     bool hasGoalBeenReached();
     int getInputTotalNumberOfNodes();
     int getSizeOfAdjList();
+    string getStartNode();
+    string getGoalNode();
 
 private:
     
@@ -50,6 +53,7 @@ private:
                           const string& destination,
                           double edgeWeight);
     void addNodeToVisitedStateMap(const string& nodeName);
+    void addNodeToCostMap(const string& nodeName);
     void processFrontNode();
     void enqueueNeighbors();
     bool hasNodeBeenVisited(const string& nodeToCheck);
@@ -60,11 +64,16 @@ private:
     queue<string> openNodeSet;
     map<string, vector<pair<string, double>>> adjacencyList;
     map<string, bool> visitedStateMap;
+    map<string, double> costToReachNodeMap;
     int inputTotalNumNodes;
     string startNode;
     string currentNode;
+    double currentCost;
+    string previousNode;
     string goalNode;
     bool goalReached;
+    
+    vector<string> finalPath;
 };
 
 

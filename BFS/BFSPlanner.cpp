@@ -6,7 +6,9 @@
 #include "BFSPlanner.h"
 
 BFSPlanner::BFSPlanner()
-        : inputTotalNumNodes(0), goalReached(false)
+        : inputTotalNumNodes(0),
+//          currentCost(0.0),
+          goalReached(false)
 {
 }
 
@@ -76,6 +78,7 @@ void BFSPlanner::processEdge(const string& edgeToProcess)
     ss >> sourceNodeName;
     
     addNodeToVisitedStateMap(sourceNodeName);
+//    addNodeToCostMap(sourceNodeName);
     
     string destinationNodeName;
     ss >> destinationNodeName;
@@ -91,6 +94,11 @@ void BFSPlanner::addNodeToVisitedStateMap(const string& nodeName)
 {
     visitedStateMap.emplace(nodeName, false);
 }
+
+//void BFSPlanner::addNodeToCostMap(const string& nodeName)
+//{
+//    costToReachNodeMap.emplace(nodeName, INFINITY);
+//}
 
 void BFSPlanner::addEdgeToAdjList(const string& source,
                                   const string& destination,
@@ -127,11 +135,10 @@ bool BFSPlanner::searchForGoal()
     while (!openNodeSet.empty() || !goalReached)
     {
         processFrontNode();
-        
         openNodeSet.pop();
     }
     
-    return true;
+    return goalReached;
 }
 
 void BFSPlanner::processFrontNode()
@@ -148,6 +155,9 @@ void BFSPlanner::processFrontNode()
     {
         updateNodeVisitedState(currentNode);
         enqueueNeighbors();
+        
+//        previousNode = currentNode;
+//        finalPath.push_back(currentNode);
     }
 }
 
@@ -194,6 +204,13 @@ bool BFSPlanner::hasNodeBeenVisited(const string& nodeToCheck)
     return true;
 }
 
+bool BFSPlanner::isNodeInGraph(const string& nodeToCheck)
+{
+    auto nodeFindEnd = adjacencyList.end();
+    
+    return (adjacencyList.find(nodeToCheck) != nodeFindEnd);
+}
+
 void BFSPlanner::setStartNode(const string& newStartNodeName)
 {
     startNode = newStartNodeName;
@@ -219,9 +236,12 @@ int BFSPlanner::getSizeOfAdjList()
     return static_cast<int>(adjacencyList.size());
 }
 
-bool BFSPlanner::isNodeInGraph(const string& nodeToCheck)
+string BFSPlanner::getStartNode()
 {
-    auto nodeFindEnd = adjacencyList.end();
-    
-    return (adjacencyList.find(nodeToCheck) != nodeFindEnd);
+    return startNode;
+}
+
+string BFSPlanner::getGoalNode()
+{
+    return goalNode;
 }
