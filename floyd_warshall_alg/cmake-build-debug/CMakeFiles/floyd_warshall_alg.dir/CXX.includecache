@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/floyd_warshall_alg.cpp
+values.h
+-
+floyd_warshall_alg.h
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/floyd_warshall_alg.h
+
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/floyd_warshall_alg.h
+vector
+-
+
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/main.cpp
+iostream
+-
+
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/test_floyd_warshall.cpp
+gtest/gtest.h
+-
+floyd_warshall_alg.h
+/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/floyd_warshall_alg.h
+

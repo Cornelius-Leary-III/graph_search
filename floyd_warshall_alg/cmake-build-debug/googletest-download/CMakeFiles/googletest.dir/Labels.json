@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}
