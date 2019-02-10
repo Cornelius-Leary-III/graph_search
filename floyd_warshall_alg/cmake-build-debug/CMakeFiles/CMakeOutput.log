@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_85a9e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_85a9e.dir/build.make CMakeFiles/cmTC_85a9e.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_85a9e.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_85a9e.dir/testCCompiler.c.o   -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_85a9e
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85a9e.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_85a9e.dir/testCCompiler.c.o  -o cmTC_85a9e 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_8abb3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8abb3.dir/build.make CMakeFiles/cmTC_8abb3.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8abb3.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8abb3.dir/testCCompiler.c.o   -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_8abb3
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8abb3.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_8abb3.dir/testCCompiler.c.o  -o cmTC_8abb3 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2d87b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2d87b.dir/build.make CMakeFiles/cmTC_2d87b.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_2d87b
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d87b.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o  -o cmTC_2d87b 
+Run Build Command:"/usr/bin/make" "cmTC_4086c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4086c.dir/build.make CMakeFiles/cmTC_4086c.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_4086c
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4086c.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o  -o cmTC_4086c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d87b' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPPnG0W.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2d87b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4086c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccggeyl9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_4086c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2d87b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2d87b.dir/build.make CMakeFiles/cmTC_2d87b.dir/build]
-  ignore line: [make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_2d87b]
-  ignore line: [/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d87b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o  -o cmTC_2d87b ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4086c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_4086c.dir/build.make CMakeFiles/cmTC_4086c.dir/build]
+  ignore line: [make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_4086c]
+  ignore line: [/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4086c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o  -o cmTC_4086c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d87b' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPPnG0W.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2d87b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4086c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccggeyl9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_4086c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccPPnG0W.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccggeyl9.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2d87b] ==> ignore
+    arg [cmTC_4086c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_2d87b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_4086c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -148,17 +148,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_dbdcf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dbdcf.dir/build.make CMakeFiles/cmTC_dbdcf.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dbdcf.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_dbdcf.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_dbdcf
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbdcf.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_dbdcf.dir/feature_tests.c.o  -o cmTC_dbdcf 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7eab5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7eab5.dir/build.make CMakeFiles/cmTC_7eab5.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7eab5.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_7eab5.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7eab5
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eab5.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_7eab5.dir/feature_tests.c.o  -o cmTC_7eab5 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -168,17 +168,17 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_83bd9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_83bd9.dir/build.make CMakeFiles/cmTC_83bd9.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_83bd9.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_83bd9.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_83bd9
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83bd9.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_83bd9.dir/feature_tests.c.o  -o cmTC_83bd9 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6c0d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c0d6.dir/build.make CMakeFiles/cmTC_6c0d6.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c0d6.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_6c0d6.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6c0d6
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c0d6.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_6c0d6.dir/feature_tests.c.o  -o cmTC_6c0d6 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -188,17 +188,17 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e3fd4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e3fd4.dir/build.make CMakeFiles/cmTC_e3fd4.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e3fd4.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_e3fd4.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e3fd4
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3fd4.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_e3fd4.dir/feature_tests.c.o  -o cmTC_e3fd4 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_28068/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28068.dir/build.make CMakeFiles/cmTC_28068.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28068.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_28068.dir/feature_tests.c.o   -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_28068
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28068.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_28068.dir/feature_tests.c.o  -o cmTC_28068 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -206,30 +206,30 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9ff33/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9ff33.dir/build.make CMakeFiles/cmTC_9ff33.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9ff33.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_9ff33.dir/testCXXCompiler.cxx.o -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_9ff33
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ff33.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_9ff33.dir/testCXXCompiler.cxx.o  -o cmTC_9ff33 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ef6d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef6d5.dir/build.make CMakeFiles/cmTC_ef6d5.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ef6d5.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ef6d5.dir/testCXXCompiler.cxx.o -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_ef6d5
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef6d5.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_ef6d5.dir/testCXXCompiler.cxx.o  -o cmTC_ef6d5 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e8bac/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e8bac.dir/build.make CMakeFiles/cmTC_e8bac.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_e8bac
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8bac.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e8bac 
+Run Build Command:"/usr/bin/make" "cmTC_eb79e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eb79e.dir/build.make CMakeFiles/cmTC_eb79e.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_eb79e
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb79e.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb79e 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -239,23 +239,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8bac' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1y6Lct.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_e8bac /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb79e' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxGe8bJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_eb79e /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e8bac/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e8bac.dir/build.make CMakeFiles/cmTC_e8bac.dir/build]
-  ignore line: [make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_e8bac]
-  ignore line: [/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8bac.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_e8bac ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_eb79e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_eb79e.dir/build.make CMakeFiles/cmTC_eb79e.dir/build]
+  ignore line: [make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_eb79e]
+  ignore line: [/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb79e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_eb79e ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -265,13 +265,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8bac' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1y6Lct.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_e8bac /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eb79e' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccxGe8bJ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_eb79e /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc1y6Lct.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccxGe8bJ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -288,7 +288,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_e8bac] ==> ignore
+    arg [cmTC_eb79e] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -300,7 +300,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_e8bac.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_eb79e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -326,17 +326,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1be79/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1be79.dir/build.make CMakeFiles/cmTC_1be79.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1be79.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_1be79.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1be79
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1be79.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_1be79.dir/feature_tests.cxx.o  -o cmTC_1be79 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_452e3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_452e3.dir/build.make CMakeFiles/cmTC_452e3.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_452e3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_452e3.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_452e3
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_452e3.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_452e3.dir/feature_tests.cxx.o  -o cmTC_452e3 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -399,17 +399,17 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_30b54/fast"
-/usr/bin/make -f CMakeFiles/cmTC_30b54.dir/build.make CMakeFiles/cmTC_30b54.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_30b54.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_30b54.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_30b54
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30b54.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_30b54.dir/feature_tests.cxx.o  -o cmTC_30b54 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_7e330/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e330.dir/build.make CMakeFiles/cmTC_7e330.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7e330.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_7e330.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_7e330
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e330.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_7e330.dir/feature_tests.cxx.o  -o cmTC_7e330 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -472,17 +472,17 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8696e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8696e.dir/build.make CMakeFiles/cmTC_8696e.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8696e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_8696e.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8696e
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8696e.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_8696e.dir/feature_tests.cxx.o  -o cmTC_8696e 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_fb828/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fb828.dir/build.make CMakeFiles/cmTC_fb828.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fb828.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_fb828.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fb828
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb828.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_fb828.dir/feature_tests.cxx.o  -o cmTC_fb828 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -545,17 +545,17 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b4990/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b4990.dir/build.make CMakeFiles/cmTC_b4990.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b4990.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_b4990.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b4990
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4990.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_b4990.dir/feature_tests.cxx.o  -o cmTC_b4990 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a724d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a724d.dir/build.make CMakeFiles/cmTC_a724d.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a724d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_a724d.dir/feature_tests.cxx.o -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a724d
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a724d.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_a724d.dir/feature_tests.cxx.o  -o cmTC_a724d 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -616,30 +616,30 @@ make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_a
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_db70f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_db70f.dir/build.make CMakeFiles/cmTC_db70f.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_db70f.dir/CheckIncludeFile.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_db70f.dir/CheckIncludeFile.c.o   -c /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_db70f
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db70f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_db70f.dir/CheckIncludeFile.c.o  -o cmTC_db70f 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d3d04/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d3d04.dir/build.make CMakeFiles/cmTC_d3d04.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d3d04.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d3d04.dir/CheckIncludeFile.c.o   -c /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d3d04
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3d04.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d3d04.dir/CheckIncludeFile.c.o  -o cmTC_d3d04 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0abf4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0abf4.dir/build.make CMakeFiles/cmTC_0abf4.dir/build
-make[1]: Entering directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0abf4.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0abf4.dir/CheckFunctionExists.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0abf4
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0abf4.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_0abf4.dir/CheckFunctionExists.c.o  -o cmTC_0abf4 -lpthread 
-make[1]: Leaving directory '/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2683d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2683d.dir/build.make CMakeFiles/cmTC_2683d.dir/build
+make[1]: Entering directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2683d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2683d.dir/CheckFunctionExists.c.o   -c /home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2683d
+/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2683d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2683d.dir/CheckFunctionExists.c.o  -o cmTC_2683d -lpthread 
+make[1]: Leaving directory '/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

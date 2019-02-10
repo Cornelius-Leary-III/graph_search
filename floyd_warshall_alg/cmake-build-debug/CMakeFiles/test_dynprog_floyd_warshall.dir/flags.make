@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-src/googletest/include -isystem /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-src/googletest 
+CXX_INCLUDES = -isystem /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-src/googletest/include -isystem /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-src/googletest 
 

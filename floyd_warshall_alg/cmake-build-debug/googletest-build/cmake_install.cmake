@@ -1,4 +1,4 @@
-# Install script for directory: /home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-src
+# Install script for directory: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/carpenter/software/cpp/ds_algs/hackerrank_ds_algs/dynamic_programming/floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/cmake_install.cmake")
+  include("/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/cmake_install.cmake")
 
 endif()
 
