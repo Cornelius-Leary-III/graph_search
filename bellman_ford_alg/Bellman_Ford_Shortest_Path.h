@@ -52,26 +52,19 @@ public:
     
     explicit Bellman_Ford_Shortest_Path(unsigned long numberOfNodes);
     
-    //    void addNodes(int startingNode, int finalNode);
     void addEdges(const vector<Edge>& edges);
     void processGraph(int sourceVertex);
     vector<double>& getDistanceTable();
     vector<int>& getPredecessorTable();
     vector<Edge>& getEdgeSet();
-    
-//    vector<vector<double>>& getSteppedThroughDistanceTable();
-//    vector<vector<int>>& getSteppedThroughPredecessorTable();
 
 private:
     
-    void processEdge(const Edge& edgeToProcess);
     bool isEdgeSetZeroBased();
     void makeEdgeSetZeroBased();
     
     vector<Edge> edgeSet;
-//    vector<vector<double>> distanceTableSteppedThrough;
     vector<double> distanceTable;
-//    vector<vector<int>> predecessorTableSteppedThrough;
     vector<int> predecessorTable;
     unsigned long nodeCount;
 };
