@@ -1,15 +1,18 @@
 //
-// Created by carpenter on 2/9/19.
+// Created by carpenter on 2/11/19.
 //
 
-#ifndef BELLMAN_FORD_ALG_BELLMAN_FORD_ALG_H
-#define BELLMAN_FORD_ALG_BELLMAN_FORD_ALG_H
+#ifndef DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
+#define DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
 
 #include <values.h>
 #include <vector>
+#include <queue>
 #include <iostream>
 
 using std::vector;
+using std::queue;
+using std::priority_queue;
 using std::cout;
 using std::endl;
 
@@ -47,39 +50,31 @@ struct Edge
     }
 };
 
-class Bellman_Ford_Shortest_Path
+class Dijkstras_Alg
 {
 public:
     
-    explicit Bellman_Ford_Shortest_Path(unsigned long numberOfNodes);
+    Dijkstras_Alg(unsigned long numberOfNodes);
     
     void addEdges(const vector<Edge>& edges);
-    void processGraph(int sourceVertex);
+    void compute(int sourceVertex);
+    
+    queue<int>& getUnvisitedVertices();
     vector<double>& getDistanceTable();
     vector<int>& getPredecessorTable();
     vector<Edge>& getEdgeSet();
 
 private:
     
-    bool isEdgeSetZeroBased();
-    void makeEdgeSetZeroBased();
-    
-    vector<Edge> edgeSet;
+    queue<int> unvisitedVertices;
     vector<double> distanceTable;
     vector<int> predecessorTable;
+    vector<Edge> edgeSet;
     unsigned long nodeCount;
 };
 
 
-#endif //BELLMAN_FORD_ALG_BELLMAN_FORD_ALG_H
-
-
-
-
-
-
-
-
+#endif //DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
 
 
 

@@ -15,39 +15,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="147dc146-f120-4e6e-a20f-1db744c83b58" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/Bellman_Ford_Shortest_Path.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/Bellman_Ford_Shortest_Path.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/Bellman_Ford_Shortest_Path.h" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/Bellman_Ford_Shortest_Path.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/test_bellman_ford.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/test_bellman_ford.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="147dc146-f120-4e6e-a20f-1db744c83b58" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/floyd_warshall_alg.h">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="553">
-                    <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
-                    <folding>
-                      <element signature="e#208#225#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
@@ -223,7 +197,7 @@
       <workItem from="1549663789110" duration="12902000" />
       <workItem from="1549753256422" duration="18000" />
       <workItem from="1549753286715" duration="3659000" />
-      <workItem from="1549924679866" duration="599000" />
+      <workItem from="1549924679866" duration="602000" />
     </task>
     <servers />
   </component>
@@ -260,10 +234,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17178000" />
+    <option name="totallyTimeSpent" value="17181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="928" height="1056" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -313,22 +288,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/floyd_warshall_alg.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding>
-            <element signature="e#42#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/floyd_warshall_alg.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1180">
           <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
           <folding>
             <element signature="e#208#225#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floyd_warshall_alg.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
