@@ -36,7 +36,7 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 add_executable(test_search_dijkstras_alg test_dijkstras_alg.cpp
-               Dijkstras_Alg.cpp Dijkstras_Alg.h)
+               Dijkstras_Alg.cpp Dijkstras_Alg.h EdgeSetBuilder.cpp EdgeSetBuilder.h)
 target_link_libraries(test_search_dijkstras_alg gtest gtest_main)
 add_test(test_dijkstras_alg_class test_search_dijkstras_alg)
 

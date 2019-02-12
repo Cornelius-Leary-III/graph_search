@@ -9,45 +9,32 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <string>
+
+#include "EdgeSetBuilder.h"
 
 using std::vector;
 using std::queue;
 using std::priority_queue;
 using std::cout;
 using std::endl;
+using std::string;
 
-struct Edge
+using std::pair;
+using std::make_pair;
+
+using node = pair<double, int>;
+using adjListNode = pair<int, double>;
+
+class NegativeEdgeWeightsException : public std::exception
 {
-    int source;
-    int destination;
-    double weight;
-    
-    Edge()
-            : source{0}, destination{0}, weight{0.0}
+public:
+
+    const char * what() noexcept
     {
+        return "\nERROR: Dijkstra's Algorithm does not allow negative edge weights.\n\nProgram terminating.";
     }
-    
-    Edge(int newSource, int newDestination)
-            : source{newSource}, destination{newDestination}, weight{1.0}
-    {
-    }
-    
-    Edge(int newSource, int newDestination, double newWeight)
-            : source{newSource}, destination{newDestination}, weight{newWeight}
-    {
-    }
-    
-    Edge& operator=(const Edge& edgeToCopy)
-    {
-        if (this != &edgeToCopy)
-        {
-            this->source = edgeToCopy.source;
-            this->destination = edgeToCopy.destination;
-            this->weight = edgeToCopy.weight;
-        }
-        
-        return *this;
-    }
+
 };
 
 class Dijkstras_Alg
@@ -59,14 +46,24 @@ public:
     void addEdges(const vector<Edge>& edges);
     void compute(int sourceVertex);
     
-    queue<int>& getUnvisitedVertices();
+    double getDistanceFromStartToNode(int start, int end);
+    
+    priority_queue<node>& getUnvisitedVertices();
     vector<double>& getDistanceTable();
     vector<int>& getPredecessorTable();
     vector<Edge>& getEdgeSet();
 
 private:
     
-    queue<int> unvisitedVertices;
+    bool isEdgeSetZeroBased();
+    void makeEdgeSetZeroBased();
+    void buildAdjacencyList();
+    void processCurrentNode(int name);
+    
+    vector<bool> visitedTable;
+    priority_queue<node> openSet;
+    vector<vector<adjListNode>> adjList;
+    
     vector<double> distanceTable;
     vector<int> predecessorTable;
     vector<Edge> edgeSet;
