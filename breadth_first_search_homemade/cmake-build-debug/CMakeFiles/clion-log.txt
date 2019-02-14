@@ -3,7 +3,10 @@
 -- Generating done
 -- Build files have been written to: /home/carpenter/software/cpp/graphs/search/breadth_first_search_homemade/cmake-build-debug/googletest-download
 [ 11%] Performing update step for 'googletest'
-Current branch master is up to date.
+From https://github.com/google/googletest
+   4f4c01d..d850e14  master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to origin/master.
 [ 22%] No configure step for 'googletest'
 [ 33%] No build step for 'googletest'
 [ 44%] No install step for 'googletest'

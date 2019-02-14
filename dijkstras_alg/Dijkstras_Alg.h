@@ -41,7 +41,7 @@ class Dijkstras_Alg
 {
 public:
     
-    Dijkstras_Alg(unsigned long numberOfNodes);
+    explicit Dijkstras_Alg(unsigned long numberOfNodes);
     
     void addEdges(const vector<Edge>& edges);
     void compute(int sourceVertex);

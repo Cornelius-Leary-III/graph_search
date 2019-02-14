@@ -17,8 +17,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="801f6fdd-6d83-4517-8dea-525dc08fe834" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/input1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/input2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/test_EdgeSetBuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.h" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/test_dijkstras_alg.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +43,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="440">
@@ -44,8 +55,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="860">
+                <state relative-caret-position="740">
                   <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#93#110#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -53,8 +67,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3140">
-                  <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+                <state relative-caret-position="500">
+                  <caret line="103" column="60" lean-forward="true" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
                   <folding>
                     <element signature="e#42#61#0" expanded="true" />
                   </folding>
@@ -62,20 +76,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/input1.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1760">
-                  <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt.in">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="280">
-                  <caret line="14" column="1" selection-end-line="14" selection-end-column="1" />
+                <state relative-caret-position="580">
+                  <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -87,8 +92,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+                <state relative-caret-position="820">
+                  <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
                   <folding>
                     <element signature="e#93#110#0" expanded="true" />
                   </folding>
@@ -137,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,6 +249,8 @@
       <workItem from="1549565545249" duration="1077000" />
       <workItem from="1549567962821" duration="1475000" />
       <workItem from="1549659049909" duration="392000" />
+      <workItem from="1550101494447" duration="42000" />
+      <workItem from="1550101547415" duration="2866000" />
     </task>
     <task id="LOCAL-00001" summary="Decided to combine several layers of abstraction to simplify the Graph and BFS planner concepts.">
       <created>1549004781164</created>
@@ -316,13 +323,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27120000" />
+    <option name="totallyTimeSpent" value="30028000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14151464" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1448314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -390,11 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8412" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testDir/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/test_BFSPlanner.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -413,10 +415,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <element signature="e#93#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BFSPlanner.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3140">
-          <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+        <state relative-caret-position="500">
+          <caret line="103" column="60" lean-forward="true" selection-start-line="103" selection-start-column="60" selection-end-line="103" selection-end-column="60" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
           </folding>
@@ -425,25 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BFSPlanner.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-          <folding>
-            <element signature="e#93#110#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="580">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
