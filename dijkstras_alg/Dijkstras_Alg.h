@@ -45,20 +45,29 @@ public:
     
     void addEdges(const vector<Edge>& edges);
     void compute(int sourceVertex);
+    void resetThenCompute(int sourceVertex);
+    vector<int> resetThenGetPathFromStartToNode(int start, int end);
     
     double getDistanceFromStartToNode(int start, int end);
+    vector<int> getPathFromStartToNode(int start, int end);
     
     priority_queue<node>& getUnvisitedVertices();
     vector<double>& getDistanceTable();
     vector<int>& getPredecessorTable();
     vector<Edge>& getEdgeSet();
-
-private:
     
+    void resetAll();
+    
+private:
     bool isEdgeSetZeroBased();
     void makeEdgeSetZeroBased();
     void buildAdjacencyList();
     void processCurrentNode(int name);
+    
+    void resetVisitedTable();
+    void resetDistanceTable();
+    void resetPredecessorTable();
+    void resetOpenSet();
     
     vector<bool> visitedTable;
     priority_queue<node> openSet;

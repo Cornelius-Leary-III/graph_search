@@ -17,18 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="801f6fdd-6d83-4517-8dea-525dc08fe834" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/input1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/input2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dijkstras_alg/test_EdgeSetBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.h" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/Dijkstras_Alg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/EdgeSetBuilder.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dijkstras_alg/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/test_dijkstras_alg.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
