@@ -5,12 +5,7 @@
 #include <gtest/gtest.h>
 #include "EdgeSetBuilder.h"
 
-bool operator==(const Edge& lhs, const Edge& rhs)
-{
-    return (lhs.source == rhs.source) &&
-           (lhs.destination == rhs.destination) &&
-           (lhs.weight == rhs.weight);
-}
+
 
 //bool operator==(Edge& lhs, Edge& rhs)
 //{
@@ -19,10 +14,7 @@ bool operator==(const Edge& lhs, const Edge& rhs)
 //           (lhs.weight == rhs.weight);
 //}
 
-bool operator!=(const Edge& lhs, const Edge& rhs)
-{
-    return !(lhs == rhs);
-}
+
 
 //bool operator!=(Edge& lhs, Edge& rhs)
 //{
@@ -478,7 +470,7 @@ TEST(EdgeSetBuilder_class, create_and_append_undirected_edges)
     auto testEdgesEnd = testEdges.end();
     
     while (outputEdgeIter != outputEdgesEnd &&
-            testEdgeIter != testEdgesEnd)
+           testEdgeIter != testEdgesEnd)
     {
         EXPECT_EQ(outputEdgeIter->source, testEdgeIter->source);
         EXPECT_EQ(outputEdgeIter->destination, testEdgeIter->destination);
@@ -523,17 +515,17 @@ TEST(EdgeSetBuilder_class, constructor_undirected_edge_set)
     
     EdgeSetBuilder testESB(inputEdges, false);
     
-//    auto inputEdgeIter = inputEdges.begin();
-//    auto inputEdgesEnd = inputEdges.end();
-//
-//    while (inputEdgeIter != inputEdgesEnd)
-//    {
-//        testESB.createAndAppendEdge(inputEdgeIter->source,
-//                                    inputEdgeIter->destination,
-//                                    inputEdgeIter->weight);
-//
-//        ++inputEdgeIter;
-//    }
+    //    auto inputEdgeIter = inputEdges.begin();
+    //    auto inputEdgesEnd = inputEdges.end();
+    //
+    //    while (inputEdgeIter != inputEdgesEnd)
+    //    {
+    //        testESB.createAndAppendEdge(inputEdgeIter->source,
+    //                                    inputEdgeIter->destination,
+    //                                    inputEdgeIter->weight);
+    //
+    //        ++inputEdgeIter;
+    //    }
     
     auto outputEdgeSet = testESB.getEdgeSet();
     auto outputEdgeCount = testESB.getEdgeCount();

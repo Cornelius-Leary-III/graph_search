@@ -11,6 +11,8 @@
 #include <istream>
 #include <ostream>
 
+#include "Edge.h"
+
 using std::vector;
 using std::ifstream;
 using std::istream;
@@ -19,39 +21,6 @@ using std::string;
 using std::ostream;
 using std::endl;
 
-struct Edge
-{
-    int source;
-    int destination;
-    double weight;
-    
-    Edge()
-            : source{0}, destination{0}, weight{0.0}
-    {
-    }
-    
-    Edge(int newSource, int newDestination)
-            : source{newSource}, destination{newDestination}, weight{1.0}
-    {
-    }
-    
-    Edge(int newSource, int newDestination, double newWeight)
-            : source{newSource}, destination{newDestination}, weight{newWeight}
-    {
-    }
-    
-    Edge& operator=(const Edge& edgeToCopy)
-    {
-        if (this != &edgeToCopy)
-        {
-            this->source = edgeToCopy.source;
-            this->destination = edgeToCopy.destination;
-            this->weight = edgeToCopy.weight;
-        }
-        
-        return *this;
-    }
-};
 
 class EdgeSetBuilder
 {

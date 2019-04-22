@@ -3,11 +3,13 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="dijkstras_alg" targetName="gmock" />
-      <config projectName="dijkstras_alg" targetName="gtest_main" />
+      <config projectName="dijkstras_alg" targetName="unit_test_EdgeSetBuilder" />
       <config projectName="dijkstras_alg" targetName="gmock_main" />
       <config projectName="dijkstras_alg" targetName="test_search_dijkstras_alg" />
-      <config projectName="dijkstras_alg" targetName="test_edge_set_builder" />
       <config projectName="dijkstras_alg" targetName="gtest" />
+      <config projectName="dijkstras_alg" targetName="test_edge_set_builder" />
+      <config projectName="dijkstras_alg" targetName="unit_test_Edge" />
+      <config projectName="dijkstras_alg" targetName="gtest_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -17,19 +19,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d688b793-d0be-4923-b60b-bb8738016740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/input1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/input2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_EdgeSetBuilder.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Edge.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Edge.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit_test_edge_class.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/../breadth_first_search_homemade/cmake-build-debug/googletest-src" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dijkstras_Alg.h" beforeDir="false" afterPath="$PROJECT_DIR$/Dijkstras_Alg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeSetBuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EdgeSetBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeSetBuilder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test_dijkstras_alg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_test_dijkstras_alg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/test_dynprog_floyd_warshall.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/floyd_warshall_alg.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/floyd_warshall_alg.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gmock.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/GTestConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/GTestConfigVersion.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/gmock.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/gmock_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/gtest.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/generated/gtest_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googlemock/gtest/gtest.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-build/googletest-distribution.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/Labels.json" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/Labels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeFiles/googletest.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/tmp/googletest-gitclone.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-download/googletest-prefix/tmp/googletest-gitupdate.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-src" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/googletest-src" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,31 +130,43 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="DockManager">
     <window id="2">
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="620">
-                    <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+                  <state relative-caret-position="747">
+                    <caret line="207" column="1" lean-forward="true" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
                     <folding>
-                      <element signature="e#120#139#0" expanded="true" />
+                      <element signature="e#43#67#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/test_dijkstras_alg.cpp">
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/unit_test_dijkstras_alg.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="864">
-                    <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+                  <state relative-caret-position="540">
+                    <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
                     <folding>
                       <element signature="e#43#67#0" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/unit_test_edge_class.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="747">
+                    <caret line="74" selection-start-line="74" selection-end-line="74" />
                   </state>
                 </provider>
               </entry>
@@ -74,35 +178,30 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="740">
-                    <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-                    <folding>
-                      <element signature="e#122#139#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="100">
+                    <caret line="5" selection-start-line="5" selection-end-line="5" />
                   </state>
                 </provider>
               </entry>
             </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/test_EdgeSetBuilder.cpp">
+              <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-858">
-                    <caret line="479" column="46" selection-start-line="479" selection-start-column="46" selection-end-line="479" selection-end-column="46" />
-                    <folding>
-                      <element signature="e#43#67#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="400">
+                    <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/Edge.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="540">
+                    <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
                   </state>
                 </provider>
               </entry>
@@ -115,29 +214,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1540">
-              <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
+            <state relative-caret-position="1320">
+              <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -154,6 +235,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input2.txt">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#120#139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="820">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <folding>
+                <element signature="e#122#139#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Edge.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="186" column="22" selection-start-line="186" selection-end-line="187" />
+              <folding>
+                <element signature="e#43#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -195,20 +321,26 @@
       <list>
         <option value="$PROJECT_DIR$/CMakeLists.txt.in" />
         <option value="$PROJECT_DIR$/Dijkstras_Alg.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Dijkstras_Alg.h" />
-        <option value="$PROJECT_DIR$/EdgeSetBuilder.h" />
         <option value="$PROJECT_DIR$/test_EdgeSetBuilder.cpp" />
-        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
         <option value="$PROJECT_DIR$/test_dijkstras_alg.cpp" />
+        <option value="$PROJECT_DIR$/unit_test_EdgeSetBuilder.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp" />
+        <option value="$PROJECT_DIR$/EdgeSetBuilder.h" />
+        <option value="$PROJECT_DIR$/Edge.h" />
+        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
+        <option value="$PROJECT_DIR$/Edge.cpp" />
+        <option value="$PROJECT_DIR$/unit_test_edge_class.cpp" />
+        <option value="$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2912" />
-    <option name="y" value="24" />
-    <option name="width" value="928" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="391" />
+    <option name="y" value="27" />
+    <option name="width" value="918" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -231,8 +363,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../techie_delight_stl_graph" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
@@ -252,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.All in test_dijkstras_alg.cpp">
+  <component name="RunManager" selected="Google Test.All in unit_test_edge_set_builder_class.cpp">
     <configuration name="All in test_EdgeSetBuilder.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/test_EdgeSetBuilder.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -265,13 +399,19 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dijkstras_Alg_class.add_zero_based_edges" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_search_dijkstras_alg" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_search_dijkstras_alg" TEST_CLASS="Dijkstras_Alg_class" TEST_METHOD="add_zero_based_edges" TEST_MODE="SUITE_TEST">
+    <configuration name="All in unit_test_edge_class.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_Edge" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_Edge" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/unit_test_edge_class.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeSetBuilder_class.constructor_undirected_edge_set" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_CLASS="EdgeSetBuilder_class" TEST_METHOD="constructor_undirected_edge_set" TEST_MODE="SUITE_TEST">
+    <configuration name="All in unit_test_edge_set_builder_class.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp)" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EdgeSetBuilder_class.constructor_undirected_edge_set" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_CLASS="EdgeSetBuilder_class" TEST_METHOD="constructor_undirected_edge_set" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -307,24 +447,38 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="unit_test_Edge" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_Edge" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_Edge">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="unit_test_EdgeSetBuilder" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_EdgeSetBuilder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_EdgeSetBuilder">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.test_edge_set_builder" />
-      <item itemvalue="Application.test_search_dijkstras_alg" />
-      <item itemvalue="Application.gmock" />
-      <item itemvalue="Application.gmock_main" />
-      <item itemvalue="Application.gtest" />
-      <item itemvalue="Application.gtest_main" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.test_edge_set_builder" />
+      <item itemvalue="CMake Application.test_search_dijkstras_alg" />
+      <item itemvalue="CMake Application.unit_test_Edge" />
+      <item itemvalue="CMake Application.unit_test_EdgeSetBuilder" />
       <item itemvalue="Google Test.All in test_dijkstras_alg.cpp" />
       <item itemvalue="Google Test.All in test_EdgeSetBuilder.cpp" />
-      <item itemvalue="Google Test.Dijkstras_Alg_class.add_zero_based_edges" />
       <item itemvalue="Google Test.EdgeSetBuilder_class.constructor_undirected_edge_set" />
+      <item itemvalue="Google Test.All in unit_test_edge_set_builder_class.cpp" />
+      <item itemvalue="Google Test.All in unit_test_edge_class.cpp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in unit_test_edge_set_builder_class.cpp" />
+        <item itemvalue="Google Test.All in unit_test_edge_class.cpp" />
         <item itemvalue="Google Test.All in test_dijkstras_alg.cpp" />
         <item itemvalue="Google Test.All in test_EdgeSetBuilder.cpp" />
         <item itemvalue="Google Test.EdgeSetBuilder_class.constructor_undirected_edge_set" />
-        <item itemvalue="Google Test.Dijkstras_Alg_class.add_zero_based_edges" />
       </list>
     </recent_temporary>
   </component>
@@ -340,6 +494,9 @@
       <workItem from="1550076389225" duration="7097000" />
       <workItem from="1550100749333" duration="732000" />
       <workItem from="1550101557968" duration="13282000" />
+      <workItem from="1555653231139" duration="2583000" />
+      <workItem from="1555960585913" duration="3574000" />
+      <workItem from="1555964416572" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented constructor and test of constructor for Dijkstra's Algorithm; updated Edge operator=() for Bellman-Ford Alg to include edge weight.">
       <created>1549999851060</created>
@@ -359,60 +516,60 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_test_EdgeSetBuilder_cpp - 2019.02.13 at 22h 27m 43s.xml">
-      <configuration name="All in test_EdgeSetBuilder.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 47m 41s.xml">
+      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_EdgeSetBuilder_cpp - 2019.02.13 at 22h 29m 19s.xml">
-      <configuration name="All in test_EdgeSetBuilder.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 49m 56s.xml">
+      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="EdgeSetBuilder_class_constructor_undirected_edge_set - 2019.02.13 at 22h 47m 52s.xml">
-      <configuration name="EdgeSetBuilder_class.constructor_undirected_edge_set" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 50m 11s.xml">
+      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_EdgeSetBuilder_cpp - 2019.02.13 at 22h 48m 00s.xml">
-      <configuration name="All in test_EdgeSetBuilder.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 59m 12s.xml">
+      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 22h 50m 29s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 16h 00m 18s.xml">
+      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 22h 50m 45s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 12m 47s.xml">
+      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 22h 53m 58s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 13m 11s.xml">
+      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 22h 54m 49s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 13m 46s.xml">
+      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 22h 56m 30s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 14m 42s.xml">
+      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_test_dijkstras_alg_cpp - 2019.02.13 at 23h 18m 50s.xml">
-      <configuration name="All in test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 16m 03s.xml">
+      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35743000" />
+    <option name="totallyTimeSpent" value="41945000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2912" y="24" width="928" height="1056" extended-state="4" />
+    <frame x="0" y="0" width="1920" height="1034" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24886364" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2673426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21603563" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.33943966" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.33853006" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.3297414" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -428,7 +585,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/test_EdgeSetBuilder.cpp</url>
+          <url>file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp</url>
           <line>523</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -444,15 +601,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="2425" selection-start-line="2425" selection-end-line="2425" />
+        <state relative-caret-position="1320">
+          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/input1.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -461,54 +616,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="89" column="30" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-          <folding>
-            <element signature="e#122#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_EdgeSetBuilder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-858">
-          <caret line="479" column="46" selection-start-line="479" selection-start-column="46" selection-end-line="479" selection-end-column="46" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/input2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="280">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#120#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_dijkstras_alg.cpp">
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="820">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="e#122#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="186" column="22" selection-start-line="186" selection-end-line="187" />
           <folding>
             <element signature="e#43#67#0" expanded="true" />
           </folding>
@@ -517,8 +658,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_dijkstras_alg.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_edge_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="207" column="1" lean-forward="true" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
