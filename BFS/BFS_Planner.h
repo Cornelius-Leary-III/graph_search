@@ -2,8 +2,8 @@
 // Created by carpenter on 2/1/19.
 //
 
-#ifndef BFS_BFSPLANNER_H
-#define BFS_BFSPLANNER_H
+#ifndef BFS_BFS_PLANNER_H
+#define BFS_BFS_PLANNER_H
 
 #include <string>
 #include <vector>
@@ -23,53 +23,76 @@ using std::istream;
 using std::ifstream;
 using std::stringstream;
 
-class BFSPlanner
+class BFS_Planner
 {
 public:
     
-    BFSPlanner();
-    ~BFSPlanner() = default;
+    /* CONSTRUCTOR(S) & DESTRUCTOR */
+    BFS_Planner();
+    ~BFS_Planner() = default;
     
+    
+    /* SETUP PUBLIC METHODS */
     void importGraphToAdjList(const string& fileName);
     void processGraphSetupHeaderOnly(const string& fileName);
     void setStartNode(const string& newStartNodeName);
     void setGoalNode(const string& newGoalNodeName);
-    
     //    void addNodeToAdjList(const string& newNodeName);
+    
+    
+    /* SEARCH PUBLIC METHODS */
     bool searchForGoal();
+    
+    
+    /* ACCESSOR PUBLIC METHODS */
     bool hasGoalBeenReached();
     int getInputTotalNumberOfNodes();
     int getSizeOfAdjList();
     string getStartNode();
     string getGoalNode();
 
+    
 private:
     
+    /* SETUP PRIVATE METHODS */
     void processFirstThreeLinesOfGraphFile(istream& inputStream);
+    static string getSetupStringValue(istream& input);
+    
+    
+    /* EDGE-PROCESSING PRIVATE METHODS */
     void updateNodesAndEdges(istream& inputStream);
-    bool isNodeInGraph(const string& nodeToCheck);
     void processEdge(const string& edgeToProcess);
-    void addEdgeToAdjList(const string& source,
-                          const string& destination,
-                          double edgeWeight);
-    void addNodeToVisitedStateMap(const string& nodeName);
-    //    void addNodeToCostMap(const string& nodeName);
+    void addEdgeToAdjList(const string& source, const string& destination, double edgeWeight);
+    
+    
+    /* NODE-LOOKUP PRIVATE METHODS */
+    bool isNodeInGraph(const string& nodeToCheck);
+    bool hasNodeBeenVisited(const string& nodeToCheck);
+    
+    
+    /* NODE-PROCESSING PRIVATE METHODS */
     void processFrontNode();
     void enqueueNeighbors();
-    bool hasNodeBeenVisited(const string& nodeToCheck);
+    void addNodeToVisitedStateMap(const string& nodeName);
     void updateNodeVisitedState(const string& nodeToMark);
-
+    //    void addNodeToCostMap(const string& nodeName);
+    
+    
 private:
     
     queue<string> openNodeSet;
     map<string, vector<pair<string, double>>> adjacencyList;
     map<string, bool> visitedStateMap;
+    
+    
     //    map<string, double> costToReachNodeMap;
+    //    double currentCost;
+    //    string previousNode;
+    
+    
     int inputTotalNumNodes;
     string startNode;
     string currentNode;
-    //    double currentCost;
-    //    string previousNode;
     string goalNode;
     bool goalReached;
     
@@ -77,4 +100,4 @@ private:
 };
 
 
-#endif //BFS_BFSPLANNER_H
+#endif //BFS_BFS_PLANNER_H

@@ -36,17 +36,21 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 
-add_executable(BFS main.cpp
-               BFSPlanner.cpp BFSPlanner.h
+add_executable(BFS
+               BFS_Planner.cpp BFS_Planner.h
                #               AdjacencyList.cpp AdjacencyList.h
                )
 
 add_executable(BFSPlanner_test test_BFSPlanner.cpp
-               BFSPlanner.cpp BFSPlanner.h
+               BFS_Planner.cpp BFS_Planner.h
                #               AdjacencyList.cpp AdjacencyList.h
                )
-target_link_libraries(BFSPlanner_test gtest gtest_main)
-add_test(test_BFS_planner_class BFSPlanner_test)
+
+target_link_libraries(BFSPlanner_test
+                      gtest gtest_main)
+
+add_test(test_BFS_planner_class
+         BFSPlanner_test)
 
 #add_executable(AdjacencyList_test test_AdjacencyList.cpp
 #               AdjacencyList.cpp AdjacencyList.h)
