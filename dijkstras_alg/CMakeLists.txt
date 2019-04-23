@@ -39,7 +39,7 @@ endif ()
 ### Dijkstra's Algorithm class
 
 add_executable(test_search_dijkstras_alg
-               unit_test_dijkstras_alg.cpp
+               previous_unit_test_dijkstras_alg.cpp
                Dijkstras_Alg.cpp Dijkstras_Alg.h
                EdgeSetBuilder.cpp EdgeSetBuilder.h Edge.cpp Edge.h)
 
@@ -96,3 +96,33 @@ target_link_libraries(unit_test_EdgeImporter
 
 add_test(edge_importer_unit_tests
          unit_test_EdgeImporter)
+
+### Dijkstras_Alg class - unit tests
+add_executable(unit_test_Dijkstras_Alg
+               Dijkstras_Alg.h Dijkstras_Alg.cpp
+               Edge.h Edge.cpp
+               EdgeSetBuilder.h EdgeSetBuilder.cpp
+               EdgeImporter.h EdgeImporter.cpp
+               unit_test_setup_methods_dijkstras_alg_class.cpp
+               unit_test_compute_methods_dijkstras_alg_class.cpp)
+
+target_link_libraries(unit_test_Dijkstras_Alg
+                      gtest_main)
+
+add_test(dijkstras_algorithm_unit_tests
+         unit_test_Dijkstras_Alg)
+
+### ShortestPath class - unit tests
+add_executable(unit_test_ShortestPath
+               ShortestPath.h ShortestPath.cpp
+               Dijkstras_Alg.h Dijkstras_Alg.cpp
+               Edge.h Edge.cpp
+               EdgeSetBuilder.h EdgeSetBuilder.cpp
+               EdgeImporter.h EdgeImporter.cpp
+               unit_test_shortest_path_class.cpp)
+
+target_link_libraries(unit_test_ShortestPath
+                      gtest_main)
+
+add_test(shortest_path_unit_tests
+         unit_test_ShortestPath)

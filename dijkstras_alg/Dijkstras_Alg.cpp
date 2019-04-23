@@ -24,6 +24,12 @@ Dijkstras_Alg::Dijkstras_Alg(unsigned long numberOfNodes)
 
 void Dijkstras_Alg::compute(int sourceVertex)
 {
+    if (sourceVertex >= nodeCount ||
+        sourceVertex < 0)
+    {
+        throw StartNodeProvidedIsNonExistentException();
+    }
+    
     distanceTable[sourceVertex] = 0;
     openSet.emplace(distanceTable[sourceVertex], sourceVertex);
     
@@ -91,14 +97,21 @@ void Dijkstras_Alg::addEdges(const vector<Edge>& edges)
         makeEdgeSetZeroBased();
     }
     
-    try
-    {
-        buildAdjacencyList();
-    }
-    catch (NegativeEdgeWeightsException& exception)
-    {
-        cout << "Exception occurred during edge adding: \n" << exception.what() << endl;
-    }
+    buildAdjacencyList();
+    
+    //    try
+    //    {
+    //        buildAdjacencyList();
+    //    }
+    //    catch (NegativeEdgeWeightsException& exception)
+    //    {
+    //        cout << "Exception occurred during edge adding: \n" << exception.what() << endl;
+    //    }
+}
+
+vector<vector<adjListNode>>& Dijkstras_Alg::getAdjacencyList()
+{
+    return adjList;
 }
 
 priority_queue<node>& Dijkstras_Alg::getUnvisitedVertices()
@@ -114,6 +127,11 @@ vector<double>& Dijkstras_Alg::getDistanceTable()
 vector<int>& Dijkstras_Alg::getPredecessorTable()
 {
     return predecessorTable;
+}
+
+vector<bool>& Dijkstras_Alg::getVisitedTable()
+{
+    return visitedTable;
 }
 
 vector<Edge>& Dijkstras_Alg::getEdgeSet()

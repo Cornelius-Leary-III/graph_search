@@ -11,7 +11,7 @@
 #include <iostream>
 #include <string>
 
-#include "EdgeSetBuilder.h"
+#include "EdgeImporter.h"
 
 using std::vector;
 using std::queue;
@@ -37,6 +37,17 @@ public:
 
 };
 
+class StartNodeProvidedIsNonExistentException : public std::exception
+{
+public:
+    
+    const char * what() noexcept
+    {
+        return "\nERROR: Start node must be one of the nodes in the graph.\n\nProgram terminating.";
+    }
+    
+};
+
 class Dijkstras_Alg
 {
 public:
@@ -45,20 +56,23 @@ public:
     
     void addEdges(const vector<Edge>& edges);
     void compute(int sourceVertex);
-    void resetThenCompute(int sourceVertex);
-    vector<int> resetThenGetPathFromStartToNode(int start, int end);
+//    void resetThenCompute(int sourceVertex);
+//    vector<int> resetThenGetPathFromStartToNode(int start, int end);
     
-    double getDistanceFromStartToNode(int start, int end);
+//    double getDistanceFromStartToNode(int start, int end);
     vector<int> getPathFromStartToNode(int start, int end);
     
+    vector<vector<adjListNode>>& getAdjacencyList();
     priority_queue<node>& getUnvisitedVertices();
     vector<double>& getDistanceTable();
     vector<int>& getPredecessorTable();
+    vector<bool>& getVisitedTable();
     vector<Edge>& getEdgeSet();
     
     void resetAll();
     
 private:
+    
     bool isEdgeSetZeroBased();
     void makeEdgeSetZeroBased();
     void buildAdjacencyList();
@@ -68,8 +82,10 @@ private:
     void resetDistanceTable();
     void resetPredecessorTable();
     void resetOpenSet();
+
+private:
     
-    vector<bool> visitedTable;
+    vector<bool> visitedTable;              // change me! (not in STL)
     priority_queue<node> openSet;
     vector<vector<adjListNode>> adjList;
     

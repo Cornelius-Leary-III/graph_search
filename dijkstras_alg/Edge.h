@@ -22,5 +22,4 @@ struct Edge
 bool operator==(const Edge& lhs, const Edge& rhs);
 bool operator!=(const Edge& lhs, const Edge& rhs);
 
-
 #endif //DIJKSTRAS_ALG_EDGE_H
