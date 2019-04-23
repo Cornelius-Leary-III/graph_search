@@ -1,4 +1,4 @@
-# Install script for directory: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg
+# Install script for directory: /home/cornelius/cpp_repo/graph_search/floyd_warshall_alg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/cornelius/cpp_repo/graph_search/floyd_warshall_alg/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

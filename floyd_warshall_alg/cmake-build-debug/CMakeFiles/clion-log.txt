@@ -1,6 +1,6 @@
-/home/carpenter/alpha_software/CLion/clion-2018.2.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg
--- The C compiler identification is GNU 5.4.0
--- The CXX compiler identification is GNU 5.4.0
+/home/cornelius/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/cornelius/cpp_repo/graph_search/floyd_warshall_alg
+-- The C compiler identification is GNU 7.3.0
+-- The CXX compiler identification is GNU 7.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -15,13 +15,13 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-download
+-- Build files have been written to: /home/cornelius/cpp_repo/graph_search/floyd_warshall_alg/cmake-build-debug/googletest-download
 Scanning dependencies of target googletest
 [ 11%] Creating directories for 'googletest'
 [ 22%] Performing download step (git clone) for 'googletest'
 Cloning into 'googletest-src'...
 Already on 'master'
-Your branch is up-to-date with 'origin/master'.
+Your branch is up to date with 'origin/master'.
 [ 33%] No patch step for 'googletest'
 [ 44%] Performing update step for 'googletest'
 Current branch master is up to date.
@@ -31,7 +31,7 @@ Current branch master is up to date.
 [ 88%] No test step for 'googletest'
 [100%] Completed 'googletest'
 [100%] Built target googletest
--- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Found PythonInterp: /usr/bin/python (found version "2.7.15") 
 -- Looking for pthread.h
 -- Looking for pthread.h - found
 -- Looking for pthread_create
@@ -43,4 +43,4 @@ Current branch master is up to date.
 -- Found Threads: TRUE  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug
+-- Build files have been written to: /home/cornelius/cpp_repo/graph_search/floyd_warshall_alg/cmake-build-debug

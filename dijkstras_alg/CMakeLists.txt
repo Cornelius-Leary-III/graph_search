@@ -50,16 +50,16 @@ add_test(test_dijkstras_alg_class
          test_search_dijkstras_alg)
 
 
-### EdgeSetBuilder class
-add_executable(test_edge_set_builder
-               previous_tests_EdgeSetBuilder.cpp
-               EdgeSetBuilder.cpp EdgeSetBuilder.h unit_test_edge_set_builder_class.cpp Edge.cpp Edge.h)
-
-target_link_libraries(test_edge_set_builder
-                      gtest gtest_main)
-
-add_test(test_edge_set_builder_class
-         test_edge_set_builder)
+#### EdgeSetBuilder class
+#add_executable(test_edge_set_builder
+#               previous_tests_EdgeSetBuilder.cpp
+#               EdgeSetBuilder.cpp EdgeSetBuilder.h unit_test_edge_set_builder_class.cpp Edge.cpp Edge.h)
+#
+#target_link_libraries(test_edge_set_builder
+#                      gtest gtest_main)
+#
+#add_test(test_edge_set_builder_class
+#         test_edge_set_builder)
 
 ### Edge class - unit tests
 add_executable(unit_test_Edge
@@ -84,5 +84,15 @@ target_link_libraries(unit_test_EdgeSetBuilder
 add_test(edge_set_builder_unit_tests
          unit_test_EdgeSetBuilder)
 
+### EdgeImporter class - unit tests
+add_executable(unit_test_EdgeImporter
+               Edge.h Edge.cpp
+               EdgeSetBuilder.h EdgeSetBuilder.cpp
+               EdgeImporter.h EdgeImporter.cpp
+               unit_test_edge_importer_class.cpp)
 
+target_link_libraries(unit_test_EdgeImporter
+                      gtest_main)
 
+add_test(edge_importer_unit_tests
+         unit_test_EdgeImporter)

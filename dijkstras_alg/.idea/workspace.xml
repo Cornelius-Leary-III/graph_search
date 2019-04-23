@@ -2,14 +2,14 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="dijkstras_alg" targetName="gmock" />
-      <config projectName="dijkstras_alg" targetName="unit_test_EdgeSetBuilder" />
       <config projectName="dijkstras_alg" targetName="gmock_main" />
       <config projectName="dijkstras_alg" targetName="test_search_dijkstras_alg" />
       <config projectName="dijkstras_alg" targetName="gtest" />
-      <config projectName="dijkstras_alg" targetName="test_edge_set_builder" />
-      <config projectName="dijkstras_alg" targetName="unit_test_Edge" />
+      <config projectName="dijkstras_alg" targetName="unit_test_EdgeSetBuilder" />
+      <config projectName="dijkstras_alg" targetName="unit_test_EdgeImporter" />
       <config projectName="dijkstras_alg" targetName="gtest_main" />
+      <config projectName="dijkstras_alg" targetName="gmock" />
+      <config projectName="dijkstras_alg" targetName="unit_test_Edge" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -18,18 +18,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d688b793-d0be-4923-b60b-bb8738016740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Edge.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Edge.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unit_test_edge_class.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp" afterDir="false" />
+    <list default="true" id="d688b793-d0be-4923-b60b-bb8738016740" name="Default Changelist" comment="Removed file-input methods">
+      <change afterPath="$PROJECT_DIR$/EdgeImporter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EdgeImporter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/empty_file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/missing_edges.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/multiple_edges.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/non_empty_file.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/setup_syntax_wrong.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/single_edge.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit_test_edge_importer_class.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BFS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BFS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EdgeSetBuilder.h" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeSetBuilder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_test_dijkstras_alg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/input2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
@@ -134,39 +137,15 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="DockManager">
-    <window id="2">
+    <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="747">
-                    <caret line="207" column="1" lean-forward="true" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
-                    <folding>
-                      <element signature="e#43#67#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/unit_test_dijkstras_alg.cpp">
+              <entry file="file://$PROJECT_DIR$/EdgeImporter.h">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="540">
-                    <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-                    <folding>
-                      <element signature="e#43#67#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/unit_test_edge_class.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="747">
-                    <caret line="74" selection-start-line="74" selection-end-line="74" />
+                    <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
                   </state>
                 </provider>
               </entry>
@@ -175,33 +154,15 @@
         </state>
       </content>
     </window>
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="100">
-                    <caret line="5" selection-start-line="5" selection-end-line="5" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
+          <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
+              <entry file="file://$PROJECT_DIR$/EdgeImporter.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="400">
-                    <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/Edge.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="540">
-                    <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+                  <state relative-caret-position="432">
+                    <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
                   </state>
                 </provider>
               </entry>
@@ -213,76 +174,117 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input2.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#120#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-              <folding>
-                <element signature="e#122#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Edge.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="186" column="22" selection-start-line="186" selection-end-line="187" />
-              <folding>
-                <element signature="e#43#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="79">
+                  <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="250">
+                  <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/unit_test_edge_importer_class.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="158" column="55" selection-start-line="158" selection-start-column="55" selection-end-line="158" selection-end-column="55" />
+                  <folding>
+                    <element signature="e#43#67#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/multiple_edges.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="1" selection-start-column="1" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/single_edge.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="3" column="12" selection-end-line="3" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/missing_edges.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/setup_syntax_wrong.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="20">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/non_empty_file.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/empty_file.txt">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                  <folding>
+                    <element signature="e#43#67#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/tests/multiple_edges.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -325,22 +327,30 @@
         <option value="$PROJECT_DIR$/test_EdgeSetBuilder.cpp" />
         <option value="$PROJECT_DIR$/test_dijkstras_alg.cpp" />
         <option value="$PROJECT_DIR$/unit_test_EdgeSetBuilder.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp" />
-        <option value="$PROJECT_DIR$/EdgeSetBuilder.h" />
         <option value="$PROJECT_DIR$/Edge.h" />
-        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
         <option value="$PROJECT_DIR$/Edge.cpp" />
         <option value="$PROJECT_DIR$/unit_test_edge_class.cpp" />
         <option value="$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp" />
+        <option value="$PROJECT_DIR$/EdgeSetBuilder.h" />
+        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
+        <option value="$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/tests/non_empty_file.txt" />
+        <option value="$PROJECT_DIR$/EdgeImporter.h" />
+        <option value="$PROJECT_DIR$/EdgeImporter.cpp" />
+        <option value="$PROJECT_DIR$/tests/setup_syntax_wrong.txt" />
+        <option value="$PROJECT_DIR$/tests/missing_edges.txt" />
+        <option value="$PROJECT_DIR$/tests/single_edge.txt" />
+        <option value="$PROJECT_DIR$/tests/multiple_edges.txt" />
+        <option value="$PROJECT_DIR$/unit_test_edge_importer_class.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="391" />
+    <option name="x" value="1920" />
     <option name="y" value="27" />
-    <option name="width" value="918" />
-    <option name="height" value="789" />
+    <option name="width" value="1920" />
+    <option name="height" value="1007" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -348,7 +358,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -356,20 +365,29 @@
               <item name="dijkstras_alg" type="b2602c69:ProjectViewProjectNode" />
               <item name="dijkstras_alg" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dijkstras_alg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dijkstras_alg" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BFS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.C/C++" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -386,8 +404,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Google Test.All in unit_test_edge_set_builder_class.cpp">
-    <configuration name="All in test_EdgeSetBuilder.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/test_EdgeSetBuilder.cpp)" TEST_MODE="PATTERN">
+  <component name="RunManager" selected="Google Test.All in unit_test_edge_importer_class.cpp">
+    <configuration name="All in previous_tests_EdgeSetBuilder.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -405,13 +423,13 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in unit_test_edge_set_builder_class.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp)" TEST_MODE="PATTERN">
+    <configuration name="All in unit_test_edge_importer_class.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_EdgeImporter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_EdgeImporter" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/unit_test_edge_importer_class.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EdgeSetBuilder_class.constructor_undirected_edge_set" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_CLASS="EdgeSetBuilder_class" TEST_METHOD="constructor_undirected_edge_set" TEST_MODE="SUITE_TEST">
+    <configuration name="All in unit_test_edge_set_builder_class.cpp" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder" TEST_PATTERN="all-tests(file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp)" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -437,17 +455,17 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test_edge_set_builder" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_edge_set_builder" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_edge_set_builder">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="test_search_dijkstras_alg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="test_search_dijkstras_alg" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="test_search_dijkstras_alg">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="unit_test_Edge" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_Edge" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_Edge">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="unit_test_EdgeImporter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="dijkstras_alg" TARGET_NAME="unit_test_EdgeImporter" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="dijkstras_alg" RUN_TARGET_NAME="unit_test_EdgeImporter">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -462,23 +480,23 @@
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
-      <item itemvalue="CMake Application.test_edge_set_builder" />
       <item itemvalue="CMake Application.test_search_dijkstras_alg" />
       <item itemvalue="CMake Application.unit_test_Edge" />
+      <item itemvalue="CMake Application.unit_test_EdgeImporter" />
       <item itemvalue="CMake Application.unit_test_EdgeSetBuilder" />
       <item itemvalue="Google Test.All in test_dijkstras_alg.cpp" />
-      <item itemvalue="Google Test.All in test_EdgeSetBuilder.cpp" />
-      <item itemvalue="Google Test.EdgeSetBuilder_class.constructor_undirected_edge_set" />
       <item itemvalue="Google Test.All in unit_test_edge_set_builder_class.cpp" />
       <item itemvalue="Google Test.All in unit_test_edge_class.cpp" />
+      <item itemvalue="Google Test.All in previous_tests_EdgeSetBuilder.cpp" />
+      <item itemvalue="Google Test.All in unit_test_edge_importer_class.cpp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.All in unit_test_edge_importer_class.cpp" />
+        <item itemvalue="Google Test.All in previous_tests_EdgeSetBuilder.cpp" />
         <item itemvalue="Google Test.All in unit_test_edge_set_builder_class.cpp" />
         <item itemvalue="Google Test.All in unit_test_edge_class.cpp" />
         <item itemvalue="Google Test.All in test_dijkstras_alg.cpp" />
-        <item itemvalue="Google Test.All in test_EdgeSetBuilder.cpp" />
-        <item itemvalue="Google Test.EdgeSetBuilder_class.constructor_undirected_edge_set" />
       </list>
     </recent_temporary>
   </component>
@@ -496,7 +514,8 @@
       <workItem from="1550101557968" duration="13282000" />
       <workItem from="1555653231139" duration="2583000" />
       <workItem from="1555960585913" duration="3574000" />
-      <workItem from="1555964416572" duration="45000" />
+      <workItem from="1555964416572" duration="9750000" />
+      <workItem from="1555994013967" duration="5187000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented constructor and test of constructor for Dijkstra's Algorithm; updated Edge operator=() for Bellman-Ford Alg to include edge weight.">
       <created>1549999851060</created>
@@ -512,85 +531,112 @@
       <option name="project" value="LOCAL" />
       <updated>1550012005182</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Created separate Edge class; wrote Edge unit tests; created new unit test file for ESB.">
+      <created>1555964580548</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555964580548</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed file-input methods from EdgeSetBuilder class; added unit tests for remaining methods in EdgeSetBuilder.">
+      <created>1555992165100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555992165100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 47m 41s.xml">
-      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 00h 59m 53s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 49m 56s.xml">
-      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 42m 42s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 50m 11s.xml">
-      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 44m 08s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 15h 59m 12s.xml">
-      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 47m 37s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_class_cpp - 2019.04.22 at 16h 00m 18s.xml">
-      <configuration name="All in unit_test_edge_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 49m 08s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 12m 47s.xml">
-      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 49m 27s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 13m 11s.xml">
-      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 52m 13s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 13m 46s.xml">
-      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 54m 17s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 14m 42s.xml">
-      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 58m 28s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="All_in_unit_test_edge_set_builder_class_cpp - 2019.04.22 at 16h 16m 03s.xml">
-      <configuration name="All in unit_test_edge_set_builder_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="All_in_unit_test_edge_importer_class_cpp - 2019.04.23 at 01h 58m 51s.xml">
+      <configuration name="All in unit_test_edge_importer_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41945000" />
+    <option name="totallyTimeSpent" value="56837000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1034" extended-state="6" />
+    <frame x="1920" y="27" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2673426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21603563" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3053961" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39954075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.33853006" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.33754304" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32937366" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3283582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20551091" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.33754304" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3283582" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented constructor and test of constructor for Dijkstra's Algorithm; updated Edge operator=() for Bellman-Ford Alg to include edge weight." />
     <MESSAGE value="Created class to create sets of edges for testing and for input - incomplete and untested at this time; algorithm doesn't pass tests right now - won't compile, due to need for better sets of input edge data for testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created class to create sets of edges for testing and for input - incomplete and untested at this time; algorithm doesn't pass tests right now - won't compile, due to need for better sets of input edge data for testing." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp</url>
-          <line>523</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Created separate Edge class; wrote Edge unit tests; created new unit test file for ESB." />
+    <MESSAGE value="Removed file-input methods from EdgeSetBuilder class; added unit tests for remaining methods in EdgeSetBuilder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed file-input methods from EdgeSetBuilder class; added unit tests for remaining methods in EdgeSetBuilder." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -598,61 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input2.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#120#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="e#122#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="186" column="22" selection-start-line="186" selection-end-line="187" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -670,17 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit_test_dijkstras_alg.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
             <element signature="e#43#67#0" expanded="true" />
           </folding>
@@ -694,10 +678,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-end-line="40" />
+          <folding>
+            <element signature="e#122#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="207" column="1" lean-forward="true" selection-start-line="207" selection-start-column="1" selection-end-line="207" selection-end-column="1" />
+        <state relative-caret-position="360">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#120#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/previous_tests_EdgeSetBuilder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/empty_file.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/input2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/non_empty_file.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/googletest-src/googletest/src/gtest.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="2448" selection-start-line="2448" selection-end-line="2448" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/setup_syntax_wrong.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/missing_edges.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="146" column="5" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeImporter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeImporter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/single_edge.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/multiple_edges.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_edge_importer_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="158" column="55" selection-start-line="158" selection-start-column="55" selection-end-line="158" selection-end-column="55" />
           <folding>
             <element signature="e#43#67#0" expanded="true" />
           </folding>

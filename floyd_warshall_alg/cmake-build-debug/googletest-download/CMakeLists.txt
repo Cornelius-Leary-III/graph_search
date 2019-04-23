@@ -6,8 +6,8 @@ include(ExternalProject)
 ExternalProject_Add(googletest
   GIT_REPOSITORY    https://github.com/google/googletest.git
   GIT_TAG           master
-  SOURCE_DIR        "/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-src"
-  BINARY_DIR        "/home/carpenter/software/cpp/graphs/search/floyd_warshall_alg/cmake-build-debug/googletest-build"
+  SOURCE_DIR        "/home/cornelius/cpp_repo/graph_search/floyd_warshall_alg/cmake-build-debug/googletest-src"
+  BINARY_DIR        "/home/cornelius/cpp_repo/graph_search/floyd_warshall_alg/cmake-build-debug/googletest-build"
   CONFIGURE_COMMAND ""
   BUILD_COMMAND     ""
   INSTALL_COMMAND   ""
