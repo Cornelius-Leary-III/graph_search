@@ -16,6 +16,7 @@ public:
     bool isFileValid();
     
     vector<Edge>& getEdges();
+    EdgeSetBuilder& getEdgeBuilder();
     int getStartNode();
     int getGoalNode();
     unsigned long getNumberOfNodes();

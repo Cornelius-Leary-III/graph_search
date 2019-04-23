@@ -33,6 +33,32 @@ TEST(EdgeImporter_params_ctor, valid_file)
     EXPECT_TRUE(importer.isFileValid());
 }
 
+TEST(setup_edge_builder, default_settings)
+{
+    EdgeImporter importer("");
+    
+    importer.setupEdgeBuilder();
+    
+    auto outputESB = importer.getEdgeBuilder();
+    
+    EXPECT_TRUE(outputESB.isGraphDirected());
+    EXPECT_TRUE(outputESB.areNegativeEdgesAllowed());
+    EXPECT_TRUE(outputESB.areSelfLoopsAllowed());
+}
+
+TEST(setup_edge_builder, custom_settings)
+{
+    EdgeImporter importer("");
+    
+    importer.setupEdgeBuilder(true, false, false);
+    
+    auto outputESB = importer.getEdgeBuilder();
+    
+    EXPECT_TRUE(outputESB.isGraphDirected());
+    EXPECT_FALSE(outputESB.areNegativeEdgesAllowed());
+    EXPECT_FALSE(outputESB.areSelfLoopsAllowed());
+}
+
 TEST(read_invalid_graph_file, no_file_given)
 {
     EdgeImporter importer("");
@@ -49,9 +75,9 @@ TEST(read_invalid_graph_file, no_file_given)
 TEST(read_invalid_graph_file, file_does_not_exist)
 {
     EdgeImporter importer("invalid_file.txt");
-
+    
     importer.readGraphFile();
-
+    
     EXPECT_TRUE(importer.getEdges().empty());
     
     EXPECT_EQ(importer.getStartNode(), 0);

@@ -10,7 +10,8 @@ EdgeImporter::EdgeImporter(string newFileToReadFrom)
           numberOfNodes{0},
           startNode{0},
           goalNode{0},
-          edgeBuilderIsSetup{false}
+          edgeBuilderIsSetup{false},
+          edgeSetBuilder{}
 {
     // check if the file string is empty.
     if (!inputFileName.empty())
@@ -49,6 +50,11 @@ unsigned long EdgeImporter::getNumberOfNodes()
 vector<Edge>& EdgeImporter::getEdges()
 {
     return edgeSetBuilder.getEdgeSet();
+}
+
+EdgeSetBuilder& EdgeImporter::getEdgeBuilder()
+{
+    return edgeSetBuilder;
 }
 
 void EdgeImporter::setupEdgeBuilder(bool isDirected,
