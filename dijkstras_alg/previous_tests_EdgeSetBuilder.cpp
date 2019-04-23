@@ -327,83 +327,83 @@ TEST(EdgeSetBuilder_class, create_and_append_edges_default_weights_only)
     }
 }
 
-TEST(EdgeSetBuilder_class, read_edges_from_input_file_that_cannot_be_opened)
-{
-    EdgeSetBuilder testESB;
-    
-    string fileThatDoesNotExist("nonExistentFile.txt");
-    testESB.readEdgesFromFile(fileThatDoesNotExist);
-    
-    auto outputEdgeSet = testESB.getEdgeSet();
-    auto outputEdgeCount = testESB.getEdgeCount();
-    auto outputGraphDirected = testESB.isGraphDirected();
-    auto outputNegativeEdgesAllowed = testESB.areNegativeEdgesAllowed();
-    auto outputSelfLoopsAllowed = testESB.areSelfLoopsAllowed();
-    
-    EXPECT_TRUE(outputEdgeSet.empty());
-    EXPECT_EQ(outputEdgeCount, 0);
-    EXPECT_TRUE(outputGraphDirected);
-    EXPECT_FALSE(outputNegativeEdgesAllowed);
-    EXPECT_FALSE(outputSelfLoopsAllowed);
-}
-
-TEST(EdgeSetBuilder_class, read_edges_from_input_file_first_8_edges)
-{
-    EdgeSetBuilder testESB;
-    
-    string fileName("/home/carpenter/software/cpp/graphs/search/dijkstras_alg/input1.txt");
-    
-    testESB.readEdgesFromFile(fileName);
-    auto outputEdgeSet = testESB.getEdgeSet();
-    auto outputGraphDirected = testESB.isGraphDirected();
-    auto outputNegativeEdgesAllowed = testESB.areNegativeEdgesAllowed();
-    auto outputSelfLoopsAllowed = testESB.areSelfLoopsAllowed();
-    
-    EXPECT_TRUE(outputGraphDirected);
-    EXPECT_FALSE(outputNegativeEdgesAllowed);
-    EXPECT_FALSE(outputSelfLoopsAllowed);
-    
-    auto outputEdgeIter = outputEdgeSet.begin();
-    
-    EXPECT_EQ(outputEdgeIter->source, 1);
-    EXPECT_EQ(outputEdgeIter->destination, 2);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 1);
-    EXPECT_EQ(outputEdgeIter->destination, 12);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 2);
-    EXPECT_EQ(outputEdgeIter->destination, 1);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 2);
-    EXPECT_EQ(outputEdgeIter->destination, 3);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 2);
-    EXPECT_EQ(outputEdgeIter->destination, 13);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 3);
-    EXPECT_EQ(outputEdgeIter->destination, 2);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 3);
-    EXPECT_EQ(outputEdgeIter->destination, 4);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-    
-    ++outputEdgeIter;
-    EXPECT_EQ(outputEdgeIter->source, 3);
-    EXPECT_EQ(outputEdgeIter->destination, 14);
-    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
-}
+//TEST(EdgeSetBuilder_class, read_edges_from_input_file_that_cannot_be_opened)
+//{
+//    EdgeSetBuilder testESB;
+//
+//    string fileThatDoesNotExist("nonExistentFile.txt");
+//    testESB.readEdgesFromFile(fileThatDoesNotExist);
+//
+//    auto outputEdgeSet = testESB.getEdgeSet();
+//    auto outputEdgeCount = testESB.getEdgeCount();
+//    auto outputGraphDirected = testESB.isGraphDirected();
+//    auto outputNegativeEdgesAllowed = testESB.areNegativeEdgesAllowed();
+//    auto outputSelfLoopsAllowed = testESB.areSelfLoopsAllowed();
+//
+//    EXPECT_TRUE(outputEdgeSet.empty());
+//    EXPECT_EQ(outputEdgeCount, 0);
+//    EXPECT_TRUE(outputGraphDirected);
+//    EXPECT_FALSE(outputNegativeEdgesAllowed);
+//    EXPECT_FALSE(outputSelfLoopsAllowed);
+//}
+//
+//TEST(EdgeSetBuilder_class, read_edges_from_input_file_first_8_edges)
+//{
+//    EdgeSetBuilder testESB;
+//
+//    string fileName("/home/carpenter/software/cpp/graphs/search/dijkstras_alg/input1.txt");
+//
+//    testESB.readEdgesFromFile(fileName);
+//    auto outputEdgeSet = testESB.getEdgeSet();
+//    auto outputGraphDirected = testESB.isGraphDirected();
+//    auto outputNegativeEdgesAllowed = testESB.areNegativeEdgesAllowed();
+//    auto outputSelfLoopsAllowed = testESB.areSelfLoopsAllowed();
+//
+//    EXPECT_TRUE(outputGraphDirected);
+//    EXPECT_FALSE(outputNegativeEdgesAllowed);
+//    EXPECT_FALSE(outputSelfLoopsAllowed);
+//
+//    auto outputEdgeIter = outputEdgeSet.begin();
+//
+//    EXPECT_EQ(outputEdgeIter->source, 1);
+//    EXPECT_EQ(outputEdgeIter->destination, 2);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 1);
+//    EXPECT_EQ(outputEdgeIter->destination, 12);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 2);
+//    EXPECT_EQ(outputEdgeIter->destination, 1);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 2);
+//    EXPECT_EQ(outputEdgeIter->destination, 3);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 2);
+//    EXPECT_EQ(outputEdgeIter->destination, 13);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 3);
+//    EXPECT_EQ(outputEdgeIter->destination, 2);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 3);
+//    EXPECT_EQ(outputEdgeIter->destination, 4);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//
+//    ++outputEdgeIter;
+//    EXPECT_EQ(outputEdgeIter->source, 3);
+//    EXPECT_EQ(outputEdgeIter->destination, 14);
+//    EXPECT_EQ(outputEdgeIter->weight, 1.000000);
+//}
 
 TEST(EdgeSetBuilder_class, create_and_append_undirected_edges)
 {

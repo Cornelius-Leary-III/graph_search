@@ -34,35 +34,29 @@ public:
     EdgeSetBuilder(const EdgeSetBuilder& edgeSetBuilderToCopy);
     
     void createAndAppendEdge(int newSource, int newDestination, double newWeight = 1.00);
-    void readEdgesFromFile(const string& inputFile);
     
     vector<Edge>& getEdgeSet();
     bool isGraphDirected();
     bool areNegativeEdgesAllowed();
     bool areSelfLoopsAllowed();
     unsigned long getEdgeCount();
+    
     // figure out how to incorporate Euclidean coordinates in edge representation.
     
     EdgeSetBuilder& operator=(const EdgeSetBuilder& rhs);
 
 private:
     
-    void processFirstThreeLinesOfGraphFile(istream& inputStream);
-    void readInEdges(istream& inputStream);
-    void processEdge(const string& edgeToProcess);
     void addEdgesForUndirectedGraph(const vector<Edge>& edges);
-    
     bool checkForNegativeEdges();
     bool checkForSelfLoops();
+
+private:
     
     vector<Edge> edgeSet;
     bool negativeEdgesAllowed;
     bool selfLoopsAllowed;
     bool directedGraph;
-    
-    unsigned long numberOfNodes;
-    int startNode;
-    int goalNode;
 };
 
 

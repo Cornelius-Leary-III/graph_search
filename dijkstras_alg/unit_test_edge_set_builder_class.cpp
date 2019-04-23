@@ -182,6 +182,75 @@ TEST(EdgeSetBuilder_edge_set_ctor, mixed_sign_weights_directed_edges_self_loops)
     EXPECT_EQ(builder.getEdgeCount(), 8);
 }
 
+TEST(EdgeSetBuilder_edge_set_ctor, all_positive_weights_undirected_edges)
+{
+    vector<Edge> inputEdges{
+            {0, 1, 1},          // reused this edge set from test_Bellman_Ford.cpp,
+            {0, 2, 4},          //      but gave all edges positive weights.
+            {1, 2, 3},
+            {1, 3, 2},
+            {1, 4, 2},
+            {3, 1, 1},
+            {3, 2, 5},
+            {4, 3, 3}
+    };
+    
+    EdgeSetBuilder builder(inputEdges, false);
+    
+    EXPECT_FALSE(builder.isGraphDirected());
+    EXPECT_FALSE(builder.areNegativeEdgesAllowed());
+    EXPECT_FALSE(builder.areSelfLoopsAllowed());
+    
+    EXPECT_FALSE(builder.getEdgeSet().empty());
+    EXPECT_EQ(builder.getEdgeCount(), 16);
+}
+
+TEST(EdgeSetBuilder_edge_set_ctor, mixed_sign_weights_undirected_edges)
+{
+    vector<Edge> inputEdges{
+            {0, 1, -1},         // changed this edge.
+            {0, 2, 4},
+            {1, 2, 3},
+            {1, 3, 2},
+            {1, 4, 2},
+            {3, 1, 1},
+            {3, 2, 5},
+            {4, 3, -3}          // changed this edge.
+    };
+    
+    EdgeSetBuilder builder(inputEdges, false);
+    
+    EXPECT_FALSE(builder.isGraphDirected());
+    EXPECT_TRUE(builder.areNegativeEdgesAllowed());
+    EXPECT_FALSE(builder.areSelfLoopsAllowed());
+    
+    EXPECT_FALSE(builder.getEdgeSet().empty());
+    EXPECT_EQ(builder.getEdgeCount(), 16);
+}
+
+TEST(EdgeSetBuilder_edge_set_ctor, mixed_sign_weights_undirected_edges_self_loops)
+{
+    vector<Edge> inputEdges{
+            {0, 1, -1},
+            {0, 2, 4},
+            {1, 2, 3},
+            {1, 3, 2},
+            {1, 1, 2},          // changed this edge.
+            {3, 1, 1},
+            {3, 2, 5},
+            {4, 3, -3}
+    };
+    
+    EdgeSetBuilder builder(inputEdges, false);
+    
+    EXPECT_FALSE(builder.isGraphDirected());
+    EXPECT_TRUE(builder.areNegativeEdgesAllowed());
+    EXPECT_TRUE(builder.areSelfLoopsAllowed());
+    
+    EXPECT_FALSE(builder.getEdgeSet().empty());
+    EXPECT_EQ(builder.getEdgeCount(), 16);
+}
+
 TEST(EdgeSetBuilder_copy_ctor, valid_ESB)
 {
     vector<Edge> inputEdges{
@@ -206,3 +275,146 @@ TEST(EdgeSetBuilder_copy_ctor, valid_ESB)
     EXPECT_FALSE(testBuilder.getEdgeSet().empty());
     EXPECT_EQ(testBuilder.getEdgeCount(), 8);
 }
+
+TEST(create_and_append_directed_edge, positive_weight)
+{
+    EdgeSetBuilder builder;
+    
+    builder.createAndAppendEdge(5, 20, 2.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 1);
+    
+    EXPECT_EQ(outputEdges.front().source, 5);
+    EXPECT_EQ(outputEdges.front().destination, 20);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, 2.00);
+}
+
+TEST(create_and_append_directed_edge, negative_weight_is_allowed)
+{
+    EdgeSetBuilder builder(true, true, true);
+    
+    builder.createAndAppendEdge(1, 5, -4.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 1);
+    
+    EXPECT_EQ(outputEdges.front().source, 1);
+    EXPECT_EQ(outputEdges.front().destination, 5);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, -4.00);
+}
+
+TEST(create_and_append_directed_edge, negative_weight_is_not_allowed)
+{
+    EdgeSetBuilder builder(true, false, true);
+    
+    builder.createAndAppendEdge(1, 5, -4.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 0);
+    
+    EXPECT_TRUE(outputEdges.empty());
+}
+
+TEST(create_and_append_directed_edge, self_loop_is_allowed)
+{
+    EdgeSetBuilder builder(true, true, true);
+    
+    builder.createAndAppendEdge(1, 1);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 1);
+    
+    EXPECT_EQ(outputEdges.front().source, 1);
+    EXPECT_EQ(outputEdges.front().destination, 1);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, 1.00);
+}
+
+TEST(create_and_append_directed_edge, self_loop_is_not_allowed)
+{
+    EdgeSetBuilder builder(true, true, false);
+    
+    builder.createAndAppendEdge(1, 1);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 0);
+    
+    EXPECT_TRUE(outputEdges.empty());
+}
+
+TEST(create_and_append_undirected_edge, positive_weight)
+{
+    EdgeSetBuilder builder(false, true, true);
+    
+    builder.createAndAppendEdge(5, 20, 2.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 2);
+    
+    EXPECT_EQ(outputEdges.front().source, 5);
+    EXPECT_EQ(outputEdges.front().destination, 20);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, 2.00);
+}
+
+TEST(create_and_append_undirected_edge, negative_weight_is_allowed)
+{
+    EdgeSetBuilder builder(false, true, true);
+    
+    builder.createAndAppendEdge(1, 5, -4.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 2);
+    
+    EXPECT_EQ(outputEdges.front().source, 1);
+    EXPECT_EQ(outputEdges.front().destination, 5);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, -4.00);
+}
+
+TEST(create_and_append_undirected_edge, negative_weight_is_not_allowed)
+{
+    EdgeSetBuilder builder(false, false, true);
+    
+    builder.createAndAppendEdge(1, 5, -4.00);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 0);
+    
+    EXPECT_TRUE(outputEdges.empty());
+}
+
+TEST(create_and_append_undirected_edge, self_loop_is_allowed)
+{
+    EdgeSetBuilder builder(false, true, true);
+    
+    builder.createAndAppendEdge(1, 1);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 2);
+    
+    EXPECT_EQ(outputEdges.front().source, 1);
+    EXPECT_EQ(outputEdges.front().destination, 1);
+    EXPECT_DOUBLE_EQ(outputEdges.front().weight, 1.00);
+}
+
+TEST(create_and_append_undirected_edge, self_loop_is_not_allowed)
+{
+    EdgeSetBuilder builder(false, true, false);
+    
+    builder.createAndAppendEdge(1, 1);
+    
+    auto outputEdges = builder.getEdgeSet();
+    
+    EXPECT_EQ(builder.getEdgeCount(), 0);
+    
+    EXPECT_TRUE(outputEdges.empty());
+}
+

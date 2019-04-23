@@ -17,21 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="801f6fdd-6d83-4517-8dea-525dc08fe834" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_files/empty_test_file.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/missing_goal.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/missing_start_and_goal.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/only_2_nodes_no_path_to_goal_in_graph.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_files/setup_info_only.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BFSPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BFS_Planner.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BFSPlanner.h" beforeDir="false" afterPath="$PROJECT_DIR$/BFS_Planner.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt.in" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/input1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_files/input2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_BFSPlanner.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test_BFSPlanner.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" beforeDir="false" afterPath="$PROJECT_DIR$/../bellman_ford_alg/CMakeLists.txt.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dijkstras_alg/test_dijkstras_alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dijkstras_alg/unit_test_dijkstras_alg.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../floyd_warshall_alg/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
@@ -259,6 +249,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fail_</find>
+      <find>success_</find>
+      <find>success</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -284,10 +281,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1853" />
-    <option name="height" value="1055" />
+    <option name="x" value="391" />
+    <option name="y" value="27" />
+    <option name="width" value="918" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -303,11 +300,6 @@
               <item name="BFS" type="b2602c69:ProjectViewProjectNode" />
               <item name="BFS" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BFS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BFS" type="462c0819:PsiDirectoryNode" />
-              <item name="test_files" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -318,7 +310,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../floyd_warshall_alg" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -427,7 +419,7 @@
       <workItem from="1550101547415" duration="2866000" />
       <workItem from="1555876191065" duration="20277000" />
       <workItem from="1555910311331" duration="1047000" />
-      <workItem from="1555958855122" duration="922000" />
+      <workItem from="1555958855122" duration="1727000" />
     </task>
     <task id="LOCAL-00001" summary="Decided to combine several layers of abstraction to simplify the Graph and BFS planner concepts.">
       <created>1549004781164</created>
@@ -464,13 +456,17 @@
       <option name="project" value="LOCAL" />
       <updated>1549140695629</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added more-thorough comments; wrote unit tests for BFS_Planner; tweaked some methods in BFS_Planner based on tests.">
+      <created>1555960003369</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555960003369</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.04.21 at 19h 46m 05s.xml">
-      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_in_test_BFSPlanner_cpp - 2019.04.21 at 19h 46m 17s.xml">
       <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
@@ -498,20 +494,23 @@
     <history-entry file="All_in_test_BFSPlanner_cpp - 2019.04.21 at 19h 57m 59s.xml">
       <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_in_test_BFSPlanner_cpp - 2019.04.22 at 15h 01m 48s.xml">
+      <configuration name="All in test_BFSPlanner.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52274000" />
+    <option name="totallyTimeSpent" value="53079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1034" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24958494" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32982844" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.55790645" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.55790645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37796977" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,7 +533,8 @@
     <MESSAGE value="Added method for testing the graph setup info at the top of .txt files; added many helper functions to clean up file and stream graph-importing; wrote method to perform BFS routine.  ALSO: added two test text files from previous course I've taken (ECE 4984 at VT)." />
     <MESSAGE value="Cleaned up and commented-out as much as I could with weighted graphs (costs, etc.), without changing the existing, working functions like addEdgeToAdjList(...); I think this solves BFS appropriately, but it needs to (potentially) terminate earlier." />
     <MESSAGE value="Commented-out all members and methods that didn't belong to BFS." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented-out all members and methods that didn't belong to BFS." />
+    <MESSAGE value="Added more-thorough comments; wrote unit tests for BFS_Planner; tweaked some methods in BFS_Planner based on tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more-thorough comments; wrote unit tests for BFS_Planner; tweaked some methods in BFS_Planner based on tests." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AdjacencyList.cpp">
@@ -641,17 +641,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_files/missing_start_and_goal.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BFS_Planner.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_files/missing_start_and_goal.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
