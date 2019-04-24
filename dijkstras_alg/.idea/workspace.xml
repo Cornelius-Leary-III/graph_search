@@ -21,16 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d688b793-d0be-4923-b60b-bb8738016740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/zero_nodes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/small_weighted_graph.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dijkstras_Alg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Dijkstras_Alg.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dijkstras_Alg.h" beforeDir="false" afterPath="$PROJECT_DIR$/Dijkstras_Alg.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EdgeImporter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeImporter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EdgeImporter.h" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeImporter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EdgeSetBuilder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/EdgeSetBuilder.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShortestPath.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ShortestPath.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShortestPath.h" beforeDir="false" afterPath="$PROJECT_DIR$/ShortestPath.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_test_edge_importer_class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_test_edge_importer_class.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unit_test_shortest_path_class.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unit_test_shortest_path_class.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/" />
@@ -72,10 +67,46 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/ShortestPath.h">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="714">
-                    <caret line="82" selection-start-line="82" selection-end-line="82" />
+                  <state relative-caret-position="654">
+                    <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
                     <folding>
                       <element signature="e#118#144#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="506">
+                    <caret line="52" selection-start-line="52" selection-end-line="52" />
+                    <folding>
+                      <element signature="e#122#139#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="2320">
+                    <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+                    <folding>
+                      <element signature="e#43#67#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/unit_test_compute_methods_dijkstras_alg_class.cpp">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="534">
+                    <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+                    <folding>
+                      <element signature="e#43#67#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -92,8 +123,8 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/ShortestPath.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="514">
-                    <caret line="84" selection-start-line="84" selection-end-line="84" />
+                  <state relative-caret-position="620">
+                    <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
                   </state>
                 </provider>
               </entry>
@@ -101,8 +132,17 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="680">
-                    <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+                  <state relative-caret-position="560">
+                    <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/tests/small_weighted_graph.txt">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="220">
+                    <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
                   </state>
                 </provider>
               </entry>
@@ -138,7 +178,7 @@
               <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="560">
-                    <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+                    <caret line="76" selection-start-line="76" selection-end-line="76" />
                   </state>
                 </provider>
               </entry>
@@ -154,8 +194,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/previous_unit_test_dijkstras_alg.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="3000">
-                    <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+                  <state relative-caret-position="645">
+                    <caret line="251" selection-start-line="251" selection-end-line="251" />
                     <folding>
                       <element signature="e#43#67#0" expanded="true" />
                     </folding>
@@ -174,32 +214,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit_test_shortest_path_class.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
-              <folding>
-                <element signature="e#43#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
-              <folding>
-                <element signature="e#122#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2840">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="388">
+              <caret line="201" column="49" lean-forward="true" selection-start-line="201" selection-start-column="49" selection-end-line="201" selection-end-column="49" />
               <folding>
                 <element signature="e#43#67#0" expanded="true" />
               </folding>
@@ -224,27 +240,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#43#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/zero_nodes.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unit_test_compute_methods_dijkstras_alg_class.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
               <folding>
                 <element signature="e#43#67#0" expanded="true" />
               </folding>
@@ -314,14 +309,12 @@
         <option value="$PROJECT_DIR$/tests/missing_edges.txt" />
         <option value="$PROJECT_DIR$/tests/single_edge.txt" />
         <option value="$PROJECT_DIR$/tests/multiple_edges.txt" />
-        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
         <option value="$PROJECT_DIR$/Edge.cpp" />
         <option value="$PROJECT_DIR$/Edge.h" />
         <option value="$PROJECT_DIR$/unit_test_dijkstras_alg_class.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/unit_test_compute_methods_dijkstras_alg_class.cpp" />
         <option value="$PROJECT_DIR$/tests/zero_nodes.txt" />
-        <option value="$PROJECT_DIR$/ShortestPath.h" />
         <option value="$PROJECT_DIR$/EdgeSetBuilder.h" />
         <option value="$PROJECT_DIR$/EdgeImporter.h" />
         <option value="$PROJECT_DIR$/unit_test_edge_importer_class.cpp" />
@@ -329,7 +322,11 @@
         <option value="$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp" />
         <option value="$PROJECT_DIR$/Dijkstras_Alg.h" />
         <option value="$PROJECT_DIR$/Dijkstras_Alg.cpp" />
+        <option value="$PROJECT_DIR$/tests/small_graph.txt" />
+        <option value="$PROJECT_DIR$/tests/small_weighted_graph.txt" />
+        <option value="$PROJECT_DIR$/EdgeSetBuilder.cpp" />
         <option value="$PROJECT_DIR$/ShortestPath.cpp" />
+        <option value="$PROJECT_DIR$/ShortestPath.h" />
         <option value="$PROJECT_DIR$/unit_test_shortest_path_class.cpp" />
       </list>
     </option>
@@ -516,7 +513,7 @@
       <workItem from="1555960585913" duration="3574000" />
       <workItem from="1555964416572" duration="9750000" />
       <workItem from="1555994013967" duration="11753000" />
-      <workItem from="1556045943560" duration="16633000" />
+      <workItem from="1556045943560" duration="20238000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented constructor and test of constructor for Dijkstra's Algorithm; updated Edge operator=() for Bellman-Ford Alg to include edge weight.">
       <created>1549999851060</created>
@@ -567,49 +564,56 @@
       <option name="project" value="LOCAL" />
       <updated>1556053087742</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Handled edge cases through exceptions and if statements; moved checking for zero-based edges into EdgeImporter class (might move to EdgeSetBuilder?).">
+      <created>1556074753362</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556074753362</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 46m 09s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 48m 11s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 48m 17s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 49m 11s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 50m 25s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 50m 32s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 50m 33s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 50m 46s.xml">
-      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 51m 12s.xml">
       <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
     <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 52m 37s.xml">
       <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 55m 16s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 55m 39s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_previous_unit_test_dijkstras_alg_cpp - 2019.04.23 at 22h 56m 16s.xml">
+      <configuration name="All in previous_unit_test_dijkstras_alg.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.23 at 22h 56m 24s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.24 at 00h 12m 47s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.24 at 00h 15m 14s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.24 at 00h 16m 25s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="All_in_unit_test_shortest_path_class_cpp - 2019.04.24 at 00h 28m 00s.xml">
+      <configuration name="All in unit_test_shortest_path_class.cpp" configurationId="CMakeGoogleTestRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80036000" />
+    <option name="totallyTimeSpent" value="83641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24172892" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2534685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -631,12 +635,12 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1905016" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2534685" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23995407" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35706085" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39954075" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -661,7 +665,8 @@
     <MESSAGE value="Created EdgeImporter class to handle reading from graph text files; wrote some unit tests for EdgeImporter class." />
     <MESSAGE value="Added tests for setupEdgeBuilder() method." />
     <MESSAGE value="Created ShortestPath wrapper class; split Dijkstras_Alg class unit tests into two files so that my IDE could function within the test files; added more Dijkstras_Alg unit tests; modified the Dijkstras_Alg class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ShortestPath wrapper class; split Dijkstras_Alg class unit tests into two files so that my IDE could function within the test files; added more Dijkstras_Alg unit tests; modified the Dijkstras_Alg class." />
+    <MESSAGE value="Handled edge cases through exceptions and if statements; moved checking for zero-based edges into EdgeImporter class (might move to EdgeSetBuilder?)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Handled edge cases through exceptions and if statements; moved checking for zero-based edges into EdgeImporter class (might move to EdgeSetBuilder?)." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.cpp" />
@@ -730,16 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/previous_unit_test_dijkstras_alg.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Edge.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -754,54 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#122#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/zero_nodes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2840">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EdgeImporter.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,47 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShortestPath.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="e#118#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/unit_test_edge_class.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_test_compute_methods_dijkstras_alg_class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit_test_edge_importer_class.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="186" selection-start-line="186" selection-end-line="186" />
-          <folding>
-            <element signature="e#43#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/single_edge.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -873,10 +787,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShortestPath.cpp">
+    <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="560">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/previous_unit_test_dijkstras_alg.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -887,10 +811,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dijkstras_Alg.cpp">
+    <entry file="file://$PROJECT_DIR$/unit_test_edge_importer_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/single_edge.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/zero_nodes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_edge_set_builder_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EdgeSetBuilder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#122#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_setup_methods_dijkstras_alg_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2320">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/small_weighted_graph.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_test_compute_methods_dijkstras_alg_class.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+          <folding>
+            <element signature="e#43#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShortestPath.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="77" column="31" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
+          <folding>
+            <element signature="e#118#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShortestPath.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -903,8 +915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit_test_shortest_path_class.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+        <state relative-caret-position="388">
+          <caret line="201" column="49" lean-forward="true" selection-start-line="201" selection-start-column="49" selection-end-line="201" selection-end-column="49" />
           <folding>
             <element signature="e#43#67#0" expanded="true" />
           </folding>

@@ -72,7 +72,7 @@ TEST(fail_to_get_distance_to_goal, paths_not_computed_beforehand)
     EXPECT_THROW(planner.getDistanceFromStartToGoal(), MustComputePathsBeforeCallingThisMethodException);
 }
 
-TEST(get_distance_to_goal, single_edge_graph)
+TEST(get_distance_to_goal, single_directed_edge_graph)
 {
     ShortestPath planner;
     
@@ -86,11 +86,39 @@ TEST(get_distance_to_goal, single_edge_graph)
     EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 1.50);
 }
 
-TEST(get_distance_to_goal, multiple_edges_graph)
+TEST(get_distance_to_goal, single_undirected_edge_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/single_edge.txt", false);
+    planner.computePathFromStartToGoal();
+    
+    EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
+    EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 1);
+    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 2);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 1.50);
+}
+
+TEST(get_distance_to_goal, multiple_directed_edges_graph)
 {
     ShortestPath planner;
     
     planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/multiple_edges.txt");
+    planner.computePathFromStartToGoal();
+    
+    EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
+    EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 3);
+    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 4);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 2.25);
+}
+
+TEST(get_distance_to_goal, multiple_undirected_edges_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/multiple_edges.txt", false);
     planner.computePathFromStartToGoal();
     
     EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
@@ -109,7 +137,7 @@ TEST(fail_to_get_path_to_goal, did_not_compute_before_getting_path)
     EXPECT_THROW(planner.getPathFromStartToGoal(), StartNodeProvidedIsNonExistentException);
 }
 
-TEST(get_path_to_goal, single_edge_graph)
+TEST(get_path_to_goal, single_directed_edge_graph)
 {
     ShortestPath planner;
     
@@ -124,7 +152,22 @@ TEST(get_path_to_goal, single_edge_graph)
     EXPECT_TRUE((++pathIter) == path.end());
 }
 
-TEST(get_path_to_goal, multiple_edges_graph)
+TEST(get_path_to_goal, single_undirected_edge_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/single_edge.txt", false);
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    
+    auto pathIter = path.begin();
+    EXPECT_EQ(*pathIter, 0);
+    EXPECT_EQ(*(++pathIter), 1);
+    EXPECT_TRUE((++pathIter) == path.end());
+}
+
+TEST(get_path_to_goal, multiple_directed_edges_graph)
 {
     ShortestPath planner;
     
@@ -140,3 +183,57 @@ TEST(get_path_to_goal, multiple_edges_graph)
     EXPECT_TRUE((++pathIter) == path.end());
 }
 
+TEST(get_path_to_goal, multiple_undirected_edges_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/multiple_edges.txt", false);
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    
+    auto pathIter = path.begin();
+    EXPECT_EQ(*pathIter, 0);
+    EXPECT_EQ(*(++pathIter), 2);
+    EXPECT_EQ(*(++pathIter), 3);
+    EXPECT_TRUE((++pathIter) == path.end());
+}
+
+TEST(full_example, small_weighted_directed_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/small_weighted_graph.txt");
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    auto pathIter = path.begin();
+    auto pathEnd = path.end();
+    
+    EXPECT_EQ(*pathIter, 0);
+    EXPECT_EQ(*(++pathIter), 2);
+    EXPECT_EQ(*(++pathIter), 5);
+    EXPECT_TRUE((++pathIter) == pathEnd);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 23.0);
+}
+
+TEST(full_example, small_weighted_undirected_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/small_weighted_graph.txt", false);
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    auto pathIter = path.begin();
+    auto pathEnd = path.end();
+    
+    EXPECT_EQ(*pathIter, 0);
+    EXPECT_EQ(*(++pathIter), 3);
+    EXPECT_EQ(*(++pathIter), 2);
+    EXPECT_EQ(*(++pathIter), 5);
+    EXPECT_TRUE((++pathIter) == pathEnd);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 20.0);
+}

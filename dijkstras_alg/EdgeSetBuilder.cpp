@@ -28,13 +28,16 @@ EdgeSetBuilder::EdgeSetBuilder(const vector<Edge>& edges,
 {
     if (!directedGraph)
     {
+        // add the reverse-edge when the graph is undirected.
         addEdgesForUndirectedGraph(edges);
     }
     else
     {
+        // when the graph is directed, the edge set provided is used.
         edgeSet = edges;
     }
     
+    // determine these graph traits from the provided edge set.
     negativeEdgesAllowed = checkForNegativeEdges();
     selfLoopsAllowed = checkForSelfLoops();
 }
@@ -56,8 +59,8 @@ void EdgeSetBuilder::addEdgesForUndirectedGraph(const vector<Edge>& edges)
     
     while (edgeIter != edgesEnd)
     {
-        undirectedEdges.push_back(*edgeIter);
-        undirectedEdges.emplace_back(edgeIter->destination,
+        undirectedEdges.push_back(*edgeIter);                   // add the forward edge.
+        undirectedEdges.emplace_back(edgeIter->destination,     // add the reverse edge.
                                      edgeIter->source,
                                      edgeIter->weight);
         ++edgeIter;

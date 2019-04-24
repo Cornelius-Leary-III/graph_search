@@ -9,6 +9,7 @@
 #include "EdgeImporter.h"
 
 #include <memory>
+
 using std::unique_ptr;
 using std::make_unique;
 
@@ -16,7 +17,7 @@ class InvalidGraphFileException : public std::exception
 {
 public:
     
-    const char * what() noexcept
+    const char* what() noexcept
     {
         return "\nERROR: Start node must be one of the nodes in the graph.\n\nProgram terminating.";
     }
@@ -27,7 +28,7 @@ class MustImportEdgesBeforeCallingThisMethodException : public std::exception
 {
 public:
     
-    const char * what() noexcept
+    const char* what() noexcept
     {
         return "\nERROR: Must call importEdges() before calling this method.\n\nProgram terminating.";
     }
@@ -38,7 +39,7 @@ class ZeroNodesImportedException : public std::exception
 {
 public:
     
-    const char * what() noexcept
+    const char* what() noexcept
     {
         return "\nERROR: Must have a non-zero # of nodes.\n\nProgram terminating.";
     }
@@ -49,7 +50,7 @@ class MustComputePathsBeforeCallingThisMethodException : public std::exception
 {
 public:
     
-    const char * what() noexcept
+    const char* what() noexcept
     {
         return "\nERROR: Must call importEdges() before calling this method.\n\nProgram terminating.";
     }
@@ -62,7 +63,7 @@ public:
     
     ShortestPath();
     
-    void importEdges(string graphFile);
+    void importEdges(string graphFile, bool isDirected = true);
     void computePathFromStartToGoal();
     
     double getDistanceFromStartToGoal();
@@ -70,8 +71,8 @@ public:
     
     EdgeImporter& getEdgeImporter();
     Dijkstras_Alg& getDijkstrasAlg();
-    
-    
+
+
 private:
     
     bool edgesHaveBeenImported;

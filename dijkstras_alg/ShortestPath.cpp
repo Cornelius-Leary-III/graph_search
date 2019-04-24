@@ -5,26 +5,32 @@
 #include "ShortestPath.h"
 
 ShortestPath::ShortestPath()
-        : dijkstrasAlgPtr{new Dijkstras_Alg(0)},
-          edgeImporter{new EdgeImporter("")},
+        : dijkstrasAlgPtr{new Dijkstras_Alg(0)},        // placeholder object
+          edgeImporter{new EdgeImporter("")},           // placeholder object
           edgesHaveBeenImported{false},
           pathsHaveBeenComputed{false}
 {
 }
 
-void ShortestPath::importEdges(string graphFile)
+void ShortestPath::importEdges(string graphFile, bool isDirected)
 {
+    // create a new EdgeImporter object using the provided graph file.
     edgeImporter.reset(new EdgeImporter(std::move(graphFile)));
     
-    edgeImporter->setupEdgeBuilder(true, false, false);
+    // calling the setup to the edgeSetBuilder for Dijkstra's Algorithm (DA):
+    //      <isDirected> --> DA can be either directed or undirected.
+    //      false --> DA cannot have negative weights.
+    //      false --> DA cannot have self-loops.
+    edgeImporter->setupEdgeBuilder(isDirected, false, false);
     
+    // check if file is valid.
     if (!edgeImporter->isFileValid())
     {
         throw InvalidGraphFileException();
     }
     
+    // import graph setup and edge data.
     edgeImporter->readGraphFile();
-    
     edgesHaveBeenImported = true;
 }
 
@@ -60,11 +66,13 @@ void ShortestPath::computePathFromStartToGoal()
 
 double ShortestPath::getDistanceFromStartToGoal()
 {
+    // check if edges have already been imported.
     if (!edgesHaveBeenImported)
     {
         throw MustImportEdgesBeforeCallingThisMethodException();
     }
     
+    // check if DA object has been updated and if paths have been computed.
     if (!pathsHaveBeenComputed)
     {
         throw MustComputePathsBeforeCallingThisMethodException();
@@ -76,11 +84,13 @@ double ShortestPath::getDistanceFromStartToGoal()
 
 vector<int> ShortestPath::getPathFromStartToGoal()
 {
+    // check if edges have already been imported.
     if (!edgesHaveBeenImported)
     {
         throw MustImportEdgesBeforeCallingThisMethodException();
     }
     
+    // get the path.
     return dijkstrasAlgPtr->getPathFromStartToNode(edgeImporter->getStartNode(),
                                                              edgeImporter->getGoalNode());
 }
