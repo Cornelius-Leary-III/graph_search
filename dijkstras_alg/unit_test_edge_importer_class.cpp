@@ -134,12 +134,12 @@ TEST(read_valid_graph_file, single_edge)
     
     auto edge = importer.getEdges().front();
     
-    EXPECT_EQ(edge.source, 1);
-    EXPECT_EQ(edge.destination, 2);
+    EXPECT_EQ(edge.source, 0);
+    EXPECT_EQ(edge.destination, 1);
     EXPECT_DOUBLE_EQ(edge.weight, 1.50);
     
-    EXPECT_EQ(importer.getStartNode(), 1);
-    EXPECT_EQ(importer.getGoalNode(), 2);
+    EXPECT_EQ(importer.getStartNode(), 0);
+    EXPECT_EQ(importer.getGoalNode(), 1);
     EXPECT_EQ(importer.getNumberOfNodes(), 2);
 }
 
@@ -151,34 +151,34 @@ TEST(read_valid_graph_file, multiple_edges)
     
     EXPECT_FALSE(importer.getEdges().empty());
     
-    EXPECT_EQ(importer.getStartNode(), 1);
-    EXPECT_EQ(importer.getGoalNode(), 4);
+    EXPECT_EQ(importer.getStartNode(), 0);
+    EXPECT_EQ(importer.getGoalNode(), 3);
     EXPECT_EQ(importer.getNumberOfNodes(), 4);
     
     auto edgeIter = importer.getEdges().begin();
     
-    EXPECT_EQ(edgeIter->source, 1);
-    EXPECT_EQ(edgeIter->destination, 2);
+    EXPECT_EQ(edgeIter->source, 0);
+    EXPECT_EQ(edgeIter->destination, 1);
     EXPECT_DOUBLE_EQ(edgeIter->weight, 1.50);
     
     ++edgeIter;
-    EXPECT_EQ(edgeIter->source, 1);
-    EXPECT_EQ(edgeIter->destination, 3);
+    EXPECT_EQ(edgeIter->source, 0);
+    EXPECT_EQ(edgeIter->destination, 2);
     EXPECT_DOUBLE_EQ(edgeIter->weight, 1.00);
     
     ++edgeIter;
-    EXPECT_EQ(edgeIter->source, 1);
-    EXPECT_EQ(edgeIter->destination, 4);
+    EXPECT_EQ(edgeIter->source, 0);
+    EXPECT_EQ(edgeIter->destination, 3);
     EXPECT_DOUBLE_EQ(edgeIter->weight, 4.00);
+    
+    ++edgeIter;
+    EXPECT_EQ(edgeIter->source, 1);
+    EXPECT_EQ(edgeIter->destination, 2);
+    EXPECT_DOUBLE_EQ(edgeIter->weight, 1.00);
     
     ++edgeIter;
     EXPECT_EQ(edgeIter->source, 2);
     EXPECT_EQ(edgeIter->destination, 3);
-    EXPECT_DOUBLE_EQ(edgeIter->weight, 1.00);
-    
-    ++edgeIter;
-    EXPECT_EQ(edgeIter->source, 3);
-    EXPECT_EQ(edgeIter->destination, 4);
     EXPECT_DOUBLE_EQ(edgeIter->weight, 1.25);
     
     ++edgeIter;

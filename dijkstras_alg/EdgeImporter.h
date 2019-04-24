@@ -35,6 +35,8 @@ private:
     void importEdges();
     void processCurrentEdgeInFile(const string& edgeToProcess);
 
+    int isEdgeSetZeroBased();
+    void makeEdgeSetZeroBased(int difference);
 
 private:
     

@@ -14,12 +14,6 @@ Dijkstras_Alg::Dijkstras_Alg(unsigned long numberOfNodes)
           edgeSet{},
           nodeCount{numberOfNodes}
 {
-    //    int vertex = 0;
-    //    while (vertex < nodeCount)
-    //    {
-    //        openSet.push(vertex);
-    //        ++vertex;
-    //    }
 }
 
 void Dijkstras_Alg::compute(int sourceVertex)
@@ -59,19 +53,12 @@ void Dijkstras_Alg::processCurrentNode(int name)
     }
 }
 
-double Dijkstras_Alg::getDistanceFromStartToNode(int start, int end)
-{
-    compute(start);
-    
-    return distanceTable[end];
-}
-
 vector<int> Dijkstras_Alg::getPathFromStartToNode(int start, int end)
 {
     compute(start);
     
     vector<int> backTracingPath;
-    if (end < predecessorTable.size())
+    if (end <= predecessorTable.size())
     {
         int backTracingIndex = end;
         while (backTracingIndex != start &&
@@ -92,21 +79,7 @@ void Dijkstras_Alg::addEdges(const vector<Edge>& edges)
 {
     edgeSet = edges;
     
-    if (!isEdgeSetZeroBased())
-    {
-        makeEdgeSetZeroBased();
-    }
-    
     buildAdjacencyList();
-    
-    //    try
-    //    {
-    //        buildAdjacencyList();
-    //    }
-    //    catch (NegativeEdgeWeightsException& exception)
-    //    {
-    //        cout << "Exception occurred during edge adding: \n" << exception.what() << endl;
-    //    }
 }
 
 vector<vector<adjListNode>>& Dijkstras_Alg::getAdjacencyList()
@@ -139,35 +112,6 @@ vector<Edge>& Dijkstras_Alg::getEdgeSet()
     return edgeSet;
 }
 
-bool Dijkstras_Alg::isEdgeSetZeroBased()
-{
-    auto edgeIter = edgeSet.begin();
-    auto edgesEnd = edgeSet.end();
-    
-    while (edgeIter != edgesEnd)
-    {
-        if (edgeIter->source == 0 ||
-            edgeIter->destination == 0)
-        {
-            return true;
-        }
-        ++edgeIter;
-    }
-    return false;
-}
-
-void Dijkstras_Alg::makeEdgeSetZeroBased()
-{
-    auto edgeIter = edgeSet.begin();
-    auto edgesEnd = edgeSet.end();
-    
-    while (edgeIter != edgesEnd)
-    {
-        (edgeIter->source)--;
-        (edgeIter->destination)--;
-        ++edgeIter;
-    }
-}
 
 void Dijkstras_Alg::buildAdjacencyList()
 {
@@ -180,18 +124,6 @@ void Dijkstras_Alg::buildAdjacencyList()
         
         adjList[edge.source].emplace_back(edge.destination, edge.weight);
     }
-}
-
-void Dijkstras_Alg::resetThenCompute(int sourceVertex)
-{
-    resetAll();
-    compute(sourceVertex);
-}
-
-vector<int> Dijkstras_Alg::resetThenGetPathFromStartToNode(int start, int end)
-{
-    resetAll();
-    return std::move(getPathFromStartToNode(start, end));
 }
 
 void Dijkstras_Alg::resetAll()

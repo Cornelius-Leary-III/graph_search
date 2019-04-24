@@ -56,10 +56,7 @@ public:
     
     void addEdges(const vector<Edge>& edges);
     void compute(int sourceVertex);
-//    void resetThenCompute(int sourceVertex);
-//    vector<int> resetThenGetPathFromStartToNode(int start, int end);
-    
-//    double getDistanceFromStartToNode(int start, int end);
+
     vector<int> getPathFromStartToNode(int start, int end);
     
     vector<vector<adjListNode>>& getAdjacencyList();
@@ -73,8 +70,6 @@ public:
     
 private:
     
-    bool isEdgeSetZeroBased();
-    void makeEdgeSetZeroBased();
     void buildAdjacencyList();
     void processCurrentNode(int name);
     

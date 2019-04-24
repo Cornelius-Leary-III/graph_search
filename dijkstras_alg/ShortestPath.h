@@ -23,21 +23,61 @@ public:
     
 };
 
+class MustImportEdgesBeforeCallingThisMethodException : public std::exception
+{
+public:
+    
+    const char * what() noexcept
+    {
+        return "\nERROR: Must call importEdges() before calling this method.\n\nProgram terminating.";
+    }
+    
+};
+
+class ZeroNodesImportedException : public std::exception
+{
+public:
+    
+    const char * what() noexcept
+    {
+        return "\nERROR: Must have a non-zero # of nodes.\n\nProgram terminating.";
+    }
+    
+};
+
+class MustComputePathsBeforeCallingThisMethodException : public std::exception
+{
+public:
+    
+    const char * what() noexcept
+    {
+        return "\nERROR: Must call importEdges() before calling this method.\n\nProgram terminating.";
+    }
+    
+};
+
 class ShortestPath
 {
 public:
     
-    explicit ShortestPath(string graphFile);
+    ShortestPath();
     
-    void importEdges();
+    void importEdges(string graphFile);
     void computePathFromStartToGoal();
     
     double getDistanceFromStartToGoal();
     vector<int> getPathFromStartToGoal();
     
+    EdgeImporter& getEdgeImporter();
+    Dijkstras_Alg& getDijkstrasAlg();
+    
+    
 private:
     
-    EdgeImporter edgeImporter;
+    bool edgesHaveBeenImported;
+    bool pathsHaveBeenComputed;
+    
+    unique_ptr<EdgeImporter> edgeImporter;
     unique_ptr<Dijkstras_Alg> dijkstrasAlgPtr;
 };
 

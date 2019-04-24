@@ -93,6 +93,16 @@ void EdgeImporter::readGraphFile()
     // import the edge data.
     importEdges();
     
+    if (edgeSetBuilder.getEdgeCount() > 0)
+    {
+        int differenceFromZero = isEdgeSetZeroBased();
+    
+        if (differenceFromZero != 0)
+        {
+            makeEdgeSetZeroBased(differenceFromZero);
+        }
+    }
+    
     // close the file afterwards.
     inputStream.close();
 }
@@ -214,4 +224,50 @@ void EdgeImporter::processCurrentEdgeInFile(const string& edgeToProcess)
     
     // add the edge to the edge list.
     edgeSetBuilder.createAndAppendEdge(source, destination, edgeWeight);
+}
+
+int EdgeImporter::isEdgeSetZeroBased()
+{
+    auto edgeIter = edgeSetBuilder.getEdgeSet().begin();
+    auto edgesEnd = edgeSetBuilder.getEdgeSet().end();
+    
+    int smallestValue = INT32_MAX;
+    
+    while (edgeIter != edgesEnd)
+    {
+        if (edgeIter->source == 0 ||
+            edgeIter->destination == 0)
+        {
+            return 0;
+        }
+        
+        if (edgeIter->source < smallestValue)
+        {
+            smallestValue = edgeIter->source;
+        }
+        
+        if (edgeIter->destination < smallestValue)
+        {
+            smallestValue = edgeIter->destination;
+        }
+        
+        ++edgeIter;
+    }
+    return smallestValue;
+}
+
+void EdgeImporter::makeEdgeSetZeroBased(int difference)
+{
+    auto edgeIter = edgeSetBuilder.getEdgeSet().begin();
+    auto edgesEnd = edgeSetBuilder.getEdgeSet().end();
+    
+    while (edgeIter != edgesEnd)
+    {
+        edgeIter->source -= difference;
+        edgeIter->destination -= difference;
+        ++edgeIter;
+    }
+    
+    goalNode -= difference;
+    startNode -= difference;
 }

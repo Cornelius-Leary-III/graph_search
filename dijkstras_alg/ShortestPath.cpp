@@ -4,42 +4,94 @@
 
 #include "ShortestPath.h"
 
-ShortestPath::ShortestPath(string graphFile)
-        : dijkstrasAlgPtr{nullptr},
-          edgeImporter{std::move(graphFile)}
+ShortestPath::ShortestPath()
+        : dijkstrasAlgPtr{new Dijkstras_Alg(0)},
+          edgeImporter{new EdgeImporter("")},
+          edgesHaveBeenImported{false},
+          pathsHaveBeenComputed{false}
 {
 }
 
-void ShortestPath::importEdges()
+void ShortestPath::importEdges(string graphFile)
 {
-    edgeImporter.setupEdgeBuilder(true, false, false);
+    edgeImporter.reset(new EdgeImporter(std::move(graphFile)));
     
-    if (!edgeImporter.isFileValid())
+    edgeImporter->setupEdgeBuilder(true, false, false);
+    
+    if (!edgeImporter->isFileValid())
     {
         throw InvalidGraphFileException();
     }
     
-    edgeImporter.readGraphFile();
+    edgeImporter->readGraphFile();
+    
+    edgesHaveBeenImported = true;
 }
 
 void ShortestPath::computePathFromStartToGoal()
 {
-    dijkstrasAlgPtr.reset(new Dijkstras_Alg(edgeImporter.getNumberOfNodes()));
+    // check if importEdges() has been called.
+    if (!edgesHaveBeenImported)
+    {
+        throw MustImportEdgesBeforeCallingThisMethodException();
+    }
     
-    dijkstrasAlgPtr->addEdges(edgeImporter.getEdges());
-    dijkstrasAlgPtr->compute(edgeImporter.getStartNode());
+    // check if any nodes have been imported successfully.
+    if (edgeImporter->getNumberOfNodes() == 0)
+    {
+        throw ZeroNodesImportedException();
+    }
+    
+    // create a new Dijkstras_Alg object using the imported node count.
+    dijkstrasAlgPtr.reset(new Dijkstras_Alg(edgeImporter->getNumberOfNodes()));
+    
+    try
+    {
+        dijkstrasAlgPtr->addEdges(edgeImporter->getEdges());
+        dijkstrasAlgPtr->compute(edgeImporter->getStartNode());
+    }
+    catch (std::exception& exception)
+    {
+        cout << exception.what() << endl;
+    }
+    
+    pathsHaveBeenComputed = true;
 }
 
 double ShortestPath::getDistanceFromStartToGoal()
 {
-    auto outputDistances = dijkstrasAlgPtr->getDistanceTable();
+    if (!edgesHaveBeenImported)
+    {
+        throw MustImportEdgesBeforeCallingThisMethodException();
+    }
     
-    return outputDistances[edgeImporter.getGoalNode()];
+    if (!pathsHaveBeenComputed)
+    {
+        throw MustComputePathsBeforeCallingThisMethodException();
+    }
+    
+    auto outputDistances = dijkstrasAlgPtr->getDistanceTable();
+    return outputDistances[edgeImporter->getGoalNode()];
 }
 
 vector<int> ShortestPath::getPathFromStartToGoal()
 {
-    return std::move(dijkstrasAlgPtr->getPathFromStartToNode(edgeImporter.getStartNode(),
-                                                             edgeImporter.getGoalNode()));
+    if (!edgesHaveBeenImported)
+    {
+        throw MustImportEdgesBeforeCallingThisMethodException();
+    }
+    
+    return dijkstrasAlgPtr->getPathFromStartToNode(edgeImporter->getStartNode(),
+                                                             edgeImporter->getGoalNode());
+}
+
+EdgeImporter& ShortestPath::getEdgeImporter()
+{
+    return *edgeImporter;
+}
+
+Dijkstras_Alg& ShortestPath::getDijkstrasAlg()
+{
+    return *dijkstrasAlgPtr;
 }
 
