@@ -36,31 +36,6 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 
-### Dijkstra's Algorithm class
-
-add_executable(test_search_dijkstras_alg
-               previous_unit_test_dijkstras_alg.cpp
-               Dijkstras_Alg.cpp Dijkstras_Alg.h
-               EdgeSetBuilder.cpp EdgeSetBuilder.h Edge.cpp Edge.h)
-
-target_link_libraries(test_search_dijkstras_alg
-                      gtest gtest_main)
-
-add_test(test_dijkstras_alg_class
-         test_search_dijkstras_alg)
-
-
-#### EdgeSetBuilder class
-#add_executable(test_edge_set_builder
-#               previous_tests_EdgeSetBuilder.cpp
-#               EdgeSetBuilder.cpp EdgeSetBuilder.h unit_test_edge_set_builder_class.cpp Edge.cpp Edge.h)
-#
-#target_link_libraries(test_edge_set_builder
-#                      gtest gtest_main)
-#
-#add_test(test_edge_set_builder_class
-#         test_edge_set_builder)
-
 ### Edge class - unit tests
 add_executable(unit_test_Edge
                EdgeSetBuilder.h EdgeSetBuilder.cpp
