@@ -23,6 +23,7 @@ using std::string;
 using std::pair;
 using std::make_pair;
 
+// please note the order in elements:
 using node = pair<double, int>;
 using adjListNode = pair<int, double>;
 
@@ -66,18 +67,11 @@ public:
     vector<bool>& getVisitedTable();
     vector<Edge>& getEdgeSet();
     
-    void resetAll();
-    
 private:
     
     void buildAdjacencyList();
     void processCurrentNode(int name);
     
-    void resetVisitedTable();
-    void resetDistanceTable();
-    void resetPredecessorTable();
-    void resetOpenSet();
-
 private:
     
     vector<bool> visitedTable;              // change me! (not in STL)

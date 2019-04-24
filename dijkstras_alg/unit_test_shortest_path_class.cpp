@@ -237,3 +237,75 @@ TEST(full_example, small_weighted_undirected_graph)
     
     EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 20.0);
 }
+
+TEST(full_example, medium_unweighted_directed_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/medium_unweighted_directed_graph.txt");
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    auto pathIter = path.begin();
+    auto pathEnd = path.end();
+    
+    EXPECT_EQ(*pathIter, 42);
+    EXPECT_EQ(*(++pathIter), 51);
+    EXPECT_EQ(*(++pathIter), 59);
+    EXPECT_EQ(*(++pathIter), 68);
+    EXPECT_EQ(*(++pathIter), 77);
+    EXPECT_EQ(*(++pathIter), 88);
+    EXPECT_EQ(*(++pathIter), 99);
+    EXPECT_EQ(*(++pathIter), 100);
+    EXPECT_EQ(*(++pathIter), 101);
+    EXPECT_EQ(*(++pathIter), 102);
+    EXPECT_EQ(*(++pathIter), 103);
+    EXPECT_EQ(*(++pathIter), 104);
+    EXPECT_EQ(*(++pathIter), 105);
+    EXPECT_EQ(*(++pathIter), 106);
+    EXPECT_EQ(*(++pathIter), 107);
+    EXPECT_EQ(*(++pathIter), 108);
+    EXPECT_EQ(*(++pathIter), 109);
+    
+    EXPECT_TRUE((++pathIter) == pathEnd);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 16.0);
+}
+
+TEST(full_example, medium_weighted_directed_graph)
+{
+    ShortestPath planner;
+    
+    planner.importEdges("/home/cornelius/cpp_repo/graph_search/dijkstras_alg/tests/medium_weighted_directed_graph.txt");
+    planner.computePathFromStartToGoal();
+    
+    auto path = planner.getPathFromStartToGoal();
+    auto pathIter = path.begin();
+    auto pathEnd = path.end();
+    
+    EXPECT_EQ(*pathIter, 11);
+    EXPECT_EQ(*(++pathIter), 22);
+    EXPECT_EQ(*(++pathIter), 33);
+    EXPECT_EQ(*(++pathIter), 44);
+    EXPECT_EQ(*(++pathIter), 55);
+    EXPECT_EQ(*(++pathIter), 66);
+    EXPECT_EQ(*(++pathIter), 67);
+    EXPECT_EQ(*(++pathIter), 68);
+    EXPECT_EQ(*(++pathIter), 69);
+    EXPECT_EQ(*(++pathIter), 70);
+    EXPECT_EQ(*(++pathIter), 71);
+    EXPECT_EQ(*(++pathIter), 72);
+    EXPECT_EQ(*(++pathIter), 83);
+    EXPECT_EQ(*(++pathIter), 84);
+    EXPECT_EQ(*(++pathIter), 85);
+    EXPECT_EQ(*(++pathIter), 96);
+    EXPECT_EQ(*(++pathIter), 97);
+    EXPECT_EQ(*(++pathIter), 108);
+    EXPECT_EQ(*(++pathIter), 109);
+    EXPECT_EQ(*(++pathIter), 120);
+    
+    EXPECT_TRUE((++pathIter) == pathEnd);
+    
+    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 82.518007);
+}
+
