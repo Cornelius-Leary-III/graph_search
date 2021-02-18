@@ -13,86 +13,69 @@
 
 #include "EdgeImporter.h"
 
-using std::vector;
-using std::queue;
-using std::priority_queue;
 using std::cout;
 using std::endl;
+using std::priority_queue;
+using std::queue;
 using std::string;
+using std::vector;
 
-using std::pair;
 using std::make_pair;
+using std::pair;
 
 // please note the order in elements:
-using node = pair<double, int>;
+using node        = pair<double, int>;
 using adjListNode = pair<int, double>;
 
 class NegativeEdgeWeightsException : public std::exception
 {
-public:
-
-    const char * what() noexcept
-    {
-        return "\nERROR: Dijkstra's Algorithm does not allow negative edge weights.\n\nProgram terminating.";
-    }
-
+   public:
+   const char* what() noexcept
+   {
+      return "\nERROR: Dijkstra's Algorithm does not allow negative edge weights.\n\nProgram "
+             "terminating.";
+   }
 };
 
 class StartNodeProvidedIsNonExistentException : public std::exception
 {
-public:
-    
-    const char * what() noexcept
-    {
-        return "\nERROR: Start node must be one of the nodes in the graph.\n\nProgram terminating.";
-    }
-    
+   public:
+   const char* what() noexcept
+   {
+      return "\nERROR: Start node must be one of the nodes in the graph.\n\nProgram terminating.";
+   }
 };
 
 class Dijkstras_Alg
 {
-public:
-    
-    explicit Dijkstras_Alg(unsigned long numberOfNodes);
-    
-    void addEdges(const vector<Edge>& edges);
-    void compute(int sourceVertex);
+   public:
+   explicit Dijkstras_Alg(unsigned long number_of_nodes);
 
-    vector<int> getPathFromStartToNode(int start, int end);
-    
-    vector<vector<adjListNode>>& getAdjacencyList();
-    priority_queue<node>& getUnvisitedVertices();
-    vector<double>& getDistanceTable();
-    vector<int>& getPredecessorTable();
-    vector<bool>& getVisitedTable();
-    vector<Edge>& getEdgeSet();
-    
-private:
-    
-    void buildAdjacencyList();
-    void processCurrentNode(int name);
-    
-private:
-    
-    vector<bool> visitedTable;              // change me! (not in STL)
-    priority_queue<node> openSet;
-    vector<vector<adjListNode>> adjList;
-    
-    vector<double> distanceTable;
-    vector<int> predecessorTable;
-    vector<Edge> edgeSet;
-    unsigned long nodeCount;
+   void addEdges(const vector<Edge>& edges);
+   void compute(int source_vertex);
+
+   vector<int> getPathFromStartToNode(int start, int end);
+
+   vector<vector<adjListNode>>& getAdjacencyList();
+   priority_queue<node>&        getUnvisitedVertices();
+   vector<double>&              getDistanceTable();
+   vector<int>&                 getPredecessorTable();
+   vector<bool>&                getVisitedTable();
+   vector<Edge>&                getEdgeSet();
+
+   private:
+   void buildAdjacencyList();
+   void processCurrentNode(int name);
+
+   private:
+   vector<bool>                mVisitedTable; // change me! (not in STL)
+   priority_queue<node>        mOpenSet;
+   vector<vector<adjListNode>> mAdjList;
+
+   vector<double> mDistanceTable;
+   vector<int>    mPredecessorTable;
+   vector<Edge>   mEdgeSet;
+   unsigned long  mNodeCount;
 };
 
-
-#endif //DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
-
-
-
-
-
-
-
-
-
-
+#endif // DIJKSTRAS_ALG_DIJKSTRAS_ALG_H

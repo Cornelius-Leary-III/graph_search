@@ -5,103 +5,102 @@
 #include "ShortestPath.h"
 
 ShortestPath::ShortestPath()
-        : dijkstrasAlgPtr{new Dijkstras_Alg(0)},        // placeholder object
-          edgeImporter{new EdgeImporter("")},           // placeholder object
-          edgesHaveBeenImported{false},
-          pathsHaveBeenComputed{false}
+   : mHaveEdgesBeenImported(false),
+     mHavePathsBeenComputed(false),
+     mEdgeImporter(new EdgeImporter("")),   // placeholder object
+     mDijkstrasAlgPtr(new Dijkstras_Alg(0)) // placeholder object
 {
 }
 
-void ShortestPath::importEdges(string graphFile, bool isDirected)
+void ShortestPath::importEdges(string graph_file, bool is_directed)
 {
-    // create a new EdgeImporter object using the provided graph file.
-    edgeImporter.reset(new EdgeImporter(std::move(graphFile)));
-    
-    // calling the setup to the edgeSetBuilder for Dijkstra's Algorithm (DA):
-    //      <isDirected> --> DA can be either directed or undirected.
-    //      false --> DA cannot have negative weights.
-    //      false --> DA cannot have self-loops.
-    edgeImporter->setupEdgeBuilder(isDirected, false, false);
-    
-    // check if file is valid.
-    if (!edgeImporter->isFileValid())
-    {
-        throw InvalidGraphFileException();
-    }
-    
-    // import graph setup and edge data.
-    edgeImporter->readGraphFile();
-    edgesHaveBeenImported = true;
+   // create a new EdgeImporter object using the provided graph file.
+   mEdgeImporter.reset(new EdgeImporter(std::move(graph_file)));
+
+   // calling the setup to the edgeSetBuilder for Dijkstra's Algorithm (DA):
+   //      <isDirected> --> DA can be either directed or undirected.
+   //      false --> DA cannot have negative weights.
+   //      false --> DA cannot have self-loops.
+   mEdgeImporter->setupEdgeBuilder(is_directed, false, false);
+
+   // check if file is valid.
+   if (!mEdgeImporter->isFileValid())
+   {
+      throw InvalidGraphFileException();
+   }
+
+   // import graph setup and edge data.
+   mEdgeImporter->readGraphFile();
+   mHaveEdgesBeenImported = true;
 }
 
 void ShortestPath::computePathFromStartToGoal()
 {
-    // check if importEdges() has been called.
-    if (!edgesHaveBeenImported)
-    {
-        throw MustImportEdgesBeforeCallingThisMethodException();
-    }
-    
-    // check if any nodes have been imported successfully.
-    if (edgeImporter->getNumberOfNodes() == 0)
-    {
-        throw ZeroNodesImportedException();
-    }
-    
-    // create a new Dijkstras_Alg object using the imported node count.
-    dijkstrasAlgPtr.reset(new Dijkstras_Alg(edgeImporter->getNumberOfNodes()));
-    
-    try
-    {
-        dijkstrasAlgPtr->addEdges(edgeImporter->getEdges());
-        dijkstrasAlgPtr->compute(edgeImporter->getStartNode());
-    }
-    catch (std::exception& exception)
-    {
-        cout << exception.what() << endl;
-    }
-    
-    pathsHaveBeenComputed = true;
+   // check if importEdges() has been called.
+   if (!mHaveEdgesBeenImported)
+   {
+      throw MustImportEdgesBeforeCallingThisMethodException();
+   }
+
+   // check if any nodes have been imported successfully.
+   if (mEdgeImporter->getNumberOfNodes() == 0)
+   {
+      throw ZeroNodesImportedException();
+   }
+
+   // create a new Dijkstras_Alg object using the imported node count.
+   mDijkstrasAlgPtr.reset(new Dijkstras_Alg(mEdgeImporter->getNumberOfNodes()));
+
+   try
+   {
+      mDijkstrasAlgPtr->addEdges(mEdgeImporter->getEdges());
+      mDijkstrasAlgPtr->compute(mEdgeImporter->getStartNode());
+   }
+   catch (std::exception& exception)
+   {
+      cout << exception.what() << endl;
+   }
+
+   mHavePathsBeenComputed = true;
 }
 
 double ShortestPath::getDistanceFromStartToGoal()
 {
-    // check if edges have already been imported.
-    if (!edgesHaveBeenImported)
-    {
-        throw MustImportEdgesBeforeCallingThisMethodException();
-    }
-    
-    // check if DA object has been updated and if paths have been computed.
-    if (!pathsHaveBeenComputed)
-    {
-        throw MustComputePathsBeforeCallingThisMethodException();
-    }
-    
-    auto outputDistances = dijkstrasAlgPtr->getDistanceTable();
-    return outputDistances[edgeImporter->getGoalNode()];
+   // check if edges have already been imported.
+   if (!mHaveEdgesBeenImported)
+   {
+      throw MustImportEdgesBeforeCallingThisMethodException();
+   }
+
+   // check if DA object has been updated and if paths have been computed.
+   if (!mHavePathsBeenComputed)
+   {
+      throw MustComputePathsBeforeCallingThisMethodException();
+   }
+
+   auto outputDistances = mDijkstrasAlgPtr->getDistanceTable();
+   return outputDistances[mEdgeImporter->getGoalNode()];
 }
 
 vector<int> ShortestPath::getPathFromStartToGoal()
 {
-    // check if edges have already been imported.
-    if (!edgesHaveBeenImported)
-    {
-        throw MustImportEdgesBeforeCallingThisMethodException();
-    }
-    
-    // get the path.
-    return dijkstrasAlgPtr->getPathFromStartToNode(edgeImporter->getStartNode(),
-                                                             edgeImporter->getGoalNode());
+   // check if edges have already been imported.
+   if (!mHaveEdgesBeenImported)
+   {
+      throw MustImportEdgesBeforeCallingThisMethodException();
+   }
+
+   // get the path.
+   return mDijkstrasAlgPtr->getPathFromStartToNode(mEdgeImporter->getStartNode(),
+                                                   mEdgeImporter->getGoalNode());
 }
 
 EdgeImporter& ShortestPath::getEdgeImporter()
 {
-    return *edgeImporter;
+   return *mEdgeImporter;
 }
 
 Dijkstras_Alg& ShortestPath::getDijkstrasAlg()
 {
-    return *dijkstrasAlgPtr;
+   return *mDijkstrasAlgPtr;
 }
-

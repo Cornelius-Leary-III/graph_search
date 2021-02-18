@@ -5,194 +5,178 @@
 #include "EdgeSetBuilder.h"
 
 EdgeSetBuilder::EdgeSetBuilder()
-        : edgeSet{},
-          directedGraph{true},
-          negativeEdgesAllowed{false},
-          selfLoopsAllowed{false}
+   : mEdgeSet(),
+     mAreNegativeEdgeWeightsAllowed(false),
+     mAreSelfLoopsAllowed(false),
+     mIsGraphDirected(true)
 {
 }
 
-EdgeSetBuilder::EdgeSetBuilder(bool directedGraphState,
-                               bool negativeEdgesAllowedState,
-                               bool selfLoopsAllowedState)
-        : edgeSet{},
-          directedGraph{directedGraphState},
-          negativeEdgesAllowed{negativeEdgesAllowedState},
-          selfLoopsAllowed{selfLoopsAllowedState}
+EdgeSetBuilder::EdgeSetBuilder(bool is_graph_directed,
+                               bool are_negative_edge_weights_allowed,
+                               bool are_self_loops_allowed)
+   : mEdgeSet(),
+     mAreNegativeEdgeWeightsAllowed(are_negative_edge_weights_allowed),
+     mAreSelfLoopsAllowed(are_self_loops_allowed),
+     mIsGraphDirected(is_graph_directed)
 {
 }
 
-EdgeSetBuilder::EdgeSetBuilder(const vector<Edge>& edges,
-                               bool directedGraphState)
-        : directedGraph{directedGraphState}
+EdgeSetBuilder::EdgeSetBuilder(const vector<Edge>& edges, bool is_graph_directed)
+   : mIsGraphDirected{is_graph_directed}
 {
-    if (!directedGraph)
-    {
-        // add the reverse-edge when the graph is undirected.
-        addEdgesForUndirectedGraph(edges);
-    }
-    else
-    {
-        // when the graph is directed, the edge set provided is used.
-        edgeSet = edges;
-    }
-    
-    // determine these graph traits from the provided edge set.
-    negativeEdgesAllowed = checkForNegativeEdges();
-    selfLoopsAllowed = checkForSelfLoops();
+   if (!mIsGraphDirected)
+   {
+      // add the reverse-edge when the graph is undirected.
+      addEdgesForUndirectedGraph(edges);
+   }
+   else
+   {
+      // when the graph is directed, the edge set provided is used.
+      mEdgeSet = edges;
+   }
+
+   // determine these graph traits from the provided edge set.
+   mAreNegativeEdgeWeightsAllowed = checkForNegativeEdges();
+   mAreSelfLoopsAllowed           = checkForSelfLoops();
 }
 
-EdgeSetBuilder::EdgeSetBuilder(const EdgeSetBuilder& edgeSetBuilderToCopy)
-        : edgeSet{edgeSetBuilderToCopy.edgeSet},
-          directedGraph{edgeSetBuilderToCopy.directedGraph},
-          negativeEdgesAllowed{edgeSetBuilderToCopy.negativeEdgesAllowed},
-          selfLoopsAllowed{edgeSetBuilderToCopy.selfLoopsAllowed}
+EdgeSetBuilder::EdgeSetBuilder(const EdgeSetBuilder& edge_set_builder_to_copy)
+   : mEdgeSet(edge_set_builder_to_copy.mEdgeSet),
+     mAreNegativeEdgeWeightsAllowed(edge_set_builder_to_copy.mAreNegativeEdgeWeightsAllowed),
+     mAreSelfLoopsAllowed(edge_set_builder_to_copy.mAreSelfLoopsAllowed),
+     mIsGraphDirected(edge_set_builder_to_copy.mIsGraphDirected)
 {
 }
 
 void EdgeSetBuilder::addEdgesForUndirectedGraph(const vector<Edge>& edges)
 {
-    auto edgeIter = edges.begin();
-    auto edgesEnd = edges.end();
-    
-    vector<Edge> undirectedEdges;
-    
-    while (edgeIter != edgesEnd)
-    {
-        undirectedEdges.push_back(*edgeIter);                   // add the forward edge.
-        undirectedEdges.emplace_back(edgeIter->destination,     // add the reverse edge.
-                                     edgeIter->source,
-                                     edgeIter->weight);
-        ++edgeIter;
-    }
-    
-    edgeSet = undirectedEdges;
+   auto edge_iter = edges.begin();
+   auto edges_end = edges.end();
+
+   vector<Edge> undirected_edges;
+
+   while (edge_iter != edges_end)
+   {
+      // add the forward edge.
+      undirected_edges.push_back(*edge_iter);
+
+      // add the reverse edge.
+      undirected_edges.emplace_back(edge_iter->mDestination,
+                                    edge_iter->mSource,
+                                    edge_iter->mWeight);
+
+      ++edge_iter;
+   }
+
+   mEdgeSet = undirected_edges;
 }
 
 EdgeSetBuilder& EdgeSetBuilder::operator=(const EdgeSetBuilder& rhs)
 {
-    if (this != &rhs)
-    {
-        this->edgeSet = rhs.edgeSet;
-        this->directedGraph = rhs.directedGraph;
-        this->negativeEdgesAllowed = rhs.negativeEdgesAllowed;
-        this->selfLoopsAllowed = rhs.selfLoopsAllowed;
-    }
-    
-    return *this;
+   if (this != &rhs)
+   {
+      this->mEdgeSet                       = rhs.mEdgeSet;
+      this->mIsGraphDirected               = rhs.mIsGraphDirected;
+      this->mAreNegativeEdgeWeightsAllowed = rhs.mAreNegativeEdgeWeightsAllowed;
+      this->mAreSelfLoopsAllowed           = rhs.mAreSelfLoopsAllowed;
+   }
+
+   return *this;
 }
 
 bool EdgeSetBuilder::checkForNegativeEdges()
 {
-    auto edgeIter = edgeSet.begin();
-    auto edgesEnd = edgeSet.end();
-    
-    while (edgeIter != edgesEnd)
-    {
-        if (edgeIter->weight < 0)
-        {
-            return true;
-        }
-        ++edgeIter;
-    }
-    
-    return false;
+   auto edge_iter = mEdgeSet.begin();
+   auto edges_end = mEdgeSet.end();
+
+   while (edge_iter != edges_end)
+   {
+      if (edge_iter->mWeight < 0)
+      {
+         return true;
+      }
+
+      ++edge_iter;
+   }
+
+   return false;
 }
 
 bool EdgeSetBuilder::checkForSelfLoops()
 {
-    auto edgeIter = edgeSet.begin();
-    auto edgesEnd = edgeSet.end();
-    
-    while (edgeIter != edgesEnd)
-    {
-        if (edgeIter->source == edgeIter->destination)
-        {
-            return true;
-        }
-        ++edgeIter;
-    }
-    
-    return false;
+   auto edge_iter = mEdgeSet.begin();
+   auto edges_end = mEdgeSet.end();
+
+   while (edge_iter != edges_end)
+   {
+      if (edge_iter->mSource == edge_iter->mDestination)
+      {
+         return true;
+      }
+
+      ++edge_iter;
+   }
+
+   return false;
 }
 
 vector<Edge>& EdgeSetBuilder::getEdgeSet()
 {
-    return edgeSet;
+   return mEdgeSet;
 }
 
 bool EdgeSetBuilder::isGraphDirected()
 {
-    return directedGraph;
+   return mIsGraphDirected;
 }
 
 bool EdgeSetBuilder::areNegativeEdgesAllowed()
 {
-    return negativeEdgesAllowed;
+   return mAreNegativeEdgeWeightsAllowed;
 }
 
 bool EdgeSetBuilder::areSelfLoopsAllowed()
 {
-    return selfLoopsAllowed;
+   return mAreSelfLoopsAllowed;
 }
 
 unsigned long EdgeSetBuilder::getEdgeCount()
 {
-    return edgeSet.size();
+   return mEdgeSet.size();
 }
 
-void EdgeSetBuilder::createAndAppendEdge(int newSource,
-                                         int newDestination,
-                                         double newWeight)
+void EdgeSetBuilder::createAndAppendEdge(int new_source, int new_destination, double new_weight)
 {
-    // checks if edge is a self-loop.
-    if (newSource == newDestination)
-    {
-        // checks if edges can be self-loops.
-        if (!selfLoopsAllowed)
-        {
-            // ignore this edge in the graph.
-            return;
-        }
-    }
-    
-    // checks if edge has a negative weight.
-    if (newWeight < 0)
-    {
-        // checks if edges can have negative weights.
-        if (!negativeEdgesAllowed)
-        {
-            // ignore this edge in the graph.
-            return;
-        }
-    }
-    
-    // add the edge to the edge set.
-    edgeSet.emplace_back(newSource, newDestination, newWeight);
-    
-    // check if the reversed edge must be added to the edge set.
-    if (!directedGraph)
-    {
-        // add the reversed edge.
-        edgeSet.emplace_back(newDestination, newSource, newWeight);
-    }
+   // checks if edge is a self-loop.
+   if (new_source == new_destination)
+   {
+      // checks if edges can be self-loops.
+      if (!mAreSelfLoopsAllowed)
+      {
+         // ignore this edge in the graph.
+         return;
+      }
+   }
+
+   // checks if edge has a negative weight.
+   if (new_weight < 0)
+   {
+      // checks if edges can have negative weights.
+      if (!mAreNegativeEdgeWeightsAllowed)
+      {
+         // ignore this edge in the graph.
+         return;
+      }
+   }
+
+   // add the edge to the edge set.
+   mEdgeSet.emplace_back(new_source, new_destination, new_weight);
+
+   // check if the reversed edge must be added to the edge set.
+   if (!mIsGraphDirected)
+   {
+      // add the reversed edge.
+      mEdgeSet.emplace_back(new_destination, new_source, new_weight);
+   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

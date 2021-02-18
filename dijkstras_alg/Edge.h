@@ -7,19 +7,19 @@
 
 struct Edge
 {
-    int source;
-    int destination;
-    double weight;
-    
-    Edge();
-    Edge(int newSource, int newDestination);
-    Edge(int newSource, int newDestination, double newWeight);
-    Edge(const Edge& edgeToCopy);
-    
-    Edge& operator=(const Edge& edgeToCopy);
+   int    mSource;
+   int    mDestination;
+   double mWeight;
+
+   Edge();
+   Edge(int new_source, int new_destination);
+   Edge(int new_source, int new_destination, double new_weight);
+   Edge(const Edge& edge_to_copy);
+
+   Edge& operator=(const Edge& edge_to_copy);
 };
 
 bool operator==(const Edge& lhs, const Edge& rhs);
 bool operator!=(const Edge& lhs, const Edge& rhs);
 
-#endif //DIJKSTRAS_ALG_EDGE_H
+#endif // DIJKSTRAS_ALG_EDGE_H

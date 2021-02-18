@@ -9,48 +9,43 @@
 
 class EdgeImporter
 {
-public:
-    
-    explicit EdgeImporter(string newFileToReadFrom);
-    
-    bool isFileValid();
-    
-    vector<Edge>& getEdges();
-    EdgeSetBuilder& getEdgeBuilder();
-    int getStartNode();
-    int getGoalNode();
-    unsigned long getNumberOfNodes();
-    
-    void setupEdgeBuilder(bool isDirected = true,
-                          bool canHaveNegWeights = true,
-                          bool canHaveSelfLoops = true);
-    void readGraphFile();
+   public:
+   explicit EdgeImporter(string new_file_to_read_from);
 
+   bool isFileValid();
 
-private:
-    
-    void processFirstThreeLinesOfGraphFile();
-    string getSetupStringValue();
-    
-    void importEdges();
-    void processCurrentEdgeInFile(const string& edgeToProcess);
+   vector<Edge>&   getEdges();
+   EdgeSetBuilder& getEdgeBuilder();
+   int             getStartNode();
+   int             getGoalNode();
+   unsigned long   getNumberOfNodes();
 
-    int isEdgeSetZeroBased();
-    void makeEdgeSetZeroBased(int difference);
+   void setupEdgeBuilder(bool is_directed               = true,
+                         bool can_have_neg_edge_weights = true,
+                         bool can_have_self_loops       = true);
+   void readGraphFile();
 
-private:
-    
-    EdgeSetBuilder edgeSetBuilder;
-    
-    unsigned long numberOfNodes;
-    int startNode;
-    int goalNode;
-    
-    bool edgeBuilderIsSetup;
-    bool fileIsValid;
-    string inputFileName;
-    ifstream inputStream;
+   private:
+   void   processFirstThreeLinesOfGraphFile();
+   string getSetupStringValue();
+
+   void importEdges();
+   void processCurrentEdgeInFile(const string& edge_to_process);
+
+   int  getSmallestNodeIndex();
+   void makeEdgeSetZeroBased(int difference);
+
+   private:
+   EdgeSetBuilder mEdgeSetBuilder;
+
+   unsigned long mNumberOfNodes;
+   int           mStartNode;
+   int           mGoalNode;
+
+   bool     mEdgeBuilderIsSetup;
+   bool     mFileIsValid;
+   string   mInputFileName;
+   ifstream mInputStream;
 };
 
-
-#endif //DIJKSTRAS_ALG_EDGEIMPORTER_H
+#endif // DIJKSTRAS_ALG_EDGEIMPORTER_H

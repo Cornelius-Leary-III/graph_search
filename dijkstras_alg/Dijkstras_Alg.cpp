@@ -4,159 +4,156 @@
 
 #include "Dijkstras_Alg.h"
 
-Dijkstras_Alg::Dijkstras_Alg(unsigned long numberOfNodes)
-        : openSet{},
-          distanceTable(numberOfNodes, MAXDOUBLE),
-          visitedTable(numberOfNodes, false),
-          adjList(numberOfNodes, vector<adjListNode>()),
-        
-          predecessorTable(numberOfNodes, -1),
-          edgeSet{},
-          nodeCount{numberOfNodes}
+Dijkstras_Alg::Dijkstras_Alg(unsigned long number_of_nodes)
+   : mVisitedTable(number_of_nodes, false),
+     mOpenSet(),
+     mAdjList(number_of_nodes, vector<adjListNode>()),
+     mDistanceTable(number_of_nodes, MAXDOUBLE),
+     mPredecessorTable(number_of_nodes, -1),
+     mEdgeSet(),
+     mNodeCount(number_of_nodes)
 {
 }
 
-void Dijkstras_Alg::compute(int sourceVertex)
+void Dijkstras_Alg::compute(int source_vertex)
 {
-    // check if the source node is too large or a negative #.
-    if (sourceVertex >= nodeCount ||
-        sourceVertex < 0)
-    {
-        throw StartNodeProvidedIsNonExistentException();
-    }
-    
-    // set the distance to the source node from the source node to be 0.
-    distanceTable[sourceVertex] = 0;
-    
-    // put the this edge into the open set queue.
-    openSet.emplace(distanceTable[sourceVertex], sourceVertex);
-    
-    // continue computing as long as there are still edges in the open set queue.
-    while (!openSet.empty())
-    {
-        // save and remove the top of the open set queue.
-        auto currentNode = openSet.top();
-        openSet.pop();
-        
-        // process the top node.
-        processCurrentNode(currentNode.second);
-    }
+   // check if the source node is too large or a negative #.
+   if (source_vertex >= (int) mNodeCount || source_vertex < 0)
+   {
+      throw StartNodeProvidedIsNonExistentException();
+   }
+
+   // set the distance to the source node from the source node to be 0.
+   mDistanceTable[source_vertex] = 0;
+
+   // put the this edge into the open set queue.
+   mOpenSet.emplace(mDistanceTable[source_vertex], source_vertex);
+
+   // continue computing as long as there are still edges in the open set queue.
+   while (!mOpenSet.empty())
+   {
+      // save and remove the top of the open set queue.
+      auto current_node = mOpenSet.top();
+      mOpenSet.pop();
+
+      // process the top node.
+      processCurrentNode(current_node.second);
+   }
 }
 
 void Dijkstras_Alg::processCurrentNode(int name)
 {
-    // process each neighbor of the provided node.
-    for (auto& neighbor : adjList[name])
-    {
-        int neighborName = neighbor.first;
-        
-        // compute the alternative path to this node:
-        //      --> add the existing cost from the source node to the current node to the weight of the
-        //              edge to the neighbor node.
-        double alternatePath = distanceTable[name] + neighbor.second;
-        
-        // compare the cost of going from the source node to the neighbor node and
-        //      the cost of going from the source node to the neighbor node via the current node.
-        if (alternatePath < distanceTable[neighborName])
-        {
-            // traveling via the current node is a less-costly path, so update the distance and predecessor tables to
-            //      reflect the new best path.
-            distanceTable[neighborName] = alternatePath;
-            predecessorTable[neighborName] = name;
-            
-            // add this neighbor and the new distance to the open set queue.
-            openSet.emplace(distanceTable[neighborName], neighborName);
-        }
-    }
+   // process each neighbor of the provided node.
+   for (auto& neighbor : mAdjList[name])
+   {
+      int neighbor_name = neighbor.first;
+
+      // compute the alternative path to this node:
+      //      --> add the existing cost from the source node to the current node to the weight of
+      //      the
+      //              edge to the neighbor node.
+      double alternate_path = mDistanceTable[name] + neighbor.second;
+
+      // compare the cost of going from the source node to the neighbor node and
+      //      the cost of going from the source node to the neighbor node via the current node.
+      if (alternate_path < mDistanceTable[neighbor_name])
+      {
+         // traveling via the current node is a less-costly path, so update the distance and
+         // predecessor tables to
+         //      reflect the new best path.
+         mDistanceTable[neighbor_name]    = alternate_path;
+         mPredecessorTable[neighbor_name] = name;
+
+         // add this neighbor and the new distance to the open set queue.
+         mOpenSet.emplace(mDistanceTable[neighbor_name], neighbor_name);
+      }
+   }
 }
 
 vector<int> Dijkstras_Alg::getPathFromStartToNode(int start, int end)
 {
-    //TODO: (04/24/19)
-    //      either:
-    //          * reimplement the reset() methods I had in a previous version.
-    //          * remove the call to the compute() module here.
-    
-    // compute the distances using the provided start node.
-    compute(start);
-    
-    vector<int> backTracingPath;
-    
-    // check that the end node provided is within the graph.
-    if (end <= predecessorTable.size())
-    {
-        // begin at the end node
-        int backTracingIndex = end;
-        
-        // continue until the index is:
-        //      * at the start node provided
-        //      * at a dead-end (== -1)
-        while (backTracingIndex != start &&
-               backTracingIndex != -1)
-        {
-            // add the current index (which doubles as the node name) to the path.
-            backTracingPath.push_back(backTracingIndex);
-            
-            // advance to the next predecessor.
-            backTracingIndex = predecessorTable[backTracingIndex];
-        }
-        
-        // add the final index to the path.
-        backTracingPath.push_back(backTracingIndex);
-    }
-    
-    // reverse the path; goes from start node to goal node.
-    return std::move(vector<int>(backTracingPath.rbegin(),
-                                 backTracingPath.rend()));
+   // TODO: (04/24/19)
+   //      either:
+   //          * reimplement the reset() methods I had in a previous version.
+   //          * remove the call to the compute() module here.
+
+   // compute the distances using the provided start node.
+   compute(start);
+
+   vector<int> back_tracing_path;
+
+   // check that the end node provided is within the graph.
+   if (end <= (int) mPredecessorTable.size())
+   {
+      // begin at the end node
+      int back_tracing_index = end;
+
+      // continue until the index is:
+      //      * at the start node provided
+      //      * at a dead-end (== -1)
+      while (back_tracing_index != start && back_tracing_index != -1)
+      {
+         // add the current index (which doubles as the node name) to the path.
+         back_tracing_path.push_back(back_tracing_index);
+
+         // advance to the next predecessor.
+         back_tracing_index = mPredecessorTable[back_tracing_index];
+      }
+
+      // add the final index to the path.
+      back_tracing_path.push_back(back_tracing_index);
+   }
+
+   // reverse the path; goes from start node to goal node.
+   return vector<int>(back_tracing_path.rbegin(), back_tracing_path.rend());
 }
 
 void Dijkstras_Alg::addEdges(const vector<Edge>& edges)
 {
-    edgeSet = edges;
-    
-    buildAdjacencyList();
+   mEdgeSet = edges;
+
+   buildAdjacencyList();
 }
 
 vector<vector<adjListNode>>& Dijkstras_Alg::getAdjacencyList()
 {
-    return adjList;
+   return mAdjList;
 }
 
 priority_queue<node>& Dijkstras_Alg::getUnvisitedVertices()
 {
-    return openSet;
+   return mOpenSet;
 }
 
 vector<double>& Dijkstras_Alg::getDistanceTable()
 {
-    return distanceTable;
+   return mDistanceTable;
 }
 
 vector<int>& Dijkstras_Alg::getPredecessorTable()
 {
-    return predecessorTable;
+   return mPredecessorTable;
 }
 
 vector<bool>& Dijkstras_Alg::getVisitedTable()
 {
-    return visitedTable;
+   return mVisitedTable;
 }
 
 vector<Edge>& Dijkstras_Alg::getEdgeSet()
 {
-    return edgeSet;
+   return mEdgeSet;
 }
-
 
 void Dijkstras_Alg::buildAdjacencyList()
 {
-    for (auto& edge: edgeSet)
-    {
-        if (edge.weight < 0)
-        {
-            throw NegativeEdgeWeightsException();
-        }
-        
-        adjList[edge.source].emplace_back(edge.destination, edge.weight);
-    }
+   for (auto& edge : mEdgeSet)
+   {
+      if (edge.mWeight < 0)
+      {
+         throw NegativeEdgeWeightsException();
+      }
+
+      mAdjList[edge.mSource].emplace_back(edge.mDestination, edge.mWeight);
+   }
 }

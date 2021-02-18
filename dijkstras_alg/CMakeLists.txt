@@ -101,3 +101,10 @@ target_link_libraries(unit_test_ShortestPath
 
 add_test(shortest_path_unit_tests
          unit_test_ShortestPath)
+
+# copy tests/ directory to build directory for use in unit tests.
+add_custom_command(
+     TARGET unit_test_ShortestPath POST_BUILD
+     COMMAND ${CMAKE_COMMAND} -E copy_directory
+             ${CMAKE_CURRENT_SOURCE_DIR}/tests
+             ${CMAKE_CURRENT_BINARY_DIR}/tests)
