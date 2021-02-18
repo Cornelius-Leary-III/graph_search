@@ -36,10 +36,10 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
 endif ()
 
 
-add_executable(BFS
-               BFS_Planner.cpp BFS_Planner.h
-               #               AdjacencyList.cpp AdjacencyList.h
-               )
+#add_executable(BFS
+#               BFS_Planner.cpp BFS_Planner.h
+#               #               AdjacencyList.cpp AdjacencyList.h
+#               )
 
 add_executable(BFSPlanner_test test_BFSPlanner.cpp
                BFS_Planner.cpp BFS_Planner.h
@@ -47,7 +47,7 @@ add_executable(BFSPlanner_test test_BFSPlanner.cpp
                )
 
 target_link_libraries(BFSPlanner_test
-                      gtest gtest_main)
+                      gtest_main)
 
 add_test(test_BFS_planner_class
          BFSPlanner_test)
@@ -56,3 +56,10 @@ add_test(test_BFS_planner_class
 #               AdjacencyList.cpp AdjacencyList.h)
 #target_link_libraries(AdjacencyList_test gtest gtest_main)
 #add_test(test_adjacency_list_class AdjacencyList_test)
+
+# copy tests/ directory to build directory for use in unit tests.
+add_custom_command(
+     TARGET BFSPlanner_test POST_BUILD
+     COMMAND ${CMAKE_COMMAND} -E copy_directory
+             ${CMAKE_CURRENT_SOURCE_DIR}/tests
+             ${CMAKE_CURRENT_BINARY_DIR}/tests)

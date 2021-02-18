@@ -13,21 +13,18 @@ using std::vector;
 
 struct Node
 {
-    string name;
-    vector<Node*> neighbors;
+   string        name;
+   vector<Node*> neighbors;
 };
 
 class AdjacencyList
 {
-public:
-    
-    AdjacencyList();
-    ~AdjacencyList() = default;
+   public:
+   AdjacencyList();
+   ~AdjacencyList() = default;
 
-private:
-    
-//    vector<vector<
+   private:
+   //    vector<vector<
 };
 
-
-#endif //BFS_ADJACENCYLIST_H
+#endif // BFS_ADJACENCYLIST_H
