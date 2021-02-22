@@ -12,7 +12,7 @@ ShortestPath::ShortestPath()
 {
 }
 
-void ShortestPath::importEdges(string graph_file, bool is_directed)
+void ShortestPath::importEdges(std::string graph_file, bool is_directed)
 {
    // create a new EdgeImporter object using the provided graph file.
    mEdgeImporter.reset(new EdgeImporter(std::move(graph_file)));
@@ -54,11 +54,11 @@ void ShortestPath::computePathFromStartToGoal()
    try
    {
       mDijkstrasAlgPtr->addEdges(mEdgeImporter->getEdges());
-      mDijkstrasAlgPtr->compute(mEdgeImporter->getStartNode());
+      mDijkstrasAlgPtr->compute(mEdgeImporter->getStartNodeName());
    }
    catch (std::exception& exception)
    {
-      cout << exception.what() << endl;
+      std::cout << exception.what() << std::endl;
    }
 
    mHavePathsBeenComputed = true;
@@ -79,10 +79,10 @@ double ShortestPath::getDistanceFromStartToGoal()
    }
 
    auto outputDistances = mDijkstrasAlgPtr->getDistanceTable();
-   return outputDistances[mEdgeImporter->getGoalNode()];
+   return outputDistances[mEdgeImporter->getGoalNodeName()];
 }
 
-vector<int> ShortestPath::getPathFromStartToGoal()
+std::vector<std::string> ShortestPath::getPathFromStartToGoal()
 {
    // check if edges have already been imported.
    if (!mHaveEdgesBeenImported)
@@ -91,8 +91,8 @@ vector<int> ShortestPath::getPathFromStartToGoal()
    }
 
    // get the path.
-   return mDijkstrasAlgPtr->getPathFromStartToNode(mEdgeImporter->getStartNode(),
-                                                   mEdgeImporter->getGoalNode());
+   return mDijkstrasAlgPtr->getPathFromStartToNode(mEdgeImporter->getStartNodeName(),
+                                                   mEdgeImporter->getGoalNodeName());
 }
 
 EdgeImporter& ShortestPath::getEdgeImporter()

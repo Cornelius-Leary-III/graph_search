@@ -4,21 +4,21 @@
 
 #include "Edge.h"
 
-Edge::Edge() : mSource{0}, mDestination{0}, mWeight{0.0}
+Edge::Edge() : mSource("0"), mDestination("0"), mWeight(0.0)
 {
 }
 
-Edge::Edge(int new_source, int new_destination)
-   : mSource(new_source),
-     mDestination(new_destination),
-     mWeight(1.0)
+Edge::Edge(const BaseNode& source, const BaseNode& destination, double weight)
+   : mSource(source),
+     mDestination(destination),
+     mWeight(weight)
 {
 }
 
-Edge::Edge(int new_source, int new_destination, double new_weight)
-   : mSource(new_source),
-     mDestination(new_destination),
-     mWeight(new_weight)
+Edge::Edge(const std::string& source, const std::string& destination, double weight)
+   : mSource(source),
+     mDestination(destination),
+     mWeight(weight)
 {
 }
 

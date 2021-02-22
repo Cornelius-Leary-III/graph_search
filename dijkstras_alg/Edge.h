@@ -5,15 +5,20 @@
 #ifndef DIJKSTRAS_ALG_EDGE_H
 #define DIJKSTRAS_ALG_EDGE_H
 
+#include "BaseNode.h"
+
 struct Edge
 {
-   int    mSource;
-   int    mDestination;
-   double mWeight;
+   BaseNode mSource;
+   BaseNode mDestination;
+   double   mWeight;
 
    Edge();
-   Edge(int new_source, int new_destination);
-   Edge(int new_source, int new_destination, double new_weight);
+
+   Edge(const BaseNode& source, const BaseNode& destination, double weight = 1.0);
+
+   Edge(const std::string& source, const std::string& destination, double weight = 1.0);
+
    Edge(const Edge& edge_to_copy);
 
    Edge& operator=(const Edge& edge_to_copy);

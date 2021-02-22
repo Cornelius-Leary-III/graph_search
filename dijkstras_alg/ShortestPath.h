@@ -10,9 +10,6 @@
 
 #include <memory>
 
-using std::make_unique;
-using std::unique_ptr;
-
 class InvalidGraphFileException : public std::exception
 {
    public:
@@ -54,11 +51,11 @@ class ShortestPath
    public:
    ShortestPath();
 
-   void importEdges(string graph_file, bool is_directed = true);
+   void importEdges(std::string graph_file, bool is_directed = true);
    void computePathFromStartToGoal();
 
-   double      getDistanceFromStartToGoal();
-   vector<int> getPathFromStartToGoal();
+   double                   getDistanceFromStartToGoal();
+   std::vector<std::string> getPathFromStartToGoal();
 
    EdgeImporter&  getEdgeImporter();
    Dijkstras_Alg& getDijkstrasAlg();
@@ -67,8 +64,8 @@ class ShortestPath
    bool mHaveEdgesBeenImported;
    bool mHavePathsBeenComputed;
 
-   unique_ptr<EdgeImporter>  mEdgeImporter;
-   unique_ptr<Dijkstras_Alg> mDijkstrasAlgPtr;
+   std::unique_ptr<EdgeImporter>  mEdgeImporter;
+   std::unique_ptr<Dijkstras_Alg> mDijkstrasAlgPtr;
 };
 
 #endif // DIJKSTRAS_ALG_SHORTESTPATH_H

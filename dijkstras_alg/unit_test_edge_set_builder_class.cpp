@@ -115,14 +115,14 @@ TEST(EdgeSetBuilderSettingsParamCtor, ttt)
 
 TEST(EdgeSetBuilderEdgeSetCtor, allPositiveWeightsDirectedEdges)
 {
-   vector<Edge> input_edges{{0, 1, 1}, // reused this edge set from test_Bellman_Ford.cpp,
-                            {0, 2, 4}, //      but gave all edges positive weights.
-                            {1, 2, 3},
-                            {1, 3, 2},
-                            {1, 4, 2},
-                            {3, 1, 1},
-                            {3, 2, 5},
-                            {4, 3, 3}};
+   std::vector<Edge> input_edges{{"0", "1", 1}, // reused this edge set from test_Bellman_Ford.cpp,
+                                 {"0", "2", 4}, //      but gave all edges positive weights.
+                                 {"1", "2", 3},
+                                 {"1", "3", 2},
+                                 {"1", "4", 2},
+                                 {"3", "1", 1},
+                                 {"3", "2", 5},
+                                 {"4", "3", 3}};
 
    EdgeSetBuilder builder(input_edges);
 
@@ -136,15 +136,15 @@ TEST(EdgeSetBuilderEdgeSetCtor, allPositiveWeightsDirectedEdges)
 
 TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsDirectedEdges)
 {
-   vector<Edge> input_edges{
-      {0, 1, -1}, // changed this edge.
-      {0, 2, 4},
-      {1, 2, 3},
-      {1, 3, 2},
-      {1, 4, 2},
-      {3, 1, 1},
-      {3, 2, 5},
-      {4, 3, -3} // changed this edge.
+   std::vector<Edge> input_edges{
+      {"0", "1", -1}, // changed this edge.
+      {"0", "2", 4},
+      {"1", "2", 3},
+      {"1", "3", 2},
+      {"1", "4", 2},
+      {"3", "1", 1},
+      {"3", "2", 5},
+      {"4", "3", -3} // changed this edge.
    };
 
    EdgeSetBuilder builder(input_edges);
@@ -159,14 +159,14 @@ TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsDirectedEdges)
 
 TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsDirectedEdgesSelfLoops)
 {
-   vector<Edge> input_edges{{0, 1, -1},
-                            {0, 2, 4},
-                            {1, 2, 3},
-                            {1, 3, 2},
-                            {1, 1, 2}, // changed this edge.
-                            {3, 1, 1},
-                            {3, 2, 5},
-                            {4, 3, -3}};
+   std::vector<Edge> input_edges{{"0", "1", -1},
+                                 {"0", "2", 4},
+                                 {"1", "2", 3},
+                                 {"1", "3", 2},
+                                 {"1", "1", 2}, // changed this edge.
+                                 {"3", "1", 1},
+                                 {"3", "2", 5},
+                                 {"4", "3", -3}};
 
    EdgeSetBuilder builder(input_edges);
 
@@ -180,14 +180,14 @@ TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsDirectedEdgesSelfLoops)
 
 TEST(EdgeSetBuilderEdgeSetCtor, allPositiveWeightsUndirectedEdges)
 {
-   vector<Edge> input_edges{{0, 1, 1}, // reused this edge set from test_Bellman_Ford.cpp,
-                            {0, 2, 4}, //      but gave all edges positive weights.
-                            {1, 2, 3},
-                            {1, 3, 2},
-                            {1, 4, 2},
-                            {3, 1, 1},
-                            {3, 2, 5},
-                            {4, 3, 3}};
+   std::vector<Edge> input_edges{{"0", "1", 1}, // reused this edge set from test_Bellman_Ford.cpp,
+                                 {"0", "2", 4}, //      but gave all edges positive weights.
+                                 {"1", "2", 3},
+                                 {"1", "3", 2},
+                                 {"1", "4", 2},
+                                 {"3", "1", 1},
+                                 {"3", "2", 5},
+                                 {"4", "3", 3}};
 
    EdgeSetBuilder builder(input_edges, false);
 
@@ -201,15 +201,15 @@ TEST(EdgeSetBuilderEdgeSetCtor, allPositiveWeightsUndirectedEdges)
 
 TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsUndirectedEdges)
 {
-   vector<Edge> input_edges{
-      {0, 1, -1}, // changed this edge.
-      {0, 2, 4},
-      {1, 2, 3},
-      {1, 3, 2},
-      {1, 4, 2},
-      {3, 1, 1},
-      {3, 2, 5},
-      {4, 3, -3} // changed this edge.
+   std::vector<Edge> input_edges{
+      {"0", "1", -1}, // changed this edge.
+      {"0", "2", 4},
+      {"1", "2", 3},
+      {"1", "3", 2},
+      {"1", "4", 2},
+      {"3", "1", 1},
+      {"3", "2", 5},
+      {"4", "3", -3} // changed this edge.
    };
 
    EdgeSetBuilder builder(input_edges, false);
@@ -224,14 +224,14 @@ TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsUndirectedEdges)
 
 TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsUndirectedEdgesSelfLoops)
 {
-   vector<Edge> input_edges{{0, 1, -1},
-                            {0, 2, 4},
-                            {1, 2, 3},
-                            {1, 3, 2},
-                            {1, 1, 2}, // changed this edge.
-                            {3, 1, 1},
-                            {3, 2, 5},
-                            {4, 3, -3}};
+   std::vector<Edge> input_edges{{"0", "1", -1},
+                                 {"0", "2", 4},
+                                 {"1", "2", 3},
+                                 {"1", "3", 2},
+                                 {"1", "1", 2}, // changed this edge.
+                                 {"3", "1", 1},
+                                 {"3", "2", 5},
+                                 {"4", "3", -3}};
 
    EdgeSetBuilder builder(input_edges, false);
 
@@ -245,14 +245,14 @@ TEST(EdgeSetBuilderEdgeSetCtor, mixedSignWeightsUndirectedEdgesSelfLoops)
 
 TEST(EdgeSetBuilderCopyCtor, validESB)
 {
-   vector<Edge> input_edges{{0, 1, -1},
-                            {0, 2, 4},
-                            {1, 2, 3},
-                            {1, 3, 2},
-                            {1, 1, 2},
-                            {3, 1, 1},
-                            {3, 2, 5},
-                            {4, 3, -3}};
+   std::vector<Edge> input_edges{{"0", "1", -1},
+                                 {"0", "2", 4},
+                                 {"1", "2", 3},
+                                 {"1", "3", 2},
+                                 {"1", "1", 2},
+                                 {"3", "1", 1},
+                                 {"3", "2", 5},
+                                 {"4", "3", -3}};
 
    EdgeSetBuilder builderToCopy(input_edges);
 
@@ -270,14 +270,14 @@ TEST(createAndAppendDirectedEdge, positiveWeight)
 {
    EdgeSetBuilder builder;
 
-   builder.createAndAppendEdge(5, 20, 2.00);
+   builder.createAndAppendEdge("5", "20", 2.00);
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 1);
 
-   EXPECT_EQ(output_edges.front().mSource, 5);
-   EXPECT_EQ(output_edges.front().mDestination, 20);
+   EXPECT_EQ(output_edges.front().mSource.mName, "5");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "20");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, 2.00);
 }
 
@@ -285,14 +285,14 @@ TEST(createAndAppendDirectedEdge, negativeWeightIsAllowed)
 {
    EdgeSetBuilder builder(true, true, true);
 
-   builder.createAndAppendEdge(1, 5, -4.00);
+   builder.createAndAppendEdge("1", "5", -4.00);
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 1);
 
-   EXPECT_EQ(output_edges.front().mSource, 1);
-   EXPECT_EQ(output_edges.front().mDestination, 5);
+   EXPECT_EQ(output_edges.front().mSource.mName, "1");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "5");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, -4.00);
 }
 
@@ -300,7 +300,7 @@ TEST(createAndAppendDirectedEdge, negativeWeightIsNotAllowed)
 {
    EdgeSetBuilder builder(true, false, true);
 
-   builder.createAndAppendEdge(1, 5, -4.00);
+   builder.createAndAppendEdge("1", "5", -4.00);
 
    auto output_edges = builder.getEdgeSet();
 
@@ -313,14 +313,14 @@ TEST(createAndAppendDirectedEdge, selfLoopIsAllowed)
 {
    EdgeSetBuilder builder(true, true, true);
 
-   builder.createAndAppendEdge(1, 1);
+   builder.createAndAppendEdge("1", "1");
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 1);
 
-   EXPECT_EQ(output_edges.front().mSource, 1);
-   EXPECT_EQ(output_edges.front().mDestination, 1);
+   EXPECT_EQ(output_edges.front().mSource.mName, "1");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "1");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, 1.00);
 }
 
@@ -328,7 +328,7 @@ TEST(createAndAppendDirectedEdge, selfLoopIsNotAllowed)
 {
    EdgeSetBuilder builder(true, true, false);
 
-   builder.createAndAppendEdge(1, 1);
+   builder.createAndAppendEdge("1", "1");
 
    auto output_edges = builder.getEdgeSet();
 
@@ -341,14 +341,14 @@ TEST(createAndAppendUndirectedEdge, positiveWeight)
 {
    EdgeSetBuilder builder(false, true, true);
 
-   builder.createAndAppendEdge(5, 20, 2.00);
+   builder.createAndAppendEdge("5", "20", 2.00);
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 2);
 
-   EXPECT_EQ(output_edges.front().mSource, 5);
-   EXPECT_EQ(output_edges.front().mDestination, 20);
+   EXPECT_EQ(output_edges.front().mSource.mName, "5");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "20");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, 2.00);
 }
 
@@ -356,14 +356,14 @@ TEST(createAndAppendUndirectedEdge, negativeWeightIsAllowed)
 {
    EdgeSetBuilder builder(false, true, true);
 
-   builder.createAndAppendEdge(1, 5, -4.00);
+   builder.createAndAppendEdge("1", "5", -4.00);
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 2);
 
-   EXPECT_EQ(output_edges.front().mSource, 1);
-   EXPECT_EQ(output_edges.front().mDestination, 5);
+   EXPECT_EQ(output_edges.front().mSource.mName, "1");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "5");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, -4.00);
 }
 
@@ -371,7 +371,7 @@ TEST(createAndAppendUndirectedEdge, negativeWeightIsNotAllowed)
 {
    EdgeSetBuilder builder(false, false, true);
 
-   builder.createAndAppendEdge(1, 5, -4.00);
+   builder.createAndAppendEdge("1", "5", -4.00);
 
    auto output_edges = builder.getEdgeSet();
 
@@ -384,14 +384,14 @@ TEST(createAndAppendUndirectedEdge, selfLoopIsAllowed)
 {
    EdgeSetBuilder builder(false, true, true);
 
-   builder.createAndAppendEdge(1, 1);
+   builder.createAndAppendEdge("1", "1");
 
    auto output_edges = builder.getEdgeSet();
 
    EXPECT_EQ(builder.getEdgeCount(), 2);
 
-   EXPECT_EQ(output_edges.front().mSource, 1);
-   EXPECT_EQ(output_edges.front().mDestination, 1);
+   EXPECT_EQ(output_edges.front().mSource.mName, "1");
+   EXPECT_EQ(output_edges.front().mDestination.mName, "1");
    EXPECT_DOUBLE_EQ(output_edges.front().mWeight, 1.00);
 }
 
@@ -399,7 +399,7 @@ TEST(createAndAppendUndirectedEdge, selfLoopIsNotAllowed)
 {
    EdgeSetBuilder builder(false, true, false);
 
-   builder.createAndAppendEdge(1, 1);
+   builder.createAndAppendEdge("1", "1");
 
    auto output_edges = builder.getEdgeSet();
 

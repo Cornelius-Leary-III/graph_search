@@ -13,14 +13,6 @@
 
 #include "Edge.h"
 
-using std::endl;
-using std::ifstream;
-using std::istream;
-using std::ostream;
-using std::string;
-using std::stringstream;
-using std::vector;
-
 class EdgeSetBuilder
 {
    public:
@@ -30,32 +22,34 @@ class EdgeSetBuilder
                   bool are_negative_edge_weights_allowed,
                   bool are_self_loops_allowed);
 
-   EdgeSetBuilder(const vector<Edge>& edges, bool directedGraphState = true);
+   EdgeSetBuilder(const std::vector<Edge>& edges, bool directedGraphState = true);
 
    EdgeSetBuilder(const EdgeSetBuilder& edge_set_builder_to_copy);
 
-   void createAndAppendEdge(int new_source, int new_destination, double new_weight = 1.00);
+   void createAndAppendEdge(const std::string& new_source,
+                            const std::string& new_destination,
+                            double             new_weight = 1.00);
 
-   vector<Edge>& getEdgeSet();
-   bool          isGraphDirected();
-   bool          areNegativeEdgesAllowed();
-   bool          areSelfLoopsAllowed();
-   unsigned long getEdgeCount();
+   std::vector<Edge>& getEdgeSet();
+   bool               isGraphDirected();
+   bool               areNegativeEdgesAllowed();
+   bool               areSelfLoopsAllowed();
+   unsigned long      getEdgeCount();
 
    // figure out how to incorporate Euclidean coordinates in edge representation.
 
    EdgeSetBuilder& operator=(const EdgeSetBuilder& rhs);
 
    private:
-   void addEdgesForUndirectedGraph(const vector<Edge>& edges);
+   void addEdgesForUndirectedGraph(const std::vector<Edge>& edges);
    bool checkForNegativeEdges();
    bool checkForSelfLoops();
 
    private:
-   vector<Edge> mEdgeSet;
-   bool         mAreNegativeEdgeWeightsAllowed;
-   bool         mAreSelfLoopsAllowed;
-   bool         mIsGraphDirected;
+   std::vector<Edge> mEdgeSet;
+   bool              mAreNegativeEdgeWeightsAllowed;
+   bool              mAreSelfLoopsAllowed;
+   bool              mIsGraphDirected;
 };
 
 #endif // DIJKSTRAS_ALG_EDGESETBUILDER_H

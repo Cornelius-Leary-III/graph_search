@@ -5,27 +5,18 @@
 #ifndef DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
 #define DIJKSTRAS_ALG_DIJKSTRAS_ALG_H
 
+#include "EdgeImporter.h"
+
 #include <values.h>
 #include <vector>
+#include <map>
 #include <queue>
 #include <iostream>
 #include <string>
 
-#include "EdgeImporter.h"
-
-using std::cout;
-using std::endl;
-using std::priority_queue;
-using std::queue;
-using std::string;
-using std::vector;
-
-using std::make_pair;
-using std::pair;
-
 // please note the order in elements:
-using node        = pair<double, int>;
-using adjListNode = pair<int, double>;
+using node        = std::pair<double, std::string>;
+using adjListNode = std::pair<std::string, double>;
 
 class NegativeEdgeWeightsException : public std::exception
 {
@@ -51,31 +42,32 @@ class Dijkstras_Alg
    public:
    explicit Dijkstras_Alg(unsigned long number_of_nodes);
 
-   void addEdges(const vector<Edge>& edges);
-   void compute(int source_vertex);
+   void addEdges(const std::vector<Edge>& edges);
+   void compute(const std::string& source_vertex);
 
-   vector<int> getPathFromStartToNode(int start, int end);
+   std::vector<std::string> getPathFromStartToNode(const std::string& start,
+                                                   const std::string& end);
 
-   vector<vector<adjListNode>>& getAdjacencyList();
-   priority_queue<node>&        getUnvisitedVertices();
-   vector<double>&              getDistanceTable();
-   vector<int>&                 getPredecessorTable();
-   vector<bool>&                getVisitedTable();
-   vector<Edge>&                getEdgeSet();
+   std::map<std::string, std::map<std::string, double>>& getAdjacencyList();
+   std::priority_queue<node>&                            getUnvisitedVertices();
+   std::map<std::string, double>&                        getDistanceTable();
+   std::map<std::string, std::string>&                   getPredecessorTable();
+   std::vector<Edge>&                                    getEdgeSet();
+   //   std::vector<bool>&                     getVisitedTable();
 
    private:
    void buildAdjacencyList();
-   void processCurrentNode(int name);
+   void processCurrentNode(const std::string& name);
 
    private:
-   vector<bool>                mVisitedTable; // change me! (not in STL)
-   priority_queue<node>        mOpenSet;
-   vector<vector<adjListNode>> mAdjList;
+   //   std::vector<bool>                     mVisitedTable; // change me! (not in STL)
+   std::priority_queue<node>                            mOpenSet;
+   std::map<std::string, std::map<std::string, double>> mAdjList;
 
-   vector<double> mDistanceTable;
-   vector<int>    mPredecessorTable;
-   vector<Edge>   mEdgeSet;
-   unsigned long  mNodeCount;
+   std::map<std::string, double>      mDistanceTable;
+   std::map<std::string, std::string> mPredecessorTable;
+   std::vector<Edge>                  mEdgeSet;
+   unsigned long                      mNodeCount;
 };
 
 #endif // DIJKSTRAS_ALG_DIJKSTRAS_ALG_H

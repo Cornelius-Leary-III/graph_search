@@ -10,8 +10,8 @@ TEST(ctor, defaultCtor)
    ShortestPath planner;
 
    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 0);
+   EXPECT_EQ(planner.getEdgeImporter().getStartNodeName(), "0");
+   EXPECT_EQ(planner.getEdgeImporter().getGoalNodeName(), "0");
 
    EXPECT_FALSE(planner.getEdgeImporter().isFileValid());
 
@@ -82,8 +82,8 @@ TEST(getDistanceToGoal, singleDirectedEdgeGraph)
    planner.importEdges("tests/single_edge.txt");
    planner.computePathFromStartToGoal();
 
-   EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 1);
+   EXPECT_EQ(planner.getEdgeImporter().getStartNodeName(), "0");
+   EXPECT_EQ(planner.getEdgeImporter().getGoalNodeName(), "1");
    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 2);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 1.50);
@@ -96,8 +96,8 @@ TEST(getDistanceToGoal, singleUndirectedEdgeGraph)
    planner.importEdges("tests/single_edge.txt", false);
    planner.computePathFromStartToGoal();
 
-   EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 1);
+   EXPECT_EQ(planner.getEdgeImporter().getStartNodeName(), "0");
+   EXPECT_EQ(planner.getEdgeImporter().getGoalNodeName(), "1");
    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 2);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 1.50);
@@ -110,8 +110,8 @@ TEST(getDistanceToGoal, multipleDirectedEdgesGraph)
    planner.importEdges("tests/multiple_edges.txt");
    planner.computePathFromStartToGoal();
 
-   EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 3);
+   EXPECT_EQ(planner.getEdgeImporter().getStartNodeName(), "0");
+   EXPECT_EQ(planner.getEdgeImporter().getGoalNodeName(), "3");
    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 4);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 2.25);
@@ -124,8 +124,8 @@ TEST(getDistanceToGoal, multipleUndirectedEdgesGraph)
    planner.importEdges("tests/multiple_edges.txt", false);
    planner.computePathFromStartToGoal();
 
-   EXPECT_EQ(planner.getEdgeImporter().getStartNode(), 0);
-   EXPECT_EQ(planner.getEdgeImporter().getGoalNode(), 3);
+   EXPECT_EQ(planner.getEdgeImporter().getStartNodeName(), "0");
+   EXPECT_EQ(planner.getEdgeImporter().getGoalNodeName(), "3");
    EXPECT_EQ(planner.getEdgeImporter().getNumberOfNodes(), 4);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 2.25);
@@ -150,8 +150,8 @@ TEST(getPathToGoal, singleDirectedEdgeGraph)
    auto path = planner.getPathFromStartToGoal();
 
    auto path_iter = path.begin();
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 1);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "1");
    EXPECT_TRUE((++path_iter) == path.end());
 }
 
@@ -165,8 +165,8 @@ TEST(getPathToGoal, singleUndirectedEdgeGraph)
    auto path = planner.getPathFromStartToGoal();
 
    auto path_iter = path.begin();
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 1);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "1");
    EXPECT_TRUE((++path_iter) == path.end());
 }
 
@@ -180,9 +180,9 @@ TEST(getPathToGoal, multipleDirectedEdgesGraph)
    auto path = planner.getPathFromStartToGoal();
 
    auto path_iter = path.begin();
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 2);
-   EXPECT_EQ(*(++path_iter), 3);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "2");
+   EXPECT_EQ(*(++path_iter), "3");
    EXPECT_TRUE((++path_iter) == path.end());
 }
 
@@ -196,9 +196,9 @@ TEST(getPathToGoal, multipleUndirectedEdgesGraph)
    auto path = planner.getPathFromStartToGoal();
 
    auto path_iter = path.begin();
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 2);
-   EXPECT_EQ(*(++path_iter), 3);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "2");
+   EXPECT_EQ(*(++path_iter), "3");
    EXPECT_TRUE((++path_iter) == path.end());
 }
 
@@ -213,9 +213,9 @@ TEST(fullExample, smallWeightedDirectedGraph)
    auto path_iter = path.begin();
    auto path_end  = path.end();
 
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 2);
-   EXPECT_EQ(*(++path_iter), 5);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "2");
+   EXPECT_EQ(*(++path_iter), "5");
    EXPECT_TRUE((++path_iter) == path_end);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 23.0);
@@ -232,10 +232,10 @@ TEST(fullExample, smallWeightedUndirectedGraph)
    auto path_iter = path.begin();
    auto path_end  = path.end();
 
-   EXPECT_EQ(*path_iter, 0);
-   EXPECT_EQ(*(++path_iter), 3);
-   EXPECT_EQ(*(++path_iter), 2);
-   EXPECT_EQ(*(++path_iter), 5);
+   EXPECT_EQ(*path_iter, "0");
+   EXPECT_EQ(*(++path_iter), "3");
+   EXPECT_EQ(*(++path_iter), "2");
+   EXPECT_EQ(*(++path_iter), "5");
    EXPECT_TRUE((++path_iter) == path_end);
 
    EXPECT_DOUBLE_EQ(planner.getDistanceFromStartToGoal(), 20.0);
@@ -252,23 +252,23 @@ TEST(fullExample, mediumUnweightedDirectedGraph)
    auto path_iter = path.begin();
    auto path_end  = path.end();
 
-   EXPECT_EQ(*path_iter, 42);
-   EXPECT_EQ(*(++path_iter), 51);
-   EXPECT_EQ(*(++path_iter), 59);
-   EXPECT_EQ(*(++path_iter), 68);
-   EXPECT_EQ(*(++path_iter), 77);
-   EXPECT_EQ(*(++path_iter), 88);
-   EXPECT_EQ(*(++path_iter), 99);
-   EXPECT_EQ(*(++path_iter), 100);
-   EXPECT_EQ(*(++path_iter), 101);
-   EXPECT_EQ(*(++path_iter), 102);
-   EXPECT_EQ(*(++path_iter), 103);
-   EXPECT_EQ(*(++path_iter), 104);
-   EXPECT_EQ(*(++path_iter), 105);
-   EXPECT_EQ(*(++path_iter), 106);
-   EXPECT_EQ(*(++path_iter), 107);
-   EXPECT_EQ(*(++path_iter), 108);
-   EXPECT_EQ(*(++path_iter), 109);
+   EXPECT_EQ(*path_iter, "42");
+   EXPECT_EQ(*(++path_iter), "51");
+   EXPECT_EQ(*(++path_iter), "59");
+   EXPECT_EQ(*(++path_iter), "68");
+   EXPECT_EQ(*(++path_iter), "77");
+   EXPECT_EQ(*(++path_iter), "88");
+   EXPECT_EQ(*(++path_iter), "99");
+   EXPECT_EQ(*(++path_iter), "100");
+   EXPECT_EQ(*(++path_iter), "101");
+   EXPECT_EQ(*(++path_iter), "102");
+   EXPECT_EQ(*(++path_iter), "103");
+   EXPECT_EQ(*(++path_iter), "104");
+   EXPECT_EQ(*(++path_iter), "105");
+   EXPECT_EQ(*(++path_iter), "106");
+   EXPECT_EQ(*(++path_iter), "107");
+   EXPECT_EQ(*(++path_iter), "108");
+   EXPECT_EQ(*(++path_iter), "109");
 
    EXPECT_TRUE((++path_iter) == path_end);
 
@@ -286,26 +286,26 @@ TEST(fullExample, mediumWeightedDirectedGraph)
    auto path_iter = path.begin();
    auto path_end  = path.end();
 
-   EXPECT_EQ(*path_iter, 11);
-   EXPECT_EQ(*(++path_iter), 22);
-   EXPECT_EQ(*(++path_iter), 33);
-   EXPECT_EQ(*(++path_iter), 44);
-   EXPECT_EQ(*(++path_iter), 55);
-   EXPECT_EQ(*(++path_iter), 66);
-   EXPECT_EQ(*(++path_iter), 67);
-   EXPECT_EQ(*(++path_iter), 68);
-   EXPECT_EQ(*(++path_iter), 69);
-   EXPECT_EQ(*(++path_iter), 70);
-   EXPECT_EQ(*(++path_iter), 71);
-   EXPECT_EQ(*(++path_iter), 72);
-   EXPECT_EQ(*(++path_iter), 83);
-   EXPECT_EQ(*(++path_iter), 84);
-   EXPECT_EQ(*(++path_iter), 85);
-   EXPECT_EQ(*(++path_iter), 96);
-   EXPECT_EQ(*(++path_iter), 97);
-   EXPECT_EQ(*(++path_iter), 108);
-   EXPECT_EQ(*(++path_iter), 109);
-   EXPECT_EQ(*(++path_iter), 120);
+   EXPECT_EQ(*path_iter, "11");
+   EXPECT_EQ(*(++path_iter), "22");
+   EXPECT_EQ(*(++path_iter), "33");
+   EXPECT_EQ(*(++path_iter), "44");
+   EXPECT_EQ(*(++path_iter), "55");
+   EXPECT_EQ(*(++path_iter), "66");
+   EXPECT_EQ(*(++path_iter), "67");
+   EXPECT_EQ(*(++path_iter), "68");
+   EXPECT_EQ(*(++path_iter), "69");
+   EXPECT_EQ(*(++path_iter), "70");
+   EXPECT_EQ(*(++path_iter), "71");
+   EXPECT_EQ(*(++path_iter), "72");
+   EXPECT_EQ(*(++path_iter), "83");
+   EXPECT_EQ(*(++path_iter), "84");
+   EXPECT_EQ(*(++path_iter), "85");
+   EXPECT_EQ(*(++path_iter), "96");
+   EXPECT_EQ(*(++path_iter), "97");
+   EXPECT_EQ(*(++path_iter), "108");
+   EXPECT_EQ(*(++path_iter), "109");
+   EXPECT_EQ(*(++path_iter), "120");
 
    EXPECT_TRUE((++path_iter) == path_end);
 

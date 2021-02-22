@@ -5,26 +5,33 @@
 #include "Dijkstras_Alg.h"
 
 Dijkstras_Alg::Dijkstras_Alg(unsigned long number_of_nodes)
-   : mVisitedTable(number_of_nodes, false),
+   : /*mVisitedTable(number_of_nodes, false),*/
      mOpenSet(),
-     mAdjList(number_of_nodes, vector<adjListNode>()),
-     mDistanceTable(number_of_nodes, MAXDOUBLE),
-     mPredecessorTable(number_of_nodes, -1),
+     mAdjList(),
+     mDistanceTable(),
+     mPredecessorTable(),
+     //     mAdjList(number_of_nodes, std::vector<adjListNode>()),
+     //     mDistanceTable(number_of_nodes, MAXDOUBLE),
+     //     mPredecessorTable(number_of_nodes, -1),
      mEdgeSet(),
      mNodeCount(number_of_nodes)
 {
 }
 
-void Dijkstras_Alg::compute(int source_vertex)
+void Dijkstras_Alg::compute(const std::string& source_vertex)
 {
    // check if the source node is too large or a negative #.
-   if (source_vertex >= (int) mNodeCount || source_vertex < 0)
+   auto find_iter = mDistanceTable.find(source_vertex);
+   auto find_end  = mDistanceTable.end();
+
+   if (find_iter == find_end)
    {
       throw StartNodeProvidedIsNonExistentException();
    }
 
    // set the distance to the source node from the source node to be 0.
-   mDistanceTable[source_vertex] = 0;
+   //   mDistanceTable.(source_vertex, 0);
+   find_iter->second = 0;
 
    // put the this edge into the open set queue.
    mOpenSet.emplace(mDistanceTable[source_vertex], source_vertex);
@@ -41,12 +48,12 @@ void Dijkstras_Alg::compute(int source_vertex)
    }
 }
 
-void Dijkstras_Alg::processCurrentNode(int name)
+void Dijkstras_Alg::processCurrentNode(const std::string& name)
 {
    // process each neighbor of the provided node.
    for (auto& neighbor : mAdjList[name])
    {
-      int neighbor_name = neighbor.first;
+      std::string neighbor_name = neighbor.first;
 
       // compute the alternative path to this node:
       //      --> add the existing cost from the source node to the current node to the weight of
@@ -70,7 +77,8 @@ void Dijkstras_Alg::processCurrentNode(int name)
    }
 }
 
-vector<int> Dijkstras_Alg::getPathFromStartToNode(int start, int end)
+std::vector<std::string> Dijkstras_Alg::getPathFromStartToNode(const std::string& start,
+                                                               const std::string& end)
 {
    // TODO: (04/24/19)
    //      either:
@@ -80,67 +88,70 @@ vector<int> Dijkstras_Alg::getPathFromStartToNode(int start, int end)
    // compute the distances using the provided start node.
    compute(start);
 
-   vector<int> back_tracing_path;
+   std::vector<std::string> back_tracing_path;
+
+   auto find_iter = mPredecessorTable.find(end);
+   auto find_end  = mPredecessorTable.end();
 
    // check that the end node provided is within the graph.
-   if (end <= (int) mPredecessorTable.size())
+   if (find_iter != find_end)
    {
       // begin at the end node
-      int back_tracing_index = end;
+      std::string back_tracking_node_name = end;
 
       // continue until the index is:
       //      * at the start node provided
       //      * at a dead-end (== -1)
-      while (back_tracing_index != start && back_tracing_index != -1)
+      while (back_tracking_node_name != start && !back_tracking_node_name.empty())
       {
          // add the current index (which doubles as the node name) to the path.
-         back_tracing_path.push_back(back_tracing_index);
+         back_tracing_path.push_back(back_tracking_node_name);
 
          // advance to the next predecessor.
-         back_tracing_index = mPredecessorTable[back_tracing_index];
+         back_tracking_node_name = mPredecessorTable[back_tracking_node_name];
       }
 
       // add the final index to the path.
-      back_tracing_path.push_back(back_tracing_index);
+      back_tracing_path.push_back(back_tracking_node_name);
    }
 
    // reverse the path; goes from start node to goal node.
-   return vector<int>(back_tracing_path.rbegin(), back_tracing_path.rend());
+   return std::vector<std::string>(back_tracing_path.rbegin(), back_tracing_path.rend());
 }
 
-void Dijkstras_Alg::addEdges(const vector<Edge>& edges)
+void Dijkstras_Alg::addEdges(const std::vector<Edge>& edges)
 {
    mEdgeSet = edges;
 
    buildAdjacencyList();
 }
 
-vector<vector<adjListNode>>& Dijkstras_Alg::getAdjacencyList()
+std::map<std::string, std::map<std::string, double>>& Dijkstras_Alg::getAdjacencyList()
 {
    return mAdjList;
 }
 
-priority_queue<node>& Dijkstras_Alg::getUnvisitedVertices()
+std::priority_queue<node>& Dijkstras_Alg::getUnvisitedVertices()
 {
    return mOpenSet;
 }
 
-vector<double>& Dijkstras_Alg::getDistanceTable()
+std::map<std::string, double>& Dijkstras_Alg::getDistanceTable()
 {
    return mDistanceTable;
 }
 
-vector<int>& Dijkstras_Alg::getPredecessorTable()
+std::map<std::string, std::string>& Dijkstras_Alg::getPredecessorTable()
 {
    return mPredecessorTable;
 }
 
-vector<bool>& Dijkstras_Alg::getVisitedTable()
-{
-   return mVisitedTable;
-}
+// std::vector<bool>& Dijkstras_Alg::getVisitedTable()
+//{
+//   return mVisitedTable;
+//}
 
-vector<Edge>& Dijkstras_Alg::getEdgeSet()
+std::vector<Edge>& Dijkstras_Alg::getEdgeSet()
 {
    return mEdgeSet;
 }
@@ -154,6 +165,19 @@ void Dijkstras_Alg::buildAdjacencyList()
          throw NegativeEdgeWeightsException();
       }
 
-      mAdjList[edge.mSource].emplace_back(edge.mDestination, edge.mWeight);
+      auto source_iter = mAdjList.find(edge.mSource.mName);
+      auto sources_end = mAdjList.end();
+
+      if (source_iter != sources_end)
+      {
+         source_iter->second.emplace(edge.mDestination.mName, edge.mWeight);
+      }
+      else
+      {
+         std::map<std::string, double> neighbor_to_source;
+         neighbor_to_source.emplace(edge.mDestination.mName, edge.mWeight);
+
+         mAdjList.emplace(edge.mSource.mName, neighbor_to_source);
+      }
    }
 }

@@ -22,7 +22,7 @@ EdgeSetBuilder::EdgeSetBuilder(bool is_graph_directed,
 {
 }
 
-EdgeSetBuilder::EdgeSetBuilder(const vector<Edge>& edges, bool is_graph_directed)
+EdgeSetBuilder::EdgeSetBuilder(const std::vector<Edge>& edges, bool is_graph_directed)
    : mIsGraphDirected{is_graph_directed}
 {
    if (!mIsGraphDirected)
@@ -49,12 +49,12 @@ EdgeSetBuilder::EdgeSetBuilder(const EdgeSetBuilder& edge_set_builder_to_copy)
 {
 }
 
-void EdgeSetBuilder::addEdgesForUndirectedGraph(const vector<Edge>& edges)
+void EdgeSetBuilder::addEdgesForUndirectedGraph(const std::vector<Edge>& edges)
 {
    auto edge_iter = edges.begin();
    auto edges_end = edges.end();
 
-   vector<Edge> undirected_edges;
+   std::vector<Edge> undirected_edges;
 
    while (edge_iter != edges_end)
    {
@@ -121,7 +121,7 @@ bool EdgeSetBuilder::checkForSelfLoops()
    return false;
 }
 
-vector<Edge>& EdgeSetBuilder::getEdgeSet()
+std::vector<Edge>& EdgeSetBuilder::getEdgeSet()
 {
    return mEdgeSet;
 }
@@ -146,7 +146,9 @@ unsigned long EdgeSetBuilder::getEdgeCount()
    return mEdgeSet.size();
 }
 
-void EdgeSetBuilder::createAndAppendEdge(int new_source, int new_destination, double new_weight)
+void EdgeSetBuilder::createAndAppendEdge(const std::string& new_source,
+                                         const std::string& new_destination,
+                                         double             new_weight)
 {
    // checks if edge is a self-loop.
    if (new_source == new_destination)

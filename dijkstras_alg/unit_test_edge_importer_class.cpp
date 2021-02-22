@@ -67,8 +67,8 @@ TEST(readInvalidGraphFile, no_file_given)
 
    EXPECT_TRUE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 0);
+   EXPECT_EQ(importer.getStartNodeName(), "0");
+   EXPECT_EQ(importer.getGoalNodeName(), "0");
    EXPECT_EQ(importer.getNumberOfNodes(), 0);
 }
 
@@ -80,8 +80,8 @@ TEST(readInvalidGraphFile, file_does_not_exist)
 
    EXPECT_TRUE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 0);
+   EXPECT_EQ(importer.getStartNodeName(), "0");
+   EXPECT_EQ(importer.getGoalNodeName(), "0");
    EXPECT_EQ(importer.getNumberOfNodes(), 0);
 }
 
@@ -93,8 +93,8 @@ TEST(readInvalidGraphFile, empty_file)
 
    EXPECT_TRUE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 0);
+   EXPECT_EQ(importer.getStartNodeName(), "0");
+   EXPECT_EQ(importer.getGoalNodeName(), "0");
    EXPECT_EQ(importer.getNumberOfNodes(), 0);
 }
 
@@ -107,8 +107,8 @@ TEST(readInvalidGraphFile, setup_info_is_incorrect)
 
    EXPECT_TRUE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 0);
+   EXPECT_EQ(importer.getStartNodeName(), "0");
+   EXPECT_EQ(importer.getGoalNodeName(), "0");
    EXPECT_EQ(importer.getNumberOfNodes(), 0);
 }
 
@@ -120,8 +120,8 @@ TEST(readInvalidGraphFile, setup_info_correct_missing_edges)
 
    EXPECT_TRUE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 1);
-   EXPECT_EQ(importer.getGoalNode(), 20);
+   EXPECT_EQ(importer.getStartNodeName(), "1");
+   EXPECT_EQ(importer.getGoalNodeName(), "20");
    EXPECT_EQ(importer.getNumberOfNodes(), 25);
 }
 
@@ -135,12 +135,12 @@ TEST(readValidGraphFile, single_edge)
 
    auto edge = importer.getEdges().front();
 
-   EXPECT_EQ(edge.mSource, 0);
-   EXPECT_EQ(edge.mDestination, 1);
+   EXPECT_EQ(edge.mSource.mName, "1");
+   EXPECT_EQ(edge.mDestination.mName, "2");
    EXPECT_DOUBLE_EQ(edge.mWeight, 1.50);
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 1);
+   EXPECT_EQ(importer.getStartNodeName(), "1");
+   EXPECT_EQ(importer.getGoalNodeName(), "2");
    EXPECT_EQ(importer.getNumberOfNodes(), 2);
 }
 
@@ -152,34 +152,34 @@ TEST(readValidGraphFile, multiple_edges)
 
    EXPECT_FALSE(importer.getEdges().empty());
 
-   EXPECT_EQ(importer.getStartNode(), 0);
-   EXPECT_EQ(importer.getGoalNode(), 3);
+   EXPECT_EQ(importer.getStartNodeName(), "1");
+   EXPECT_EQ(importer.getGoalNodeName(), "4");
    EXPECT_EQ(importer.getNumberOfNodes(), 4);
 
    auto edge_iter = importer.getEdges().begin();
 
-   EXPECT_EQ(edge_iter->mSource, 0);
-   EXPECT_EQ(edge_iter->mDestination, 1);
+   EXPECT_EQ(edge_iter->mSource.mName, "1");
+   EXPECT_EQ(edge_iter->mDestination.mName, "2");
    EXPECT_DOUBLE_EQ(edge_iter->mWeight, 1.50);
 
    ++edge_iter;
-   EXPECT_EQ(edge_iter->mSource, 0);
-   EXPECT_EQ(edge_iter->mDestination, 2);
+   EXPECT_EQ(edge_iter->mSource.mName, "1");
+   EXPECT_EQ(edge_iter->mDestination.mName, "3");
    EXPECT_DOUBLE_EQ(edge_iter->mWeight, 1.00);
 
    ++edge_iter;
-   EXPECT_EQ(edge_iter->mSource, 0);
-   EXPECT_EQ(edge_iter->mDestination, 3);
+   EXPECT_EQ(edge_iter->mSource.mName, "1");
+   EXPECT_EQ(edge_iter->mDestination.mName, "4");
    EXPECT_DOUBLE_EQ(edge_iter->mWeight, 4.00);
 
    ++edge_iter;
-   EXPECT_EQ(edge_iter->mSource, 1);
-   EXPECT_EQ(edge_iter->mDestination, 2);
+   EXPECT_EQ(edge_iter->mSource.mName, "2");
+   EXPECT_EQ(edge_iter->mDestination.mName, "3");
    EXPECT_DOUBLE_EQ(edge_iter->mWeight, 1.00);
 
    ++edge_iter;
-   EXPECT_EQ(edge_iter->mSource, 2);
-   EXPECT_EQ(edge_iter->mDestination, 3);
+   EXPECT_EQ(edge_iter->mSource.mName, "3");
+   EXPECT_EQ(edge_iter->mDestination.mName, "4");
    EXPECT_DOUBLE_EQ(edge_iter->mWeight, 1.25);
 
    ++edge_iter;

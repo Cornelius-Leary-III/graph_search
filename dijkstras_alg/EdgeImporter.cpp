@@ -4,11 +4,11 @@
 
 #include "EdgeImporter.h"
 
-EdgeImporter::EdgeImporter(string new_file_to_read_from)
+EdgeImporter::EdgeImporter(std::string new_file_to_read_from)
    : mEdgeSetBuilder(),
      mNumberOfNodes(0),
-     mStartNode(0),
-     mGoalNode(0),
+     mStartNodeName("0"),
+     mGoalNodeName("0"),
      mEdgeBuilderIsSetup(false),
      mFileIsValid(false),
      mInputFileName(std::move(new_file_to_read_from))
@@ -32,14 +32,14 @@ bool EdgeImporter::isFileValid()
    return mFileIsValid;
 }
 
-int EdgeImporter::getStartNode()
+const std::string& EdgeImporter::getStartNodeName()
 {
-   return mStartNode;
+   return mStartNodeName;
 }
 
-int EdgeImporter::getGoalNode()
+const std::string& EdgeImporter::getGoalNodeName()
 {
-   return mGoalNode;
+   return mGoalNodeName;
 }
 
 unsigned long EdgeImporter::getNumberOfNodes()
@@ -47,7 +47,7 @@ unsigned long EdgeImporter::getNumberOfNodes()
    return mNumberOfNodes;
 }
 
-vector<Edge>& EdgeImporter::getEdges()
+std::vector<Edge>& EdgeImporter::getEdges()
 {
    return mEdgeSetBuilder.getEdgeSet();
 }
@@ -95,12 +95,12 @@ void EdgeImporter::readGraphFile()
 
    if (mEdgeSetBuilder.getEdgeCount() > 0)
    {
-      int difference_from_zero = getSmallestNodeIndex();
+      //      int difference_from_zero = getSmallestNodeIndex();
 
-      if (difference_from_zero != 0)
-      {
-         makeEdgeSetZeroBased(difference_from_zero);
-      }
+      //      if (difference_from_zero != 0)
+      //      {
+      //         makeEdgeSetZeroBased(difference_from_zero);
+      //      }
    }
 
    // close the file afterwards.
@@ -120,7 +120,7 @@ void EdgeImporter::processFirstThreeLinesOfGraphFile()
    while (value_count < 3)
    {
       // parse the setup value on the current line.
-      string temp = getSetupStringValue();
+      std::string temp = getSetupStringValue();
 
       // check if the setup function returned an empty string
       //      --> returns an empty string if no value was on that line.
@@ -140,39 +140,39 @@ void EdgeImporter::processFirstThreeLinesOfGraphFile()
       }
       else if (value_count == 1)
       {
-         mStartNode = std::stoi(temp);
+         mStartNodeName = std::stoi(temp);
       }
       else if (value_count == 2)
       {
-         mGoalNode = std::stoi(temp);
+         mGoalNodeName = std::stoi(temp);
       }
 
       ++value_count;
    }
 }
 
-string EdgeImporter::getSetupStringValue()
+std::string EdgeImporter::getSetupStringValue()
 {
-   string current_line;
-   string value;
+   std::string current_line;
+   std::string value;
 
    // obtain the current line from the file.
    if (std::getline(mInputStream, current_line, '\n'))
    {
       // setting found.
-      stringstream ss;
+      std::stringstream ss;
       ss << current_line;
 
       // save the first value.
       if (ss >> value)
       {
-         string temp;
+         std::string temp;
 
          // check if additional value is on same line of file.
          if (ss >> temp)
          {
             // there is additional information on the line.
-            return string();
+            return std::string();
          }
       }
       // value found AND no additional info on the same line.
@@ -183,7 +183,7 @@ string EdgeImporter::getSetupStringValue()
 
 void EdgeImporter::importEdges()
 {
-   string temp_line;
+   std::string temp_line;
 
    // get the next line.
    while (std::getline(mInputStream, temp_line))
@@ -199,72 +199,70 @@ void EdgeImporter::importEdges()
    }
 }
 
-void EdgeImporter::processCurrentEdgeInFile(const string& edge_to_process)
+void EdgeImporter::processCurrentEdgeInFile(const std::string& edge_to_process)
 {
    // pass the entire edge data string into the stream.
-   stringstream ss;
+   std::stringstream ss;
    ss << edge_to_process;
 
    // parse the source node name from the edge data.
-   string source_node_name;
+   std::string source_node_name;
    ss >> source_node_name;
-   int source = std::stoi(source_node_name);
 
    // parse the destination node name from the edge data.
-   string destination_node_name;
+   std::string destination_node_name;
    ss >> destination_node_name;
-   int destination = std::stoi(destination_node_name);
 
    // parse the weight from the edge data.
-   string weight_string;
+   std::string weight_string;
    ss >> weight_string;
    double edge_weight = std::stod(weight_string);
 
    // add the edge to the edge list.
-   mEdgeSetBuilder.createAndAppendEdge(source, destination, edge_weight);
+   mEdgeSetBuilder.createAndAppendEdge(source_node_name, destination_node_name, edge_weight);
 }
 
-int EdgeImporter::getSmallestNodeIndex()
-{
-   auto edge_iter = mEdgeSetBuilder.getEdgeSet().begin();
-   auto edges_end = mEdgeSetBuilder.getEdgeSet().end();
+// int EdgeImporter::getSmallestNodeIndex()
+//{
+//   auto edge_iter = mEdgeSetBuilder.getEdgeSet().begin();
+//   auto edges_end = mEdgeSetBuilder.getEdgeSet().end();
 
-   int smallest_value = INT32_MAX;
+//   int smallest_value = INT32_MAX;
 
-   while (edge_iter != edges_end)
-   {
-      if (edge_iter->mSource == 0 || edge_iter->mDestination == 0)
-      {
-         return 0;
-      }
+//   while (edge_iter != edges_end)
+//   {
+//      if (edge_iter->mSource.mName.empty() || edge_iter->mDestination.mName.empty())
+//      {
+//         return 0;
+//      }
 
-      if (edge_iter->mSource < smallest_value)
-      {
-         smallest_value = edge_iter->mSource;
-      }
+//      if (edge_iter->mSource.mName < smallest_value)
+//      {
+//         smallest_value = edge_iter->mSource;
+//      }
 
-      if (edge_iter->mDestination < smallest_value)
-      {
-         smallest_value = edge_iter->mDestination;
-      }
+//      if (edge_iter->mDestination < smallest_value)
+//      {
+//         smallest_value = edge_iter->mDestination;
+//      }
 
-      ++edge_iter;
-   }
-   return smallest_value;
-}
+//      ++edge_iter;
+//   }
+//   return smallest_value;
+//}
 
-void EdgeImporter::makeEdgeSetZeroBased(int difference)
-{
-   auto edge_iter = mEdgeSetBuilder.getEdgeSet().begin();
-   auto edges_end = mEdgeSetBuilder.getEdgeSet().end();
+// void EdgeImporter::makeEdgeSetZeroBased(int difference)
+//{
+//   auto edge_iter = mEdgeSetBuilder.getEdgeSet().begin();
+//   auto edges_end = mEdgeSetBuilder.getEdgeSet().end();
 
-   while (edge_iter != edges_end)
-   {
-      edge_iter->mSource -= difference;
-      edge_iter->mDestination -= difference;
-      ++edge_iter;
-   }
+//   while (edge_iter != edges_end)
+//   {
+//      edge_iter->mSource -= difference;
+//      edge_iter->mDestination -= difference;
+//      ++edge_iter;
+//   }
 
-   mGoalNode -= difference;
-   mStartNode -= difference;
-}
+//   mGoalNode -= difference;
+//   mStartNode -= difference;
+//}
